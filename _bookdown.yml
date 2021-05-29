@@ -1,7 +1,7 @@
 book_filename: "manual_hotspots"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Capítulo "
 delete_merged_file: true
 output_dir: docs
 cover-image: images/cover.jpg
