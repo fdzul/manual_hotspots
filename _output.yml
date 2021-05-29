@@ -6,6 +6,8 @@ bookdown::gitbook:
         <li><a href="./">Munual Hotspots in R</a></li>
       after: |
         <li><a href="https://github.com/fdzul" target="blank">Felipe Dzul</a></li>
+        <li><a href="https://github.com/fdzul" target="blank">Fabián Correa-Moreles</a></li>
+        <li><a href="https://github.com/fdzul" target="blank">Felipe Dzul</a></li>
     edit: https://github.com/fdzul/manual_hotspots/edit/master/%s
     download: ["pdf", "epub", "mobi"]
 bookdown::pdf_book:
