@@ -45,15 +45,18 @@ description: "El manual describe la Identificación de los hotspots en R"
 
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-El programa de prevención y control del dengue en México se enfrenta a grandes desafíos que incluyen:
+<span style="color:#660033;">El programa de prevención y control del dengue en México se enfrenta a grandes desafíos que incluyen:</span>
 
- - Expanción geográfica del dengue.
- - Incremento de la transmisión en zonas endémicas y no endémicas.
- - Presencia de brotes en zonas urbanas que contituyen grandes metropolis (Guadalajara, Monterrey, La comarca Lagunera, etc).
- - Potencial introducción de nuevos agentes causales, como la Fiebre Amarilla y Mayaro.
+ - <span style="color:#660033;">Expanción geográfica del dengue.</span>
+ 
+ - <span style="color:#660033;">Incremento de la transmisión en zonas endémicas y no endémicas.</span>
+ 
+ - <span style="color:#660033;">Presencia de brotes en zonas urbanas que contituyen grandes metropolis (Guadalajara, Monterrey, La comarca Lagunera, etc).</span>
+ 
+ - <span style="color:#660033;">Potencial introducción de nuevos agentes causales, como la Fiebre Amarilla y Mayaro.</span>
 
 
-El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales). Teóricamente, de acuerdo a la ley de Pareto 80/20, si el 80% de la transmisión se concentra en el 20% del área urbana, la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad. 
+<span style="color:#660033;">El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales). Teóricamente, de acuerdo a la ley de Pareto 80/20, si el 80% de la transmisión se concentra en el 20% del área urbana, la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad.</span>
 
 # **<span style="color:#003300;">Software & Convenciones</span>** {-}
 
