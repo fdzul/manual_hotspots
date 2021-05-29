@@ -2,6 +2,7 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
+      collapse: section
       before: |
         <li><a href="./">Manual Hotspots in R</a></li>
       after: |
@@ -22,4 +23,4 @@ bookdown::epub_book: default
 bookdown::html_book:
   css: toc.css
 ouput_dir: docs
-
+citation_package: biblatex
