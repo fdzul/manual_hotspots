@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Manual para la Identificación de los hotspots del dengue en área urbanas de México</title>
+  <meta name="description" content="El manual describe la Identificación de los hotspots en R" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Manual para la Identificación de los hotspots del dengue en área urbanas de México" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="El manual describe la Identificación de los hotspots en R" />
+  <meta name="github-repo" content="fdzul/manual_hotspots" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Manual para la Identificación de los hotspots del dengue en área urbanas de México" />
+  
+  <meta name="twitter:description" content="El manual describe la Identificación de los hotspots en R" />
+  
+
+<meta name="author" content="Felipe Antonio Dzul Manzanilla" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/header-attrs-2.8.4/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">Manual para la Identificación de los hotspots del dengue en área urbanas de México</h1>
+<p class="author"><em>Felipe Antonio Dzul Manzanilla</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021: Last compiled 2021-05-28</em></p>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#prologo"><strong><span style="color:#003300;">Prologo</span></strong></a></li>
+<li><a href="#justificación"><strong><span style="color:#003300;">Justificación</span></strong></a></li>
+<li><a href="#software-convenciones"><strong><span style="color:#003300;">Software &amp; Convenciones</span></strong></a></li>
+<li><a href="#estructura-de-manual"><strong><span style="color:#003300;">Estructura de Manual</span></strong></a></li>
+<li><a href="#agradecimientos"><strong><span style="color:#003300;">Agradecimientos</span></strong></a></li>
+<li><a href="#autores"><strong><span style="color:#003300;">Autores</span></strong></a>
+<ul>
+<li><a href="#felipe-antonio-dzul-manzanilla"><strong><span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span></strong></a></li>
+<li><a href="#fabián-correa-morales"><strong><span style="color:#003300;">Fabián Correa Morales</span></strong></a></li>
+</ul></li>
+<li><a href="#intro"><span class="toc-section-number">1</span> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
+<li><a href="#objetivos"><span class="toc-section-number">2</span> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
+<li><a href="#hotspots"><span class="toc-section-number">3</span> <strong><span style="color:#003300;">Hotspots</span></strong></a>
+<ul>
+<li><a href="#análisis-de-la-información-epidemiológica-y-entomológica"><span class="toc-section-number">3.1</span> <strong>Análisis de la Información epidemiológica y entomológica</strong></a></li>
+<li><a href="#hotspots-de-transmisión-histórica"><span class="toc-section-number">3.2</span> <strong>Hotspots de transmisión histórica</strong></a>
+<ul>
+<li><a href="#algoritmo-para-el-cálculo-de-los-hotspots-de-transmisión"><span class="toc-section-number">3.2.1</span> Algoritmo para el cálculo de los <strong>hotspots de transmisión</strong></a></li>
+<li><a href="#referencias"><span class="toc-section-number">3.2.2</span> <strong>Referencias</strong></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#hotspotsr"><span class="toc-section-number">4</span> <strong>Cálculo de los Hotspots en R</strong></a>
+<ul>
+<li><a href="#bajar-las-bases-de-datos-del-sinave."><span class="toc-section-number">4.1</span> Bajar las bases de datos del <span>SINAVE</span>.</a>
+<ul>
+<li><a href="#escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx."><span class="toc-section-number">4.1.1</span> Escribir en el buscador de preferencia la página del sinave (<span>https://www.sinave.gob.mx/</span>).</a></li>
+<li><a href="#en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector."><span class="toc-section-number">4.1.2</span> En la página del sinave buscar y darle click al <strong>boton Enfermedades Transmitidas por Vector</strong>.</a></li>
+<li><a href="#ingresar-el-nombre-del-usurio-y-contraseña."><span class="toc-section-number">4.1.3</span> Ingresar el nombre del usurio y contraseña.</a></li>
+<li><a href="#ingresar-a-la-sección-de-reportes."><span class="toc-section-number">4.1.4</span> Ingresar a la sección de <strong>Reportes</strong>.</a></li>
+<li><a href="#darle-click-a-descarga-de-datos-vectores"><span class="toc-section-number">4.1.5</span> Darle click a <strong>Descarga de Datos Vectores</strong></a></li>
+<li><a href="#bajar-la-base-de-datos-de-la-última-fecha-de-la-enfermedad-de-interés."><span class="toc-section-number">4.1.6</span> Bajar la base de datos de la última fecha de la enfermedad de interés.</a></li>
+<li><a href="#guardar-la-base-en-la-carpeta-de-interes."><span class="toc-section-number">4.1.7</span> Guardar la base en la carpeta de interes.</a></li>
+<li><a href="#extraer-el-txt-del-archivo-con-extensión-rar."><span class="toc-section-number">4.1.8</span> Extraer el txt del archivo con extensión RAR.</a></li>
+</ul></li>
+<li><a href="#geocodificación-de-la-base-de-datos-de-dengue."><span class="toc-section-number">4.2</span> Geocodificación de la base de datos de Dengue.</a>
+<ul>
+<li><a href="#subir-la-base-de-datos-de-dengue-a"><span class="toc-section-number">4.2.1</span> Subir la base de datos de Dengue a <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /></a></li>
+<li><a href="#subir-el-csv-a-y-creamos-el-vector-de-direcciones"><span class="toc-section-number">4.2.2</span> Subir el csv a <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /> y creamos el vector de direcciones</a></li>
+<li><a href="#realizar-la-geocodificación"><span class="toc-section-number">4.2.3</span> Realizar la geocodificación</a></li>
+<li><a href="#guardar-la-información-en-rdata"><span class="toc-section-number">4.2.4</span> Guardar la información en RData</a></li>
+</ul></li>
+<li><a href="#bajar-los-shapefile-del-inegi."><span class="toc-section-number">4.3</span> Bajar los shapefile del <span>INEGI</span>.</a></li>
+<li><a href="#contar-el-número-de-casos-por-ageb-agregación-espacial."><span class="toc-section-number">4.4</span> Contar el número de casos por AGEB (agregación espacial).</a>
+<ul>
+<li><a href="#subir-la-base-datos-geocodificada."><span class="toc-section-number">4.4.1</span> subir la base datos geocodificada.</a></li>
+<li><a href="#subir-los-agebs."><span class="toc-section-number">4.4.2</span> subir los AGEBs.</a></li>
+<li><a href="#realizar-la-agregación-espacial."><span class="toc-section-number">4.4.3</span> Realizar la agregación espacial.</a></li>
+</ul></li>
+<li><a href="#pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots."><span class="toc-section-number">4.5</span> Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</a></li>
+<li><a href="#visualizar-los-hotspots."><span class="toc-section-number">4.6</span> Visualizar los hotspots.</a></li>
+</ul></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Manual para la Identificación de los hotspots del dengue en área urbanas de México</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="prologo" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Prologo</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</div>
+<div id="justificación" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Justificación</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p>El programa de prevención y control del dengue en México se enfrenta a grandes desafíos que incluyen:</p>
+<ul>
+<li>Expanción geográfica del dengue.</li>
+<li>Incremento de la transmisión en zonas endémicas y no endémicas.</li>
+<li>Presencia de brotes en zonas urbanas que contituyen grandes metropolis (Guadalajara, Monterrey, La comarca Lagunera, etc).</li>
+<li>Potencial introducción de nuevos agentes causales, como la Fiebre Amarilla y Mayaro.</li>
+</ul>
+<p>El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales). Teóricamente, de acuerdo a la ley de Pareto 80/20, si el 80% de la transmisión se concentra en el 20% del área urbana, la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad.</p>
+</div>
+<div id="software-convenciones" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Software &amp; Convenciones</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p>Con el advenimiento de la era del internet, la exponencial la capacidad de las computadoras (software and hardware) y la creciente la disponibilidad software libre para el análisis espacial, ha permitido que más investigadores tengan acceso a las herramientas analíticas. En el top ten para el análisis de datos espaciales, se observan a <a href="http://www.qgis.org/es/site/">QGIS</a>, <strong><a href="https://cran.r-project.org/">R</a></strong>, <a href="https://www.python.org/">Python</a>, <a href="https://spatial.uchicago.edu/software">GeoDa</a>, <a href="https://www.satscan.org/">SaTScan</a> y <a href="https://grass.osgeo.org/">GRASS</a>. Actualmente, existe una tendencia a usar R o Python para el análisis espacial. Entre las principales limitantes de ambos lenguajes de programación es que la curva de aprendizaje es lenta y tortuosa. No obstante, lo anterior, cada día más personas están usando ambos lenguajes para el análisis espacial.</p>
+<p>En el presente manual se usará <strong><a href="https://cran.r-project.org/">R</a></strong> y <strong><a href="https://www.rstudio.com/">RStudio</a></strong> para el cálculo de los hotspots. El manual asume que los usuarios tienen experiencia en el uso de R, RStudio y que cuentan con su clave API del servicio de geocodificacion de google (<a href="https://developers.google.com/maps/documentation/geocoding/overview">Geocoding API de google</a>). <strong><a href="https://cran.r-project.org/">R</a></strong> es un programa de computadora estadístico que proporciona un ambiente rico y variado para la visualización y análisis de datos (espaciales y no espaciales). <strong><a href="https://cran.r-project.org/">R</a></strong> se baja gratis del website de Comprensive R Archive Network en <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> y es distribuido con una licencia pública general (GBU). Lo ideal es usar la consola de <strong><a href="https://cran.r-project.org/">R</a></strong>, pero es ampliamente recomendado utilizar un ambiente de desarrollo integrado (IDE, integrated development enviroment) para interactuar con <strong><a href="https://cran.r-project.org/">R</a></strong>, como <strong><a href="https://www.rstudio.com/">RStudio</a></strong>. <strong><a href="https://www.rstudio.com/">RStudio</a></strong> se baja gratis en la página de RStudio <a href="https://rstudio.com/products/rstudio/" class="uri">https://rstudio.com/products/rstudio/</a>.</p>
+<p>Los análisis hotspots con el estadístico espacial local Getis&amp;Ord (<span class="math inline">\(G_{i}^{*}\)</span>) tanto para los datos históricos de los casos y del vector (ovitrampas), así como <strong>Space-Time análisis</strong> con <strong><a href="https://www.satscan.org/">SaTScan</a></strong> y <strong><a href="https://www.biomedware.com/software/clusterseer/">ClusterSeer</a></strong> son implementados en <strong><a href="https://cran.r-project.org/">R</a></strong> y se desarrollaron los siguientes paquetes para facilitar su implementación en los servicios de salud de México.</p>
+<ul>
+<li><strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong></li>
+<li><strong><a href="https://github.com/fdzul/deneggs">deneggs</a></strong></li>
+<li><strong><a href="https://github.com/fdzul/rgeomex">rgeomex</a></strong></li>
+<li><strong><a href="https://github.com/fdzul/dendata">dendata</a></strong></li>
+</ul>
+<p>Los paquetes se instalan en la consola de <strong><a href="https://cran.r-project.org/">R</a></strong> o <strong><a href="https://www.rstudio.com/">RStudio</a></strong> en tecleando lo siguiente:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/denhotspots&quot;)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/deneggs&quot;)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/rgeomex&quot;)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/dendata&quot;)</span></span></code></pre></div>
+<p>ó</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/denhotspots&quot;)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/deneggs&quot;)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/rgeomex&quot;)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/dendata&quot;)</span></span></code></pre></div>
+<p>Por convención en el texto los paquetes se proporcionaran en negrita y azul marino (ejemplo <strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong>). Las funciones puedes referirse individualmente (<strong><a href="">extract_ageb</a></strong>) o a través de su paquete (<strong><em><a href="">rgeomex::extract_ageb</a></em></strong>) en cursiva y color azul marino. En el caso de <strong><em><a href="">denhotspots::gihi</a></em></strong>, <strong><a href="">denhotspots</a></strong> es el paquete y <strong><em><a href="">gihi</a></em></strong> es la función. En los códigos las funciones de los paquetes <strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong>,<strong><a href="https://github.com/fdzul/deneggs">deneggs</a></strong>, <strong><a href="https://github.com/fdzul/rgeomex">rgeomex</a></strong> y <strong><a href="https://github.com/fdzul/dendata">dendata</a></strong> usaran este metodo de applicar la función atravez de <strong><em>:</em></strong> debido a que evita conflictos con otros paquetes que tienen funciones con el mismo nombre pero que realizan diferente función.</p>
+<p>Como el documento incluye texto y código, el código estara cirscunscrito en un recuadro con fondo <span style="color:#567482">gris</span> como acontinuación se presenta. El símbolo <strong>#</strong> indica un comentario del código, no tiene efecto en R y como resultado no se correrá la pieza del código.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/denhotspots&quot;)</span></span></code></pre></div>
+<p>En el código (recuadro gris) a las funciones se les asignará un color <strong><span style="color:#06287e">azul</span></strong>, a los paquetes un color <strong><span style="color:#567482">gris</span></strong>, a los <strong>argumentos</strong> de la funciones se les asignará un color <strong><span style="color:#7d9029">verde</span></strong> y a los <strong>valores</strong> de los argumentos se les asignará un color <strong><span style="color:#06287e">azul</span></strong>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>gua <span class="ot">&lt;-</span> rgeomex<span class="sc">::</span><span class="fu">extract_ageb</span>(<span class="at">locality =</span> <span class="fu">c</span>(<span class="st">&quot;Zapopan&quot;</span>, <span class="st">&quot;Tonalá&quot;</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">&quot;Tlaquepaque&quot;</span>, <span class="st">&quot;Guadalajara&quot;</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                             <span class="at">cve_geo =</span> <span class="st">&quot;14&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sf<span class="sc">::</span><span class="fu">st_geometry</span>(gua<span class="sc">$</span>locality))</span></code></pre></div>
+<p><img src="manual_hotspots_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="estructura-de-manual" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Estructura de Manual</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</div>
+<div id="agradecimientos" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Agradecimientos</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p>Los autores agradecen a</p>
+</div>
+<div id="autores" class="section level1 unnumbered">
+<h1 class="unnumbered"><strong><span style="color:#003300;">Autores</span></strong></h1>
+<div id="felipe-antonio-dzul-manzanilla" class="section level2 unnumbered">
+<h2 class="unnumbered"><strong><span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span></strong></h2>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+</div>
+<div id="fabián-correa-morales" class="section level2 unnumbered">
+<h2 class="unnumbered"><strong><span style="color:#003300;">Fabián Correa Morales</span></strong></h2>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p>Fabián Correa Morales es Licenciado en Biologia por la Universidad Autonoma de México.</p>
+<!--chapter:end:index.Rmd-->
+</div>
+</div>
+<div id="intro" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> <strong><span style="color:#003300;">Introducción </span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p><span style="color:#660033;">Los hotspots de las arbovirosis transmitidas por Aedes aegypti son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/o zika (Bisanzio et al 2017; Dzul-Manzanilla et al 2021). Actualmente, los hotspots son la principal estrategia de identificación de las áreas de riesgo en el interior de los grandes centros urbanos endémicos de dengue y es ampliamente recomendada por la Organización Panamericana de de la Salud (2019) y grupos científicos (Vanlerberghe et al., 2017; Olliaro et al., 2018 Roiz et al., 2019).</span></p>
+<p><span style="color:#660033;">Los procedimientos y cálculos en los respectivos programas (GeoDA, ArcView, ArcGis, R y Python) es completemente restrictivo a la comunidad científica y grupos académicos con expertis. La operacionalización de los algoritmos para la identificación de los hotspots en los programas de salud en México, es el paso siguiente que se requiere para que la estrategía de focalización de los hotspots se escale en todo el país.</span></p>
+<p><span style="color:#660033;">En el presente manual se describen los pasos lógicos para la identificación de los hotspots de los casos de dengue y los hotspots de la abundancia el vector usando bases de datos históricas y bases de datos recientes. Así mismo, se describe la identificación de cluster de transmisión y la identificación de las cadenas de transmisión. Todos los análisis espaciales son implementados en R.</span></p>
+<!--chapter:end:01-intro.Rmd-->
+</div>
+<div id="objetivos" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> <strong><span style="color:#003300;"> Objetivo </span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p><span style="color:#660033;">I. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para la identificación de los hotspots en las áreas urbanas endémicas de dengue en México.</span></p>
+<p><span style="color:#660033;">II. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de las cadenas de transmisión en las áreas urbanas endémicas de dengue en México.</span></p>
+<p><span style="color:#660033;">III. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de los clusters de transmisión en las áreas urbanas endémicas de dengue en México.</span></p>
+<p><span style="color:#660033;">El manual para la identificación de los hotspots en las localidades urbanas endémicas no solo está dirigido al personal operativo, mandos medios y directivos de los Programas de Prevención y Control de las arbovirosis transmitidas por <strong><em>Aedes</em></strong> de la Secretaria de Salud de México, sino también a la comunidad académica relacionada con la investigación operativa sobre los hotspots de dengue y al público en general interesado en el tema.</span></p>
+<!--chapter:end:02-objetivos.Rmd-->
+</div>
+<div id="hotspots" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> <strong><span style="color:#003300;">Hotspots</span></strong></h1>
+<p>Placeholder</p>
+<div id="análisis-de-la-información-epidemiológica-y-entomológica" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> <strong>Análisis de la Información epidemiológica y entomológica</strong></h2>
+</div>
+<div id="hotspots-de-transmisión-histórica" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> <strong>Hotspots de transmisión histórica</strong></h2>
+<div id="algoritmo-para-el-cálculo-de-los-hotspots-de-transmisión" class="section level3" number="3.2.1">
+<h3 number="3.2.1"><span class="header-section-number">3.2.1</span> Algoritmo para el cálculo de los <strong>hotspots de transmisión</strong></h3>
+</div>
+<div id="referencias" class="section level3" number="3.2.2">
+<h3 number="3.2.2"><span class="header-section-number">3.2.2</span> <strong>Referencias</strong></h3>
+<!--chapter:end:03-hotspots.Rmd-->
+</div>
+</div>
+</div>
+<div id="hotspotsr" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> <strong>Cálculo de los Hotspots en R</strong></h1>
+<p>Placeholder</p>
+<div id="bajar-las-bases-de-datos-del-sinave." class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> Bajar las bases de datos del <a href="https://www.sinave.gob.mx/">SINAVE</a>.</h2>
+<div id="escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx." class="section level3" number="4.1.1">
+<h3 number="4.1.1"><span class="header-section-number">4.1.1</span> Escribir en el buscador de preferencia la página del sinave (<a href="https://www.sinave.gob.mx/" class="uri">https://www.sinave.gob.mx/</a>).</h3>
+</div>
+<div id="en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector." class="section level3" number="4.1.2">
+<h3 number="4.1.2"><span class="header-section-number">4.1.2</span> En la página del sinave buscar y darle click al <strong>boton Enfermedades Transmitidas por Vector</strong>.</h3>
+</div>
+<div id="ingresar-el-nombre-del-usurio-y-contraseña." class="section level3" number="4.1.3">
+<h3 number="4.1.3"><span class="header-section-number">4.1.3</span> Ingresar el nombre del usurio y contraseña.</h3>
+</div>
+<div id="ingresar-a-la-sección-de-reportes." class="section level3" number="4.1.4">
+<h3 number="4.1.4"><span class="header-section-number">4.1.4</span> Ingresar a la sección de <strong>Reportes</strong>.</h3>
+</div>
+<div id="darle-click-a-descarga-de-datos-vectores" class="section level3" number="4.1.5">
+<h3 number="4.1.5"><span class="header-section-number">4.1.5</span> Darle click a <strong>Descarga de Datos Vectores</strong></h3>
+</div>
+<div id="bajar-la-base-de-datos-de-la-última-fecha-de-la-enfermedad-de-interés." class="section level3" number="4.1.6">
+<h3 number="4.1.6"><span class="header-section-number">4.1.6</span> Bajar la base de datos de la última fecha de la enfermedad de interés.</h3>
+</div>
+<div id="guardar-la-base-en-la-carpeta-de-interes." class="section level3" number="4.1.7">
+<h3 number="4.1.7"><span class="header-section-number">4.1.7</span> Guardar la base en la carpeta de interes.</h3>
+</div>
+<div id="extraer-el-txt-del-archivo-con-extensión-rar." class="section level3" number="4.1.8">
+<h3 number="4.1.8"><span class="header-section-number">4.1.8</span> Extraer el txt del archivo con extensión RAR.</h3>
+</div>
+</div>
+<div id="geocodificación-de-la-base-de-datos-de-dengue." class="section level2" number="4.2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> Geocodificación de la base de datos de Dengue.</h2>
+<div id="subir-la-base-de-datos-de-dengue-a" class="section level3" number="4.2.1">
+<h3 number="4.2.1"><span class="header-section-number">4.2.1</span> Subir la base de datos de Dengue a <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /></h3>
+<div id="subir-la-base-de-datos-de-dengue-de-la-semana-actual." class="section level4" number="4.2.1.1">
+<h4 number="4.2.1.1"><span class="header-section-number">4.2.1.1</span> Subir la base de datos de dengue de la semana actual.</h4>
+</div>
+<div id="subir-la-base-de-datos-de-dengue-de-la-semana-pasada" class="section level4" number="4.2.1.2">
+<h4 number="4.2.1.2"><span class="header-section-number">4.2.1.2</span> Subir la base de datos de dengue de la semana pasada</h4>
+</div>
+<div id="ordenar-la-base-por-el-id-del-paciente-y-extraer-los-casos-no-geocodificados-de-la-semana-actual." class="section level4" number="4.2.1.3">
+<h4 number="4.2.1.3"><span class="header-section-number">4.2.1.3</span> Ordenar la base por el ID del paciente y extraer los casos no geocodificados de la semana actual.</h4>
+</div>
+<div id="guardar-el-resultado" class="section level4" number="4.2.1.4">
+<h4 number="4.2.1.4"><span class="header-section-number">4.2.1.4</span> Guardar el resultado</h4>
+</div>
+<div id="head-dim-y-names" class="section level4" number="4.2.1.5">
+<h4 number="4.2.1.5"><span class="header-section-number">4.2.1.5</span> head(), dim() y names()</h4>
+</div>
+</div>
+<div id="subir-el-csv-a-y-creamos-el-vector-de-direcciones" class="section level3" number="4.2.2">
+<h3 number="4.2.2"><span class="header-section-number">4.2.2</span> Subir el csv a <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /> y creamos el vector de direcciones</h3>
+</div>
+<div id="realizar-la-geocodificación" class="section level3" number="4.2.3">
+<h3 number="4.2.3"><span class="header-section-number">4.2.3</span> Realizar la geocodificación</h3>
+<div id="manipulación-de-texto" class="section level4" number="4.2.3.1">
+<h4 number="4.2.3.1"><span class="header-section-number">4.2.3.1</span> manipulación de texto</h4>
+</div>
+<div id="geocodificación." class="section level4" number="4.2.3.2">
+<h4 number="4.2.3.2"><span class="header-section-number">4.2.3.2</span> Geocodificación.</h4>
+</div>
+</div>
+<div id="guardar-la-información-en-rdata" class="section level3" number="4.2.4">
+<h3 number="4.2.4"><span class="header-section-number">4.2.4</span> Guardar la información en RData</h3>
+<div id="subir-la-base-geocodificada" class="section level4" number="4.2.4.1">
+<h4 number="4.2.4.1"><span class="header-section-number">4.2.4.1</span> Subir la base geocodificada</h4>
+</div>
+<div id="subir-la-base-de-casos" class="section level4" number="4.2.4.2">
+<h4 number="4.2.4.2"><span class="header-section-number">4.2.4.2</span> Subir la base de casos</h4>
+</div>
+<div id="elminar-duplicados-y-guardar" class="section level4" number="4.2.4.3">
+<h4 number="4.2.4.3"><span class="header-section-number">4.2.4.3</span> Elminar duplicados y guardar</h4>
+</div>
+</div>
+</div>
+<div id="bajar-los-shapefile-del-inegi." class="section level2" number="4.3">
+<h2 number="4.3"><span class="header-section-number">4.3</span> Bajar los shapefile del <a href="https://www.inegi.org.mx/">INEGI</a>.</h2>
+</div>
+<div id="contar-el-número-de-casos-por-ageb-agregación-espacial." class="section level2" number="4.4">
+<h2 number="4.4"><span class="header-section-number">4.4</span> Contar el número de casos por AGEB (agregación espacial).</h2>
+<div id="subir-la-base-datos-geocodificada." class="section level3" number="4.4.1">
+<h3 number="4.4.1"><span class="header-section-number">4.4.1</span> subir la base datos geocodificada.</h3>
+</div>
+<div id="subir-los-agebs." class="section level3" number="4.4.2">
+<h3 number="4.4.2"><span class="header-section-number">4.4.2</span> subir los AGEBs.</h3>
+</div>
+<div id="realizar-la-agregación-espacial." class="section level3" number="4.4.3">
+<h3 number="4.4.3"><span class="header-section-number">4.4.3</span> Realizar la agregación espacial.</h3>
+</div>
+</div>
+<div id="pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots." class="section level2" number="4.5">
+<h2 number="4.5"><span class="header-section-number">4.5</span> Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</h2>
+</div>
+<div id="visualizar-los-hotspots." class="section level2" number="4.6">
+<h2 number="4.6"><span class="header-section-number">4.6</span> Visualizar los hotspots.</h2>
+<!--chapter:end:04-hotspotsr.Rmd-->
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
