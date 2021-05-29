@@ -1,4 +1,4 @@
-# **Cálculo de los Hotspots en R** {#hotspots_r}
+# **Cálculo de los Hotspots en R** {#hotspotsr}
 
 ## Bajar las bases de datos del [SINAVE](https://www.sinave.gob.mx/).
 
