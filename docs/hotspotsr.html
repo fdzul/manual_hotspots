@@ -11,7 +11,7 @@
   <meta property="og:title" content="Chapter 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/cover.jpg" />
   <meta property="og:description" content="El manual describe la Identificación de los hotspots en R" />
   <meta name="github-repo" content="fdzul/manual_hotspots" />
 
@@ -19,7 +19,7 @@
   <meta name="twitter:title" content="Chapter 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
   
   <meta name="twitter:description" content="El manual describe la Identificación de los hotspots en R" />
-  
+  <meta name="twitter:image" content="/images/cover.jpg" />
 
 <meta name="author" content="Felipe Antonio Dzul Manzanilla" />
 
@@ -33,7 +33,7 @@
 <link rel="prev" href="hotspots.html"/>
 
 <script src="libs/header-attrs-2.8.4/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,6 +52,14 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.17/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
@@ -144,6 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="index.html#felipe-antonio-dzul-manzanilla"><strong><span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span></strong></a></li>
 <li><a href="index.html#fabián-correa-morales"><strong><span style="color:#003300;">Fabián Correa Morales</span></strong></a></li>
+<li><a href="index.html#arturo-baez-hernández"><strong><span style="color:#003300;">Arturo Baez Hernández </span></strong></a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
 <li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
@@ -314,260 +323,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 1:           IMSS                 NA  2021-01-27
 ## 2:           IMSS                  2  2021-03-25</code></pre>
 <p>Esta funcion nos proporciona o presenta la base.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hotspotsr.html#cb11-1" aria-hidden="true" tabindex="-1"></a>kableExtra<span class="sc">::</span><span class="fu">kable</span>(y) <span class="co"># proporciona la tabla completa</span></span></code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align:right;">
-VEC_ID
-</th>
-<th style="text-align:right;">
-IDE_EDA_ANO
-</th>
-<th style="text-align:right;">
-IDE_SEX
-</th>
-<th style="text-align:left;">
-DES_CAL
-</th>
-<th style="text-align:left;">
-IDE_CAL
-</th>
-<th style="text-align:left;">
-NUM_EXT
-</th>
-<th style="text-align:left;">
-NUM_INT
-</th>
-<th style="text-align:left;">
-IDE_COL
-</th>
-<th style="text-align:right;">
-IDE_CP
-</th>
-<th style="text-align:right;">
-CVE_LOC_RES
-</th>
-<th style="text-align:left;">
-DES_LOC_RES
-</th>
-<th style="text-align:right;">
-CVE_MPO_RES
-</th>
-<th style="text-align:left;">
-DES_MPO_RES
-</th>
-<th style="text-align:left;">
-DES_JUR_RES
-</th>
-<th style="text-align:right;">
-CVE_EDO_RES
-</th>
-<th style="text-align:left;">
-DES_EDO_RES
-</th>
-<th style="text-align:right;">
-ESTATUS_CASO
-</th>
-<th style="text-align:right;">
-CVE_DIAG_PROBABLE
-</th>
-<th style="text-align:left;">
-DES_DIAG_PROBABLE
-</th>
-<th style="text-align:left;">
-DES_DIAG_FINAL
-</th>
-<th style="text-align:left;">
-FEC_INI_SIGNOS_SINT
-</th>
-<th style="text-align:right;">
-ANO
-</th>
-<th style="text-align:right;">
-SEM
-</th>
-<th style="text-align:right;">
-MANEJO
-</th>
-<th style="text-align:left;">
-DES_INS_UNIDAD
-</th>
-<th style="text-align:right;">
-DENGUE_SER_TRIPLEX
-</th>
-<th style="text-align:left;">
-FEC_INGRESO
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-886120
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-CALLE
-</td>
-<td style="text-align:left;">
-MADVID
-</td>
-<td style="text-align:left;">
-19
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-AGUSTÍN LARA Colonia
-</td>
-<td style="text-align:right;">
-93270
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-POZA RICA DE HIDALGO
-</td>
-<td style="text-align:right;">
-131
-</td>
-<td style="text-align:left;">
-POZA RICA DE HIDALGO
-</td>
-<td style="text-align:left;">
-POZA RICA
-</td>
-<td style="text-align:right;">
-30
-</td>
-<td style="text-align:left;">
-VERACRUZ
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-DENGUE CON SIGNOS DE ALARMA
-</td>
-<td style="text-align:left;">
-DENGUE CON SIGNOS DE ALARMA
-</td>
-<td style="text-align:left;">
-2021-01-24
-</td>
-<td style="text-align:right;">
-2021
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-IMSS
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:left;">
-2021-01-27
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-889065
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-CALLE
-</td>
-<td style="text-align:left;">
-RIO CAZONES
-</td>
-<td style="text-align:left;">
-110
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-MIGUEL HIDALGO Fraccionamiento
-</td>
-<td style="text-align:right;">
-93319
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-POZA RICA DE HIDALGO
-</td>
-<td style="text-align:right;">
-131
-</td>
-<td style="text-align:left;">
-POZA RICA DE HIDALGO
-</td>
-<td style="text-align:left;">
-POZA RICA
-</td>
-<td style="text-align:right;">
-30
-</td>
-<td style="text-align:left;">
-VERACRUZ
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-DENGUE CON SIGNOS DE ALARMA
-</td>
-<td style="text-align:left;">
-DENGUE CON SIGNOS DE ALARMA
-</td>
-<td style="text-align:left;">
-2021-03-23
-</td>
-<td style="text-align:right;">
-2021
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-IMSS
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-2021-03-25
-</td>
-</tr>
-</tbody>
-</table>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hotspotsr.html#cb11-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(y)</span></code></pre></div>
+<div id="htmlwidget-c9e281421c43f9c2f35f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c9e281421c43f9c2f35f">{"x":{"filter":"none","data":[["1","2"],[886120,889065],[9,27],[2,1],["CALLE","CALLE"],["MADVID","RIO CAZONES"],["19","110"],["",""],["AGUSTÍN LARA Colonia","MIGUEL HIDALGO Fraccionamiento"],[93270,93319],[1,1],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],[131,131],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],["POZA RICA","POZA RICA"],[30,30],["VERACRUZ","VERACRUZ"],[2,2],[2,2],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["2021-01-24","2021-03-23"],[2021,2021],[4,12],[1,1],["IMSS","IMSS"],[null,2],["2021-01-27","2021-03-25"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>VEC_ID<\/th>\n      <th>IDE_EDA_ANO<\/th>\n      <th>IDE_SEX<\/th>\n      <th>DES_CAL<\/th>\n      <th>IDE_CAL<\/th>\n      <th>NUM_EXT<\/th>\n      <th>NUM_INT<\/th>\n      <th>IDE_COL<\/th>\n      <th>IDE_CP<\/th>\n      <th>CVE_LOC_RES<\/th>\n      <th>DES_LOC_RES<\/th>\n      <th>CVE_MPO_RES<\/th>\n      <th>DES_MPO_RES<\/th>\n      <th>DES_JUR_RES<\/th>\n      <th>CVE_EDO_RES<\/th>\n      <th>DES_EDO_RES<\/th>\n      <th>ESTATUS_CASO<\/th>\n      <th>CVE_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_FINAL<\/th>\n      <th>FEC_INI_SIGNOS_SINT<\/th>\n      <th>ANO<\/th>\n      <th>SEM<\/th>\n      <th>MANEJO<\/th>\n      <th>DES_INS_UNIDAD<\/th>\n      <th>DENGUE_SER_TRIPLEX<\/th>\n      <th>FEC_INGRESO<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,9,10,12,15,17,18,22,23,24,26]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="subir-el-csv-a-y-creamos-el-vector-de-direcciones" class="section level3" number="4.2.2">

@@ -95,7 +95,7 @@ head(y)  # proporciona los primero seis registro.
 
 Esta funcion nos proporciona o presenta la base.
 ```{r, echo=TRUE}
-kableExtra::kable(y) # proporciona la tabla completa
+DT::datatable(y)
 
 ```
 

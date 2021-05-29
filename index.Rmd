@@ -8,6 +8,7 @@ documentclass: book
 biblio-style: apalike
 link-citations: yes
 github-repo: fdzul/manual_hotspots
+cover-image: "images/cover.jpg"
 description: "El manual describe la Identificación de los hotspots en R"
 ---
 
