@@ -17,7 +17,7 @@ description: "El manual describe la Identificación de los hotspots en R"
 #  **<span style="color:#003300;">Welcome</span>** {-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;"> Este documento es la versión en línea del bookdown **Manual para la Identificación de los hotspots del dengue en áreas urbanas de México**, es un libro diseñado para desarrollar las competencias específicas para la identificación de los hotspots del dengue en áreas urbanas y metropolitanas de México.</span>
+<span style="color:#660033;">Este documento es la versión en línea del bookdown</span><span style="color:#003300;"> **Manual para la Identificación de los hotspots del dengue en áreas urbanas de México**</span><span style="color:#660033;">, es un libro diseñado para desarrollar las competencias específicas para la identificación de los hotspots del dengue en áreas urbanas y metropolitanas de México.</span>
 
 <a href=""><img src="images/cover.jpg" width="550" height="550" alt="" align="right" style="margin: 0 1em 0 1em" /></a>
   
@@ -26,7 +26,7 @@ description: "El manual describe la Identificación de los hotspots en R"
 
 
 <span style="color:#660033;">La publicación online es inspirada por las iniciativas libres para la publicación de textos como 
-[**bookdown**](https://github.com/rstudio/bookdown) & todas las inciciativas de software libre para el análisis de datos espaciales y no espaciales como [R](https://cran.r-project.org/), [RStudio](https://www.rstudio.com/) y [Python](https://www.python.org/). El libro es de codigo abierto, asegurando que su contenido es completamente reproducible y públicamente disponible para personal de la Secretaría de Salud de México.</span>
+[**bookdown**](https://github.com/rstudio/bookdown) & todas las inciciativas de software libre para el análisis de datos espaciales y no espaciales como [**R**](https://cran.r-project.org/), [**RStudio**](https://www.rstudio.com/) y [**Python**](https://www.python.org/). El libro es de codigo abierto, asegurando que su contenido es completamente reproducible y públicamente disponible para personal de la Secretaría de Salud de México.</span>
 
 
 <span style="color:#660033;">La versión online del manual es mantenida en [fdzul.github.io/manual_hotspots](https://fdzul.github.io/manual_hotspots/) & es actualizada [GitHub Actions](https://github.com/fdzul/manual_hotspots/actions), la cual proporciona información sobre el estatus 'build status' con:

@@ -4,7 +4,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">Manual Hotspots in R</a></li>
+        <li><a href="./"><span style="color:#660033;">Hotspot in R</span></a></li>
       after: |
         <li><a href="https://github.com/fdzul" target="blank">Felipe Dzul</a></li>
         <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank">Fabián Correa-Moreles</a></li>
