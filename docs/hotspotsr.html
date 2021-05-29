@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</title>
+  <title>Capítulo 4 Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</title>
   <meta name="description" content="El manual describe la Identificación de los hotspots en R" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
+  <meta property="og:title" content="Capítulo 4 Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://fdzul.github.io/manual_hotspots/" />
   <meta property="og:image" content="https://fdzul.github.io/manual_hotspots//images/cover.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="fdzul/manual_hotspots" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
+  <meta name="twitter:title" content="Capítulo 4 Hotspots en R | Manual para la Identificación de los hotspots del dengue en áreas urbanas de México" />
   
   <meta name="twitter:description" content="El manual describe la Identificación de los hotspots en R" />
   <meta name="twitter:image" content="https://fdzul.github.io/manual_hotspots//images/cover.jpg" />
@@ -31,7 +31,7 @@
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="prev" href="hotspots.html"/>
-
+<link rel="next" href="clusters.html"/>
 <script src="libs/header-attrs-2.8.4/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -149,8 +149,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li><a href="index.html#welcome"><strong><span style="color:#003300;">Welcome</span></strong></a></li>
+<li class="part"><span><b>I Sección</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
 <li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
+<li class="part"><span><b>II Sección</b></span></li>
 <li class="chapter" data-level="3" data-path="hotspots.html"><a href="hotspots.html"><i class="fa fa-check"></i><b>3</b> <strong><span style="color:#003300;">Hotspots</span></strong></a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="hotspots.html"><a href="hotspots.html#análisis-de-la-información-epidemiológica-y-entomológica"><i class="fa fa-check"></i><b>3.1</b> <strong><span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span></strong></a></li>
@@ -160,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.2" data-path="hotspots.html"><a href="hotspots.html#referencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><span style="color:#003300;">Referencias</span></strong></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="hotspotsr.html"><a href="hotspotsr.html"><i class="fa fa-check"></i><b>4</b> <strong><span style="color:#003300;">Cálculo de los Hotspots en R</span></strong></a>
+<li class="chapter" data-level="4" data-path="hotspotsr.html"><a href="hotspotsr.html"><i class="fa fa-check"></i><b>4</b> <strong><span style="color:#003300;">Hotspots en R</span></strong></a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-las-bases-de-datos-del-sinave."><i class="fa fa-check"></i><b>4.1</b> <strong><span style="color:#003300;">Bajar las bases de datos del <span>SINAVE</span>.</span></strong></a>
 <ul>
@@ -190,6 +192,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="hotspotsr.html"><a href="hotspotsr.html#pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots."><i class="fa fa-check"></i><b>4.5</b> <strong><span style="color:#003300;">Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</span></strong></a></li>
 <li class="chapter" data-level="4.6" data-path="hotspotsr.html"><a href="hotspotsr.html#visualizar-los-hotspots."><i class="fa fa-check"></i><b>4.6</b> <strong><span style="color:#003300;">Visualizar los hotspots.</span></strong></a></li>
 </ul></li>
+<li class="part"><span><b>III Sección</b></span></li>
+<li class="chapter" data-level="5" data-path="clusters.html"><a href="clusters.html"><i class="fa fa-check"></i><b>5</b> <strong><span style="color:#003300;">Clusters</span></strong></a></li>
+<li class="chapter" data-level="6" data-path="clustersr.html"><a href="clustersr.html"><i class="fa fa-check"></i><b>6</b> <strong><span style="color:#003300;">Clusters en R</span></strong></a></li>
+<li class="part"><span><b>IV Sección</b></span></li>
+<li class="chapter" data-level="7" data-path="cadenas.html"><a href="cadenas.html"><i class="fa fa-check"></i><b>7</b> <strong><span style="color:#003300;">Cadenas de Transmisión</span></strong></a></li>
+<li class="chapter" data-level="8" data-path="cadenasr.html"><a href="cadenasr.html"><i class="fa fa-check"></i><b>8</b> <strong><span style="color:#003300;">Cadenas de Transmisión en R</span></strong></a></li>
+<li class="part"><span><b>V Sección</b></span></li>
+<li class="chapter" data-level="9" data-path="cox.html"><a href="cox.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">log-Gaussian Cox Process</span></strong></a></li>
+<li class="chapter" data-level="10" data-path="coxr.html"><a href="coxr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">log-Gaussian Cox Process en R</span></strong></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/fdzul" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Felipe Dzul-Manzanilla</span> </a></li>
 <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Fabián Correa-Morales</span></a></li>
@@ -215,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="hotspotsr" class="section level1" number="4">
-<h1><span class="header-section-number">Capítulo 4</span> <strong><span style="color:#003300;">Cálculo de los Hotspots en R</span></strong></h1>
+<h1><span class="header-section-number">Capítulo 4</span> <strong><span style="color:#003300;">Hotspots en R</span></strong></h1>
 <div id="bajar-las-bases-de-datos-del-sinave." class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> <strong><span style="color:#003300;">Bajar las bases de datos del <a href="https://www.sinave.gob.mx/">SINAVE</a>.</span></strong></h2>
 <div id="escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx." class="section level3" number="4.1.1">
@@ -323,8 +334,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 2:           IMSS                  2  2021-03-25</code></pre>
 <p>Esta funcion nos proporciona o presenta la base.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hotspotsr.html#cb11-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(y)</span></code></pre></div>
-<div id="htmlwidget-dc9725ab90659cf68896" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-dc9725ab90659cf68896">{"x":{"filter":"none","data":[["1","2"],[886120,889065],[9,27],[2,1],["CALLE","CALLE"],["MADVID","RIO CAZONES"],["19","110"],["",""],["AGUSTÍN LARA Colonia","MIGUEL HIDALGO Fraccionamiento"],[93270,93319],[1,1],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],[131,131],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],["POZA RICA","POZA RICA"],[30,30],["VERACRUZ","VERACRUZ"],[2,2],[2,2],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["2021-01-24","2021-03-23"],[2021,2021],[4,12],[1,1],["IMSS","IMSS"],[null,2],["2021-01-27","2021-03-25"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>VEC_ID<\/th>\n      <th>IDE_EDA_ANO<\/th>\n      <th>IDE_SEX<\/th>\n      <th>DES_CAL<\/th>\n      <th>IDE_CAL<\/th>\n      <th>NUM_EXT<\/th>\n      <th>NUM_INT<\/th>\n      <th>IDE_COL<\/th>\n      <th>IDE_CP<\/th>\n      <th>CVE_LOC_RES<\/th>\n      <th>DES_LOC_RES<\/th>\n      <th>CVE_MPO_RES<\/th>\n      <th>DES_MPO_RES<\/th>\n      <th>DES_JUR_RES<\/th>\n      <th>CVE_EDO_RES<\/th>\n      <th>DES_EDO_RES<\/th>\n      <th>ESTATUS_CASO<\/th>\n      <th>CVE_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_FINAL<\/th>\n      <th>FEC_INI_SIGNOS_SINT<\/th>\n      <th>ANO<\/th>\n      <th>SEM<\/th>\n      <th>MANEJO<\/th>\n      <th>DES_INS_UNIDAD<\/th>\n      <th>DENGUE_SER_TRIPLEX<\/th>\n      <th>FEC_INGRESO<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,9,10,12,15,17,18,22,23,24,26]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3a3f634995aca40a403d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3a3f634995aca40a403d">{"x":{"filter":"none","data":[["1","2"],[886120,889065],[9,27],[2,1],["CALLE","CALLE"],["MADVID","RIO CAZONES"],["19","110"],["",""],["AGUSTÍN LARA Colonia","MIGUEL HIDALGO Fraccionamiento"],[93270,93319],[1,1],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],[131,131],["POZA RICA DE HIDALGO","POZA RICA DE HIDALGO"],["POZA RICA","POZA RICA"],[30,30],["VERACRUZ","VERACRUZ"],[2,2],[2,2],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["DENGUE CON SIGNOS DE ALARMA","DENGUE CON SIGNOS DE ALARMA"],["2021-01-24","2021-03-23"],[2021,2021],[4,12],[1,1],["IMSS","IMSS"],[null,2],["2021-01-27","2021-03-25"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>VEC_ID<\/th>\n      <th>IDE_EDA_ANO<\/th>\n      <th>IDE_SEX<\/th>\n      <th>DES_CAL<\/th>\n      <th>IDE_CAL<\/th>\n      <th>NUM_EXT<\/th>\n      <th>NUM_INT<\/th>\n      <th>IDE_COL<\/th>\n      <th>IDE_CP<\/th>\n      <th>CVE_LOC_RES<\/th>\n      <th>DES_LOC_RES<\/th>\n      <th>CVE_MPO_RES<\/th>\n      <th>DES_MPO_RES<\/th>\n      <th>DES_JUR_RES<\/th>\n      <th>CVE_EDO_RES<\/th>\n      <th>DES_EDO_RES<\/th>\n      <th>ESTATUS_CASO<\/th>\n      <th>CVE_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_PROBABLE<\/th>\n      <th>DES_DIAG_FINAL<\/th>\n      <th>FEC_INI_SIGNOS_SINT<\/th>\n      <th>ANO<\/th>\n      <th>SEM<\/th>\n      <th>MANEJO<\/th>\n      <th>DES_INS_UNIDAD<\/th>\n      <th>DENGUE_SER_TRIPLEX<\/th>\n      <th>FEC_INGRESO<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,9,10,12,15,17,18,22,23,24,26]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="subir-el-csv-a-y-creamos-el-vector-de-direcciones" class="section level3" number="4.2.2">
@@ -728,13 +739,16 @@ es un valor lógico para indicar si el mapa es por AGEB
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="hotspots.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="hotspots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="clusters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

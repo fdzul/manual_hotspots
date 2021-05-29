@@ -1,3 +1,5 @@
+# (PART) Sección {-}
+
 # **<span style="color:#003300;">Hotspots</span>** {#hotspots}
 
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 

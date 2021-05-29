@@ -1,4 +1,4 @@
-# **<span style="color:#003300;">Cálculo de los Hotspots en R</span>** {#hotspotsr}
+# **<span style="color:#003300;">Hotspots en R</span>** {#hotspotsr}
 
 
 ## **<span style="color:#003300;">Bajar las bases de datos del [SINAVE](https://www.sinave.gob.mx/).</span>**

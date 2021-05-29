@@ -67,3 +67,9 @@ pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots.
 hotspotsr
 algoritmo-para-el-cálculo-de-los-hotspots
 eliminar-duplicados-y-guardar
+clusters
+clustersr
+cadenas
+cadenasr
+cox
+coxr

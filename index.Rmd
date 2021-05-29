@@ -115,7 +115,8 @@ plot(sf::st_geometry(gua$locality))
 # **<span style="color:#003300;">Estructura de Manual</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;"> El manual incluye tres análisis espaciales, un análisis de para datos espaciales de área (areal analysis) con el estadístico espacial local $G{_i}^{*}$, tres análisis para datos espaciales de patron de puntos espaciales (point pattern), dos son conocidos como space-time analysis y son realizados don los estadísticos satscan statistics & knox test y el tercer análisis utiliza un modelo log-Gaussian Cox process. El libro incluye para cada análisis un capítulo donde se describe el algoritmo y un capítulo donde se describe su implementación en el lenguaje de programación de [**R**](https://cran.r-project.org/).</span>
+<span style="color:#660033;"> El manual incluye tres análisis espaciales, un análisis de para datos espaciales de área (areal analysis) con el estadístico espacial local $G{_i}^{*}$, tres análisis para datos espaciales de patron de puntos espaciales (point pattern), dos son conocidos como space-time analysis y son realizados don los estadísticos satscan statistics & knox test y el tercer análisis utiliza un modelo log-Gaussian Cox process.
+El libro incluye cuatro secciones o apartados, una seccion para la introducción y el objetivo del libro, y un apartado que incluye para cada análisis un capítulo donde se describe el algoritmo y un capítulo donde se describe su implementación en el lenguaje de programación de [**R**](https://cran.r-project.org/).</span>
 
 # **<span style="color:#003300;">Agradecimientos</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
