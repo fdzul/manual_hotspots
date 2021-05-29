@@ -1,0 +1,9 @@
+# **<span style="color:#003300;" >Introducción </span>** {#intro}
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+<span style="color:#660033;">Los hotspots de las arbovirosis transmitidas por Aedes aegypti son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/o zika (Bisanzio et al 2017; Dzul-Manzanilla et al 2021). Actualmente, los hotspots son la principal estrategia de identificación de las áreas de riesgo en el interior de los grandes centros urbanos endémicos de dengue y es ampliamente recomendada por la Organización Panamericana de de la Salud (2019) y grupos científicos (Vanlerberghe et al., 2017;  Olliaro et al., 2018 Roiz et al., 2019).</span>
+
+<span style="color:#660033;">Los procedimientos y cálculos en los respectivos programas (GeoDA, ArcView, ArcGis, R y Python) es completemente restrictivo a la comunidad científica y grupos académicos con expertis. La operacionalización de los algoritmos para la identificación de los hotspots en los programas de salud en México, es el paso siguiente que se requiere para que la estrategía de focalización de los hotspots se escale en todo el país.</span>
+
+<span style="color:#660033;">En el presente manual se describen los pasos lógicos para la identificación de los hotspots de los casos de dengue y los hotspots de la abundancia el vector usando bases de datos históricas y bases de datos recientes. Así mismo, se describe la identificación de cluster de transmisión y la identificación de las cadenas  de transmisión. Todos los análisis espaciales son implementados en R.</span>

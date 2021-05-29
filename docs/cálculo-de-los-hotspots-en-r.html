@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en área urbanas de México</title>
+  <meta name="description" content="El manual describe la Identificación de los hotspots en R" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en área urbanas de México" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="El manual describe la Identificación de los hotspots en R" />
+  <meta name="github-repo" content="fdzul/manual_hotspots" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Cálculo de los Hotspots en R | Manual para la Identificación de los hotspots del dengue en área urbanas de México" />
+  
+  <meta name="twitter:description" content="El manual describe la Identificación de los hotspots en R" />
+  
+
+<meta name="author" content="Felipe Antonio Dzul Manzanilla" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hotspots.html"/>
+
+<script src="libs/header-attrs-2.8.4/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Manual para la Identificación de los hotspots en R</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a>
+<ul>
+<li><a href="index.html#felipe-antonio-dzul-manzanilla"><strong><span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span></strong></a></li>
+<li><a href="index.html#fabián-correa-morales"><strong><span style="color:#003300;">Fabián Correa Morales</span></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
+<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
+<li class="chapter" data-level="3" data-path="hotspots.html"><a href="hotspots.html"><i class="fa fa-check"></i><b>3</b> <strong><span style="color:#003300;">Hotspots</span></strong></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="hotspots.html"><a href="hotspots.html#análisis-de-la-información-epidemiológica-y-entomológica"><i class="fa fa-check"></i><b>3.1</b> <strong>Análisis de la Información epidemiológica y entomológica</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="hotspots.html"><a href="hotspots.html#hotspots-de-transmisión-histórica"><i class="fa fa-check"></i><b>3.2</b> <strong>Hotspots de transmisión histórica</strong></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="hotspots.html"><a href="hotspots.html#algoritmo-para-el-cálculo-de-los-hotspots-de-transmisión"><i class="fa fa-check"></i><b>3.2.1</b> Algoritmo para el cálculo de los <strong>hotspots de transmisión</strong></a></li>
+<li class="chapter" data-level="3.2.2" data-path="hotspots.html"><a href="hotspots.html#referencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong>Referencias</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cálculo-de-los-hotspots-en-r.html"><a href="cálculo-de-los-hotspots-en-r.html"><i class="fa fa-check"></i><b>4</b> <strong>Cálculo de los Hotspots en R</strong></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cálculo-de-los-hotspots-en-r.html"><a href="cálculo-de-los-hotspots-en-r.html#bajar-las-bases-de-datos-del-sinave."><i class="fa fa-check"></i><b>4.1</b> Bajar las bases de datos del <span>SINAVE</span>.</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="cálculo-de-los-hotspots-en-r.html"><a href="cálculo-de-los-hotspots-en-r.html#escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx."><i class="fa fa-check"></i><b>4.1.1</b> Escribir en el buscador de preferencia la página del sinave (<span>https://www.sinave.gob.mx/</span>).</a></li>
+<li class="chapter" data-level="4.1.2" data-path="cálculo-de-los-hotspots-en-r.html"><a href="cálculo-de-los-hotspots-en-r.html#en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector."><i class="fa fa-check"></i><b>4.1.2</b> En la página del sinave buscar y darle click al <strong>boton Enfermedades Transmitidas por Vector</strong>.</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Manual para la Identificación de los hotspots del dengue en área urbanas de México</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cálculo-de-los-hotspots-en-r" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> <strong>Cálculo de los Hotspots en R</strong></h1>
+<div id="bajar-las-bases-de-datos-del-sinave." class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Bajar las bases de datos del <a href="https://www.sinave.gob.mx/">SINAVE</a>.</h2>
+<div id="escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx." class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Escribir en el buscador de preferencia la página del sinave (<a href="https://www.sinave.gob.mx/" class="uri">https://www.sinave.gob.mx/</a>).</h3>
+</div>
+<div id="en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector." class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> En la página del sinave buscar y darle click al <strong>boton Enfermedades Transmitidas por Vector</strong>.</h3>
+<p><img src="https://www.sinave.gob.mx/imagenes4t/imagen9_.png" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hotspots.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/fdzul/manual_hotspots/edit/master/03-hotspots.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["manual_hotspots.pdf", "manual_hotspots.epub", "manual_hotspots.mobi"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
