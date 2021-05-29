@@ -4,7 +4,7 @@ highlight: tango
   config:
     toc:
       before: |
-        <li><a href="./">Manual para la Identificación de los hotspots en R</a></li>
+        <li><a href="./">Hotspots en R</a></li>
       after: |
         <li><a href="https://github.com/fdzul">Felipe Dzul Antonio Dzul Manzanilla</a></li>
         <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales">Fabian Correa</a></li>
