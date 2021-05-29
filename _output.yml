@@ -1,14 +1,11 @@
 bookdown::gitbook:
-highlight: tango
   css: style.css
   config:
     toc:
       before: |
-        <li><a href="./">Hotspots en R</a></li>
+        <li><a href="./">Munual Hotspots in R</a></li>
       after: |
-        <li><a href="https://github.com/fdzul">Felipe Dzul Antonio Dzul Manzanilla</a></li>
-        <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales">Fabian Correa</a></li>
-        <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez">Arturo Baéz Hernández </a></li>
+        <li><a href="https://github.com/fdzul" target="blank">Felipe Dzul</a></li>
     edit: https://github.com/fdzul/manual_hotspots/edit/master/%s
     download: ["pdf", "epub", "mobi"]
 bookdown::pdf_book:
@@ -21,5 +18,4 @@ bookdown::epub_book: default
 bookdown::html_book:
   css: toc.css
 ouput_dir: docs
-cover-image: images/cover.jpg
-download: ["pdf", "epub", "mobi"]
+
