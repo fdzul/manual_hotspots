@@ -11,6 +11,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: fdzul/manual_hotspots
 cover-image: images/cover.jpg
+url: https://fdzul.github.io/manual_hotspots/
 favicon: "favicon.ico"
 description: "El manual describe la Identificación de los hotspots en R"
 ---
