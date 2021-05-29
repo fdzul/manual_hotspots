@@ -1,7 +1,7 @@
 --- 
 title: |
    ![](images/cover.jpg){width=400px style="display: block; margin:0 auto; align:center;" }
-   <center> Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</center>
+   <center> **<span style="color:#003300;">Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</span>** </center>
 author: "Felipe Antonio Dzul Manzanilla"
 date: "2021: Last compiled `r Sys.Date()`"
 site: bookdown::bookdown_site
