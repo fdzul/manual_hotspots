@@ -3,7 +3,7 @@
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
 
-## **Análisis de la Información epidemiológica y entomológica**
+## **<span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span>**
 
 <span style="color:#660033;">La idea central es la identificación de los hotspots de transmisión (áreas con mayor concentración de casos ) y los hotspots del vector (áreas con mayor abundancia de huevos) con las bases de datos históricas, asumiendo que ambos hotspots (casos y vector) tienen concordancia espacial. Posteriormente, se identifican los cluster de casos y las cadenas de transmisión activa mediante el análisis con space-time con **[SaTScan](https://www.satscan.org/)** y **[ClusterSeer](https://www.biomedware.com/software/clusterseer/)** y por último, el análisis hotspots de la abundancia de huevos con las bases de datos de ovitrampas actuales.</span>
 
@@ -39,11 +39,10 @@ DiagrammeR::grViz("digraph {
 
 ```
 
-## **Hotspots de transmisión histórica**
-
+## **<span style="color:#003300;">Hotspots de transmisión histórica</span>**
 <span style="color:#660033;">Para la determinación de los hotspots de transmisión histórica, los clusters de casos y las cadenas de transmisión, como primer paso se bajan las bases de datos de dengue en el **[SINAVE](https://www.sinave.gob.mx/)**. Como segundo paso, se geocodifican las direcciones de los domicilios de los casos con el servicio de [geocodificación API de google](https://developers.google.com/maps/documentation/geocoding/overview?hl=es-419) en R y la función ***[geocode]()*** del paquete  ***[ggmap](https://github.com/dkahle/ggmap)***. Como tercer paso se baja la información cartográfica de las localidades y los **AGEBs** (Área Geoestadística Básica) del **[INEGI](https://www.inegi.org.mx/)** y cuarto paso se selecciona la localidad de interes y se extraen los AGEBs (Áreas Geoestadísticas Básicas) de la localidad de interes. Quinto paso, se agregan los casos por AGEBs. En el paso seis se calcula el Z score de los casos por año con la siguiente formula:($\frac{x{_i}-mean}{sd}$) el número de casos de cada AGEBs es restado por el promedio de los casos por AGEB y diferencia es dividida entre la desviacion estandar de los casos. En el paso siete se calcula la matriz de adjacencias para los AGEBs. El z-score de los casos y la matriz de adjacencias son el ingrediente de la formula para calcular el estadístico espacial local Getis&Ord ($G{_i}^{*}$) (paso 8). En el paso nueve se realiza la corrección de Bonferroni y en el paso diéz se calcula los hotspots. Los hotspots son definidos como los AGEBs con los valores de Z (valores producidos por el estadístico local espacial ($G{_i}^{*}$) mayores al umbral definido por la correccion de Bonferroni y por último se visualizan los hotspots (paso 11).</span> 
 
-### Algoritmo para el cálculo de los **hotspots de transmisión**
+### <span style="color:#003300;">Algoritmo para el cálculo de los Hotspots</span>
 
 <span style="color:#660033;"> 1. Bajar las bases de datos del **[SINAVE](https://www.sinave.gob.mx/)**.</span>
 
@@ -109,4 +108,4 @@ DiagrammeR::grViz("digraph {
 
 ```
 
-### **Referencias**
+### **<span style="color:#003300;">Referencias</span>**
