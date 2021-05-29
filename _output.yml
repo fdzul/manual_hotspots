@@ -8,7 +8,7 @@ highlight: tango
       after: |
         <li><a href="https://github.com/fdzul">Felipe Dzul Antonio Dzul Manzanilla</a></li>
         <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales">Fabian Correa</a></li>
-        <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez/">Arturo Baéz Hernández </a></li>
+        <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez">Arturo Baéz Hernández </a></li>
     edit: https://github.com/fdzul/manual_hotspots/edit/master/%s
     download: ["pdf", "epub", "mobi"]
 bookdown::pdf_book:

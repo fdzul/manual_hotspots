@@ -95,3 +95,86 @@ plot(sf::st_geometry(gua$locality))
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
 
+
+<!--chapter:end:index.Rmd-->
+
+# **<span style="color:#003300;" >Introducción </span>** {#intro}
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+<span style="color:#660033;">Los hotspots de las arbovirosis transmitidas por Aedes aegypti son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/o zika (Bisanzio et al 2017; Dzul-Manzanilla et al 2021). Actualmente, los hotspots son la principal estrategia de identificación de las áreas de riesgo en el interior de los grandes centros urbanos endémicos de dengue y es ampliamente recomendada por la Organización Panamericana de de la Salud (2019) y grupos científicos (Vanlerberghe et al., 2017;  Olliaro et al., 2018 Roiz et al., 2019).</span>
+
+<span style="color:#660033;">Los procedimientos y cálculos en los respectivos programas (GeoDA, ArcView, ArcGis, R y Python) es completemente restrictivo a la comunidad científica y grupos académicos con expertis. La operacionalización de los algoritmos para la identificación de los hotspots en los programas de salud en México, es el paso siguiente que se requiere para que la estrategía de focalización de los hotspots se escale en todo el país.</span>
+
+<span style="color:#660033;">En el presente manual se describen los pasos lógicos para la identificación de los hotspots de los casos de dengue y los hotspots de la abundancia el vector usando bases de datos históricas y bases de datos recientes. Así mismo, se describe la identificación de cluster de transmisión y la identificación de las cadenas  de transmisión. Todos los análisis espaciales son implementados en R.</span>
+
+<!--chapter:end:01-intro.Rmd-->
+
+# **<span style="color:#003300;"> Objetivo </span>** {#objetivos}
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+<span style="color:#660033;">I.	Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para la identificación de los hotspots en las áreas urbanas endémicas de dengue en México.</span>
+
+<span style="color:#660033;">II. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de las cadenas de transmisión en las áreas urbanas endémicas de dengue en México.</span>
+
+
+<span style="color:#660033;">III. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de los clusters de transmisión en las áreas urbanas endémicas de dengue  en México.</span>
+
+<span style="color:#660033;">El manual para la identificación de los hotspots en las localidades urbanas endémicas no solo está dirigido al personal operativo, mandos medios y directivos de los Programas de Prevención y Control de las arbovirosis transmitidas por ***Aedes*** de la Secretaria de Salud de México, sino también a la comunidad académica relacionada con la investigación operativa sobre los hotspots de dengue y al público en general interesado en el tema.</span>
+
+<!--chapter:end:02-objetivos.Rmd-->
+
+
+# **<span style="color:#003300;">Hotspots</span>** {#hotspots}
+
+Placeholder
+
+
+## **Análisis de la Información epidemiológica y entomológica**
+## **Hotspots de transmisión histórica**
+### Algoritmo para el cálculo de los **hotspots de transmisión**
+### **Referencias**
+
+<!--chapter:end:03-hotspots.Rmd-->
+
+
+# **Cálculo de los Hotspots en R** {#hotspotsr}
+
+Placeholder
+
+
+## Bajar las bases de datos del [SINAVE](https://www.sinave.gob.mx/).
+### Escribir en el buscador de preferencia la página del sinave (https://www.sinave.gob.mx/).
+### En la página del sinave buscar y darle click al **boton Enfermedades Transmitidas por Vector**.
+### Ingresar el nombre del usurio y contraseña.
+### Ingresar a la sección de **Reportes**.
+### Darle click a **Descarga de Datos Vectores**
+### Bajar la base de datos de la última fecha de la enfermedad de interés.
+### Guardar la base en la carpeta de interes.
+### Extraer el txt del archivo con extensión RAR.
+## Geocodificación de la base de datos de Dengue.
+### Subir la base de datos de Dengue a ![](https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg){width=10%}
+#### Subir la base de datos de dengue de la semana actual.
+#### Subir la base de datos de dengue de la semana pasada
+#### Ordenar la base por el ID del paciente y extraer los casos no geocodificados de la semana actual.
+#### Guardar el resultado
+#### head(), dim() y names()
+### Subir el csv a ![](https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg){width=10%} y creamos el vector de direcciones
+### Realizar la geocodificación
+#### manipulación de texto
+#### Geocodificación.
+###  Guardar la información en RData
+#### Subir la base geocodificada
+#### Subir la base de casos
+#### Elminar duplicados y guardar
+## Bajar los shapefile del [INEGI](https://www.inegi.org.mx/).
+## Contar el número de casos por AGEB (agregación espacial).
+### subir la base datos geocodificada.
+### subir los AGEBs.
+### Realizar la agregación espacial. 
+## Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.
+## Visualizar los hotspots.
+
+<!--chapter:end:04-hotspotsr.Rmd-->
+
