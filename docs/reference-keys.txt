@@ -64,3 +64,4 @@ subir-la-base-geocodificada
 subir-la-base-de-casos
 elminar-duplicados-y-guardar
 pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots.
+hotspotsr
