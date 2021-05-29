@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Munual Hotspots in R</a></li>
+        <li><a href="./">Manual Hotspots in R</a></li>
       after: |
         <li><a href="https://github.com/fdzul" target="blank">Felipe Dzul</a></li>
         <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank">Fabián Correa-Moreles</a></li>
