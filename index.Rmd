@@ -8,14 +8,10 @@ documentclass: book
 biblio-style: apalike
 link-citations: yes
 github-repo: fdzul/manual_hotspots
-cover-image: "images/cover.jpg"
+cover-image: images/cover.jpg
 favicon: "favicon.ico"
 description: "El manual describe la Identificación de los hotspots en R"
 ---
-
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://www.crcpress.com/product/isbn/9781138700109'}
-knitr::include_graphics('images/cover.jpg', dpi = NA)
-```
 
 # **<span style="color:#003300;">Prologo</span>**{-}
 
