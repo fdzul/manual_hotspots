@@ -73,3 +73,13 @@ cadenas
 cadenasr
 cox
 coxr
+space-time-análisis-con-satscan-para-determinar-los-clusters-de-casos.
+span-stylecolor003300space-time-análisis-con-satscan-para-determinar-los-clusters-de-casos.
+identificación-de-cluster-de-transmisión-con-el-estadístico-satscan-space-time-análisis-con
+identificación-de-clusters-de-transmisión-con-el-estadístico-satscan-space-time-análisis
+identificación-de-clusters-de-transmisión
+tab:unnamed-chunk-1
+tab:unnamed-chunk-2
+fig:unnamed-chunk-3
+fig:unnamed-chunk-4
+algoritmo-para-space-time-análisis-con-satscan

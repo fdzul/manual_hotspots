@@ -1,4 +1,228 @@
 # (PART) Sección {-}
 
-# **<span style="color:#003300;">Clusters</span>** {#clusters}
+# **<span style="color:#003300;">Clusters de transmisión </span>** {#clusters}
+
+## <span style="color:#003300;">**Identificación de clusters de transmisión**</span>
+
+<span style="color:#660033;">La identificación de clusters de transmisión de los virus del dengue se realiza con el estadístico satscan, este análisis es conocido en ingles como space-time analysis y por lo general es realizado en el software **[SaTScan](https://www.satscan.org/)**. Actualmente existe un paquete en **[R]()** llamado rsatscan que corre el software **[SaTScan](https://www.satscan.org/)** a través de **[R]()**. El requisito es tener instalado software **[SaTScan](https://www.satscan.org/)** en el equipo de computo. La identificación de las cadenas de transmisión del dengue con las bases de datos del **[SINAVE]()** es realizado en **[R]()** a traves del análisis space-time con la función **[satscanr]()** del paquete **[denhotspots]()**</span>
+
+<span style="color:#660033;">Los primeros cuatro pasos son similares al análisis de los hotspots de transmisión histórica, descrito en el apartado previo. La diferencia rádica en que solo es de ínteres el shapefile de las localidades con la finalidad de extraer los casos de la localidad de interes. Como paso cinco se generan dos archivos para el análisis espacio-temporal de los casos: 1) un archivo que contiene tres columnas llamado cas y 2) un archivo con tres columnas llamado geo, ambos nombrados por convención y con la finalidad nemotécnica. El archivo cas hace referencia al archivo que tiene los casos y el archivo geo hace referencia al archivo con la información geográfica. El archivo cas tiene las variables id (identificador del caso), cases (casos por inicio de síntomas), onset (fecha de inicio de síntomas). El archivo geo tiene las variables id(cases), longitud (long) y latitud (lat).</span>
+
+```{r echo=FALSE,dpi=300, fig.align ="center", out.width = "100%",fig.cap = "Ejemplo de un archivo *.cas"}
+load("C:/Users/felip/OneDrive/proyects/hotspots/9.cas&geo_files/veracruz/Orizaba.RData")
+knitr::kable(head(x_cas), 
+             caption = "Ejemplo de un archivo cas.")
+
+```
+
+```{r echo=FALSE,fig.align ="center", out.width = "100%", fig.cap = "Ejemplo de un archivo geo"}
+load("C:/Users/felip/OneDrive/proyects/hotspots/9.cas&geo_files/veracruz/Orizaba.RData")
+knitr::kable(head(x_geo), 
+             caption = "Ejemplo de un archivo geo.")
+
+```
+
+
+<span style="color:#660033;">En el paso seis se definen los parámetros del **input**, **análisis** y del **output** (Figura 5.1). En los parametros del **input** esta la selección de los archivos cas/geo, el tipo de coordenadas geográficas, la precisión del tiempo (año, mes, día), la fecha de inicio y la fecha del fin del periódo de estudio. Para el análisis de space-time se definió como día (inicio de los síntomas) la precisión del tiempo y las cordenadas fueron longitud/latitud (crs = 4326).
+En los parámetros del **análisis** se define el tipo de análisis, el modelo de probabilidad, la agregación del tiempo y la busqueda de áreas con altas tasa, bajas tasas o ambas. En los análisis space-time con dengue se usan los siguientes parámetros:</span>
+
+
+
+* <span style="color:#660033;">Analysis/type analysis/Space-Time</span>
+
+* <span style="color:#660033;">Analysis/Probabiliity Model/Space-Time Permutation</span>
+
+* <span style="color:#660033;">Analysis/scan areas/High Rates</span>
+
+* <span style="color:#660033;">Analysis/time aggregation/Days</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Spatial Window/Maximun Spatial Cluster Size/0.4 km radius</span>
+
+*  <span style="color:#660033;">Advanced Analysis Features/Spatial Window/Spatial Window Shape/Circular</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Cluster Restriction/2 cases</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Inference/Standard Monte Carlo</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Inference/Monte Carlo Replications/999</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Temporal Windows/Maximun Temporal Cluster Size/20 Days</span>
+
+* <span style="color:#660033;">Advanced Analysis Features/Temporal Windows/Minimun Temporal Cluster Size/1 Days (es valor entrada)</span>
+
+
+<span style="color:#660033;">En los parámetros del **output** se define donde se guardaran los archivos de salida y que tipo de archivos. Para los análisis de space-time se solicitan los siguientes archivos:
+
+1) <span style="color:#660033;">Shapefile file for GIS software</span>
+
+2) <span style="color:#660033;">Cluster Information</span>
+
+3) <span style="color:#660033;">Stratified Cluster Information</span>
+
+4) <span style="color:#660033;">Location Information</span>
+
+5) <span style="color:#660033;">Simulated Log Likelihood Ratios/Test Statistics.</span>
+
+<span style="color:#660033;">Todos los archivos tienen extensión dBase, excepto el primero que esta compuesto por varias extensiones (.prj, .shp, .shx). adicionalmente pare la información geográfica también existe la extension kml.</span>
+
+```{r, echo=FALSE, dpi=300, fig.align ="center", out.width = "100%",fig.cap = "Algoritmo para el análisis space-time con SaTScan."}
+DiagrammeR::grViz("digraph {
+
+  # graph definitions
+  graph [layout = dot, rankdir = LR]
+  
+  # node definitions
+  node [shape = rectangle, style = filled, color = grey] 
+  
+  
+  # flow chart for cas y geo file
+  cas [label = 'cas file']
+  geo [label = 'geo file']
+  
+  # SaTScan deginition
+  
+  SaTScan [label = 'SaTScan',  style = filled, color = orange]
+  input [label = 'Input']
+  analysis [label = 'Analysis']
+  output [label = 'Output']
+  
+  # Input
+  time_precision [label = 'Time Precision']
+  start_date [label = 'Start Date']
+  end_date [label = 'End Date']
+  coord [label = 'Coordinates']
+  lon_lat [label = 'Long/Lat']
+  
+  # Analysis
+  type_ana [label = 'Type of Analysis']
+  time_ana_retro [label = 'Retrospective Analysis']
+  space_time [label = 'Space-Time']
+  
+  prob_model [label = 'Probability Model']
+  space_time_per [label = 'Space-Time Permutation']
+  
+  
+  scan [label = 'Scan Areas with']
+  high_rates [label = 'High Rates']
+  
+  time_aggr [label = 'Time Aggregation']
+  day [label = 'Day']
+  
+  # Advanced Analysis Features/Temporal Windows/Maximun Temporal Cluster Size/20 Days
+  adv_ana [label = 'Advanced Analysis Features']
+  temp_window [label = 'Temporal Windows']
+  max_temp_size [label = 'Maximun Temporal Cluster Size']
+  min_temp_size [label = 'Minimun Temporal Cluster Size']
+  
+  day20 [label = '20 Days']
+  day1 [label = '1 Days']
+  
+  adv_ana -> temp_window
+  temp_window -> {max_temp_size, min_temp_size}
+  max_temp_size -> day20
+  min_temp_size -> day1
+  
+  #
+  spatial_window [label = 'Spatial Windows']
+  adv_ana -> spatial_window
+  max_spatial_size [label = '0.40 km']
+  spatial_window -> max_spatial_size
+  
+  # Output
+  dir [label = 'Directory File']
+  geo_output [label = 'Geographical Output']
+  col_output [label = 'Column Output Format']
+  
+  # dBase
+  clus_inf [label = 'Cluster Information']
+  strat_clus [label = 'Stratified Cluster Information']
+  loc_inf [label = 'Location Information']
+  stat [label = 'Test Statistics']
+  
+  
+    
+  # edge definitions with the node IDs
+  edge [color = black]
+  
+  SaTScan -> {input, analysis, output}
+  input -> {time_precision, cas, geo, start_date, end_date, coord}
+  analysis -> {type_ana, prob_model, scan, time_aggr, adv_ana}
+  output -> {dir, geo_output, col_output}
+  col_output -> {clus_inf, strat_clus, loc_inf, stat}
+  type_ana -> time_ana_retro -> space_time
+  prob_model -> space_time_per 
+  scan -> high_rates
+  time_aggr -> day
+  time_precision -> day
+  coord -> lon_lat
+  
+  
+  }", 
+  height = 600)
+
+```
+
+
+## <span style="color:#003300;">Algoritmo para **Space-Time análisis** con **[SaTScan](https://www.satscan.org/)**</span>
+
+1. <span style="color:#660033;">Bajar las bases de **[SINAVE](https://www.sinave.gob.mx/)**.</span>
+
+2. <span style="color:#660033;">Geocodificar las bases.</span>
+
+3. <span style="color:#660033;">Bajar los shapefile del **[INEGI](https://www.inegi.org.mx/)**.</span>
+
+4. <span style="color:#660033;">Seleccionar la localidad de ínteres.</span>
+
+5. <span style="color:#660033;">Generar los archivos cas y geo.</span>
+
+6. <span style="color:#660033;">Definir los parametros del input, análisis y resultado (output).</span>
+
+7. <span style="color:#660033;">Seleccionar los cluster y los casos con valores de p < 0.05</span> 
+
+8. <span style="color:#660033;">Visualizar los cluster de transmisión.</span>
+
+
+```{r, echo=FALSE, dpi=300, fig.align ="center", out.width = "100%",fig.cap = "Algoritmo para el análisis space-time con SaTScan y R."}
+DiagrammeR::grViz("digraph {
+
+  # graph definitions
+  graph [layout = dot, rankdir = TB]
+  
+  # node definitions
+  node [shape = rectangle, style = filled, color = grey] 
+  
+  # flowchart for hotspots
+  sinave [label = 'SINAVE']
+  denv [label = 'Bases de DENV']
+  geocode [label = 'Geocodificación']
+  
+  # flow chart for inegi
+  inegi [label = 'INEGI']
+  loc [label = 'Localidades Shapefile']
+  loc_esp [label = 'Localidad de Ínteres']
+  
+  # flow chart for cas y geo file
+  case_by_loc [label = 'Casos de la Localidad de Ínteres']
+  cas [label = 'cas file']
+  geo [label = 'geo file']
+  
+  # SaTScan definition
+  
+  input [label = 'Input']
+  analysis [label = 'Analysis']
+  output [label = 'Output']
+  
+  # edge definitions with the node IDs
+  edge [color = black]
+  sinave -> denv -> geocode
+  inegi -> loc -> loc_esp
+  loc_esp -> case_by_loc
+  geocode -> case_by_loc -> {cas, geo} -> input -> analysis
+  analysis -> output -> p_values -> cluster
+  p_values [label = 'p < 0.05']
+  cluster [label = 'Cluster de Transmisión', style = filled, color = orange]
+  }", 
+  height = 500)
+
+```
 
