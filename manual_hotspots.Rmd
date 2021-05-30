@@ -1,0 +1,234 @@
+--- 
+title: <span style="color:#003300;">Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</span>
+author: <span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span>
+date: "2021: Last compiled `r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+github-repo: fdzul/manual_hotspots
+cover-image: images/cover.jpg
+url: https://fdzul.github.io/manual_hotspots/
+favicon: "favicon.ico"
+description: "El manual describe la Identificación de los hotspots en R"
+---
+
+#  **<span style="color:#003300;">Welcome</span>** {-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+# (PART) Sección {-}
+
+# **<span style="color:#003300;">Introducción </span>** {#intro}
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+<span style="color:#660033;">Los hotspots de las arbovirosis transmitidas por Aedes aegypti son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/o zika (Bisanzio et al 2017; Dzul-Manzanilla et al 2021). Actualmente, los hotspots son la principal estrategia de identificación de las áreas de riesgo en el interior de los grandes centros urbanos endémicos de dengue y es ampliamente recomendada por la Organización Panamericana de de la Salud (2019) y grupos científicos (Vanlerberghe et al., 2017;  Olliaro et al., 2018 Roiz et al., 2019).</span>
+
+<span style="color:#660033;">Los procedimientos y cálculos en los respectivos programas (GeoDA, ArcView, ArcGis, R y Python) es completemente restrictivo a la comunidad científica y grupos académicos con expertis. La operacionalización de los algoritmos para la identificación de los hotspots en los programas de salud en México, es el paso siguiente que se requiere para que la estrategía de focalización de los hotspots se escale en todo el país.</span>
+
+<span style="color:#660033;">En el presente manual se describen los pasos lógicos para la identificación de los hotspots de los casos de dengue y los hotspots de la abundancia el vector usando bases de datos históricas y bases de datos recientes. Así mismo, se describe la identificación de cluster de transmisión y la identificación de las cadenas  de transmisión. Todos los análisis espaciales son implementados en R.</span>
+
+<!--chapter:end:01-intro.Rmd-->
+
+# **<span style="color:#003300;"> Objetivo </span>** {#objetivos}
+
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+<span style="color:#660033;">I.	Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para la identificación de los hotspots en las áreas urbanas endémicas de dengue en México.</span>
+
+<span style="color:#660033;">II. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de las cadenas de transmisión en las áreas urbanas endémicas de dengue en México.</span>
+
+
+<span style="color:#660033;">III. Unificar y estandarizar los criterios, instrumentos, y cálculos que se requieren para identificación de los clusters de transmisión en las áreas urbanas endémicas de dengue  en México.</span>
+
+<span style="color:#660033;">El manual para la identificación de los hotspots en las localidades urbanas endémicas no solo está dirigido al personal operativo, mandos medios y directivos de los Programas de Prevención y Control de las arbovirosis transmitidas por ***Aedes*** de la Secretaria de Salud de México, sino también a la comunidad académica relacionada con la investigación operativa sobre los hotspots de dengue y al público en general interesado en el tema.</span>
+
+<!--chapter:end:02-objetivos.Rmd-->
+
+
+# (PART) Sección {-}
+# **<span style="color:#003300;">Hotspots</span>** {#hotspots}
+
+Placeholder
+
+
+## **<span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span>**
+## **<span style="color:#003300;">Hotspots de transmisión histórica</span>**
+### <span style="color:#003300;">Algoritmo para el cálculo de los Hotspots</span>
+### **<span style="color:#003300;">Referencias</span>**
+
+<!--chapter:end:03-hotspots.Rmd-->
+
+
+# **<span style="color:#003300;">Hotspots en R</span>** {#hotspotsr}
+
+Placeholder
+
+
+## **<span style="color:#003300;">Bajar las bases de datos del [SINAVE](https://www.sinave.gob.mx/).</span>**
+### **<span style="color:#660033;">Escribir en el buscador de preferencia la página del sinave (https://www.sinave.gob.mx/).</span>**
+### **<span style="color:#660033;">En la página del sinave buscar y darle click al boton Enfermedades Transmitidas por Vector.</span>**
+### **<span style="color:#660033;">Ingresar el nombre del usurio y contraseña.</span>** 
+### <span style="color:#660033;">Ingresar a la sección de **Reportes**.</span> 
+### <span style="color:#660033;">Darle click a **Descarga de Datos Vectores**</span> 
+### **<span style="color:#660033;">Bajar la base de datos de la última fecha de la enfermedad de interés.</span>** 
+### **<span style="color:#660033;">Guardar la base en la carpeta de interes.</span>** 
+### **<span style="color:#660033;">Extraer el txt del archivo con extensión RAR.</span>** 
+## **<span style="color:#003300;">Geocodificación de la base de datos de Dengue.</span>**
+### **<span style="color:#660033;">Subir la base de datos de Dengue a</span>**  ![](https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg){width=10%}
+#### **<span style="color:#660033;">Subir la base de datos de dengue de la semana actual.</span>** 
+#### **<span style="color:#660033;">Subir la base de datos de dengue de la semana pasada</span>** 
+#### **<span style="color:#660033;">Ordenar la base por el ID del paciente y extraer los casos no geocodificados de la semana actual.</span>**
+#### **<span style="color:#660033;">Guardar el resultado</span>** 
+#### **<span style="color:#660033;">head(), dim() y names()</span>** 
+### **<span style="color:#660033;">Subir el csv a</span>**  ![](https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg){width=10%} **<span style="color:#003300;">y creamos el vector de direcciones</span>**
+### **<span style="color:#660033;">Realizar la geocodificación</span>** 
+#### **<span style="color:#660033;">manipulación de texto</span>** 
+#### **<span style="color:#660033;">Geocodificación.</span>** 
+###  **<span style="color:#660033;">Guardar la información en RData</span>** 
+#### **<span style="color:#660033;">Subir la base geocodificada</span>** 
+#### **<span style="color:#660033;">Subir la base de casos</span>** 
+#### **<span style="color:#660033;">Eliminar duplicados y guardar</span>** 
+## **<span style="color:#003300;">Bajar los shapefile del [INEGI](https://www.inegi.org.mx/).</span>**
+## **<span style="color:#003300;">Contar el número de casos por AGEB (agregación espacial).</span>** 
+### **<span style="color:#660033;">subir la base datos geocodificada.</span>** 
+### **<span style="color:#660033;">subir los AGEBs.</span>** 
+### **<span style="color:#660033;"> Realizar la agregación espacial.</span>**
+## **<span style="color:#003300;">Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</span>** 
+## **<span style="color:#003300;">Visualizar los hotspots.</span>**  
+
+<!--chapter:end:04-hotspotsr.Rmd-->
+
+
+# (PART) Sección {-}
+# **<span style="color:#003300;">Clusters de transmisión </span>** {#clusters}
+
+Placeholder
+
+
+## <span style="color:#003300;">**Identificación de clusters de transmisión**</span>
+## <span style="color:#003300;">Algoritmo para **Space-Time análisis** con **[SaTScan](https://www.satscan.org/)**</span>
+
+<!--chapter:end:05-clusters.Rmd-->
+
+
+# **<span style="color:#003300;">Clusters de Transmisión en R</span>** {#clustersr}
+
+Placeholder
+
+
+## **<span style="color:#003300;">Identificación de los cluster de transmisión en R</span>**
+## **<span style="color:#003300;">Generar los archivos cas y geo</span>**.
+### **<span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span>**.
+### **<span style="color:#003300;">Paso 2. Subir las funciones </span>**.
+### **<span style="color:#003300;">Paso 3. Aplicar las funciones</span>**.
+## **<span style="color:#003300;">Definir los parametros del input, análisis y resultado (output).</span>**
+
+<!--chapter:end:06-clustersr.Rmd-->
+
+
+# (PART) Sección {-}
+# **<span style="color:#003300;">Cadenas de Transmisión</span>** {#cadenas}
+
+Placeholder
+
+
+## <span style="color:#003300;">**Space-Time con Knox test**</span>
+## **<span style="color:#003300;">Algorítmo para realizar la prueba de knox</span>**
+
+<!--chapter:end:07-cadenas.Rmd-->
+
+
+# **<span style="color:#003300;">Cadenas de Transmisión en R</span>** {#cadenasr}
+
+
+## **<span style="color:#003300;">Identificación de cadenas de transmisión en R</span>**
+
+<span style="color:#660033;">Los pasos uno al tres ya fueron descritos en los apartados previos. En el paso Generar los archivos cas y geo (paso 5) de la Identificación de cluster de transmisión además de generar los archivos cas y geo, se genera un archivo llamado x_data, el cual contiene la información necesaría para calcular la cadenas de transmisión.</span> 
+
+
+## **<span style="color:#003300;">Knox test</span>**
+
+<span style="color:#660033;">A esta base se le aplica el knox test para identificar las cadenas de transmisión. La función ***[denhotspots::knox()]()*** realiza la prueba de knox a la base de datos.</span><span style="color:#660033;>"La función tiene siete argumentos: **<span style="color:#7d9029">x</span>**,**<span style="color:#7d9029">crs</span>**,**<span style="color:#7d9029">dt</span>**,**<span style="color:#7d9029">ds</span>**,**<span style="color:#7d9029">sym</span>**, **<span style="color:#7d9029">sp_link</span>** & **<span style="color:#7d9029">planar_coord</span>**.</span>
+
+```{r, echo=FALSE}
+d <- data.frame(Argumento = c("x", "crs", "dt", "ds", "sym", "sp_link", "planar_coord"),
+                Definición = c("Es la base de datos con las coordenadas y fecha de inicio de síntomas",
+                               "Es el sistema de referencia de coordenadas", "Es la ventana temporal", "Es la ventana espacial",
+                               "Es el numero de simulaciones de Monte Carlo", "Es un valor lógico para indicar la clase del objeto el space-time link. Si es TRUE, la clase es sp, de los contrario es sf", "Es valor lógico para indicar si la base es projetada en un sistema planar (TRUE) o no (FALSE)"))
+kableExtra::kable(d)
+
+```
+
+
+```{r}
+# 1. Subir el archivo cas y geo generado con la función write_cas_geo
+load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+
+# 2. aplicar la prueba de knox
+library(magrittr)
+knox_res <- denhotspots::knox(x = x_data, 
+                              crs = "+proj=eqc", 
+                              ds = 400, 
+                              dt = 20, 
+                              sym = 1000, 
+                              sp_link = FALSE,
+                              planar_coord = FALSE)
+```
+
+
+### **<span style="color:#003300;">Visualización de las cadenas de Transmisión </span>** 
+
+<span style="color:#660033;">La visualización de las cadenas de transmisión se realiza a através de la función ***[denhotspots::space_time_link_map]()***. La función tiene cinco argumentos: **<span style="color:#7d9029">x</span>**, **<span style="color:#7d9029">locality</span>**, **<span style="color:#7d9029">cve_edo</span>**, **<span style="color:#7d9029">maptype</span>** &**<span style="color:#7d9029">facetmap</span>**</span>
+
+```{r, echo=FALSE}
+d <- data.frame(Argumento = c("x", "locality", "cve_edo", 
+                              "maptype", "facetmap"),
+                Definición = c("Es el resultado de la prueba de knox",
+                               "Es la localidad blanco",
+                               "Es la clave del estado",
+                               "Es el tipo de mapa y tiene dos valores (staticmap = mapa estático, intereactive_map = mapa interactivo)",
+                               "Es un valor lógico para indicar si el mapa estático se presente en facetas (TRUE) o no (FALSE)"))
+kableExtra::kable(d)
+
+```
+
+
+#### **<span style="color:#003300;">Mapa estático</span>** 
+```{r, cache=TRUE, warning=FALSE, message=FALSE}
+
+plotly::ggplotly(
+denhotspots::space_time_link_map(x = knox_res,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 maptype = "staticmap",
+                                 facetmap = FALSE))
+```
+
+#### **<span style="color:#003300;">Mapa estático en paneles por grupos de semanas</span>**
+```{r, cache=TRUE, warning=FALSE, message=FALSE}
+denhotspots::space_time_link_map(x = knox_res,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 maptype = "staticmap",
+                                 facetmap = TRUE)
+```
+
+<!--chapter:end:08-cadenasr.Rmd-->
+
+# (PART) Sección {-}
+
+# **<span style="color:#003300;">log-Gaussian Cox Process</span>** {#cox}
+
+<!--chapter:end:09-cox.Rmd-->
+
+# **<span style="color:#003300;">log-Gaussian Cox Process en R</span>** {#coxr}
+
+<!--chapter:end:10-coxr.Rmd-->
+
