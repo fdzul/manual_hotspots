@@ -90,3 +90,5 @@ paso-1.-subir-la-base-de-datos-geocodificada.
 paso-2.-subir-las-funciones-.
 paso-2.-aplicar-las-funciones.
 paso-3.-aplicar-las-funciones.
+definir-los-parametros-del-input-análisis-y-resultado-output.span
+definir-los-parametros-del-input-análisis-y-resultado-output.

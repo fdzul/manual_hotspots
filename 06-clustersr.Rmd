@@ -4,18 +4,18 @@
 
 <span style="color:#660033;">Dado que los pasos del uno al cuatro han sido abordados en la sección dos (hotspots de casos y del vector), el procedimiento lo iniciamos con el paso 5.</span> 
 
-### **<span style="color:#003300;">Generar los archivos cas y geo</span>**.
+## **<span style="color:#003300;">Generar los archivos cas y geo</span>**.
 
 <span style="color:#660033;">Para generar los archivos cas y geo, primero se carga la base de datos de los casos geocodificados, segundo se cargan dos funciones y por último se aplican las funciones. En esté último paso, se define la localidad, el identificador único del estado y la carpeta donde se van a guardar los archivos cas y geo.</span>
 
 
-#### **<span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span>**.
+### **<span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span>**.
 ```{r}
 load("C:/Users/felip/OneDrive/proyects/geocoding_mex/geocodemx_xalapa_ver/geocodemx_xalapa_ver/8.RData/geo_positive_den_xal_2008_2020.RData")
 ```
 
 
-#### **<span style="color:#003300;">Paso 2. Subir las funciones </span>**.
+### **<span style="color:#003300;">Paso 2. Subir las funciones </span>**.
 ```{r}
 # Step 5.2. cargamos las funciones ####
 source('C:/Users/felip/OneDrive/proyects/hotspots/3.Functions/write_cas_geo.R')
@@ -23,7 +23,7 @@ source('C:/Users/felip/OneDrive/proyects/satscan/3.Functions/cas_geo.R')
 
 ```
 
-#### **<span style="color:#003300;">Paso 3. Aplicar las funciones</span>**.
+### **<span style="color:#003300;">Paso 3. Aplicar las funciones</span>**.
 ```{r}
 library(magrittr)
 library(sf)
@@ -36,3 +36,70 @@ write_cas_geo(y = xy %>%
 ```
 
 
+## **<span style="color:#003300;">Definir los parametros del input, análisis y resultado (output).</span>**
+
+<span style="color:#660033;">Una vez generado los archivos cas y geo, podemos definir los parámetros para correr space-time análisis con rsatscan. el proceso es realizado en tres pasos. En el paso uno subimos los archivos geo y cas que se generaron en el subcapítulo anterior. En el paso dos usamos la funcion ***[denhotspots::satscanR]()*** y definimos los argumentos.</span>
+
+```{r, echo=FALSE, warning=FALSE, error=FALSE}
+library(magrittr)
+d <- data.frame(Argumento = c("cas_file", "geo_file",
+                              "start_date", "end_date",
+                              "spatial_window", "spatial_window"),
+                Definición = c("Es el archivo cas", "Es el archivo geo",
+                               "Es la fecha inicio del primer caso",
+                               "Es la fecha de inicio del último caso",
+                               "Es la resolución espacial (km)",
+                               "Es la resolución tempora (días)"))
+kableExtra::kable(d)
+
+```
+
+<span style="color:#660033;">La resolución temporal y espacial para el space-time análisis de dengue por conveniencia estamos considerando 20 días y 400 metros, respectivamente.</span>
+
+```{r, cache=TRUE}
+library(rsatscan)
+# 1. Subir el archivo cas y geo generado con la función write_cas_geo
+load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+
+# 2. Aplicar la función denhotspots::satscanR 
+x <- denhotspots::satscanR(cas_file = x_cas,
+                           geo_file = x_geo,
+                           start_date = stringr::str_replace_all(min(x_cas$date),
+                                                                 pattern = "-", replacement = "/"),
+                           end_date = stringr::str_replace_all(max(x_cas$date),
+                                                               pattern = "-", replacement = "/"),
+                           spatial_window = 0.4,
+                           temporal_window = 20)
+```
+
+
+<span style="color:#660033;">La selección de los cluster de transmisión y los casos con valores de p menores a 0.05, y su respectiva visualización se realiza  con la función ***[denhotspots::staticmap_satscan]()***. Esta función tiene la capacidad de visualizar los resultados del space-time analisis con rsatscan o SaTScan. En nuestro análisis con rsatscan definimos los argumentos de acuerdo a la siguiente tabla y visualizamos.</span>
+
+```{r, echo=FALSE, warning=FALSE, error=FALSE}
+library(magrittr)
+d <- data.frame(Argumento = c("x", "rsatscan","satscan",
+                              "locality", "cve_edo",
+                              "path_shapeclust",
+                              "path_gis"),
+                Definición = c("Es la base de casos de dengue. Esta fue generado en el paso 5.",
+                               "es el resultado del space-time con rsatscan",
+                               "Es un valor logico para definir el resultado con rsatscan (FALSE) o SaTScan (TRUE)",
+                               "Es el nombre de la localidad",
+                               "Es el indentificador único del estado",
+                               "Cuando satscan es TRUE, se define el path donde se alojan el archivo shapeclust",
+                               "Cuando satscan es TRUE, se define el path donde se alojan el archivo gis de SaTScan"))
+kableExtra::kable(d)
+
+```
+
+```{r,echo=TRUE, warning=FALSE, error=FALSE, dpi = 400}
+library(sf)
+library(magrittr)
+denhotspots::staticmap_satscan(x = x_data,  # este objeto se subió en el paso paso anterior
+                               locality = "Xalapa de Enriquez",
+                               cve_edo = "30",
+                               satscan = FALSE,
+                               rsatscan = x) # x es el resultado de aplicar satscanR
+```
+
+<span style="color:#660033;">El mapa muestra todos los cluster circulares de la transmisión de dengue. En el mapa se representan en azul los clusters no significativos (p > 0.05), en rojo se representan los clusters significativos (p < 0.05) y los puntos de color gris son los casos.</span>
