@@ -1,2 +1,38 @@
-# **<span style="color:#003300;">Clusters en R</span>** {#clustersr}
+# **<span style="color:#003300;">Clusters de Transmisión en R</span>** {#clustersr}
+
+## **<span style="color:#003300;">Identificación de los cluster de transmisión en R</span>**
+
+<span style="color:#660033;">Dado que los pasos del uno al cuatro han sido abordados en la sección dos (hotspots de casos y del vector), el procedimiento lo iniciamos con el paso 5.</span> 
+
+### **<span style="color:#003300;">Generar los archivos cas y geo</span>**.
+
+<span style="color:#660033;">Para generar los archivos cas y geo, primero se carga la base de datos de los casos geocodificados, segundo se cargan dos funciones y por último se aplican las funciones. En esté último paso, se define la localidad, el identificador único del estado y la carpeta donde se van a guardar los archivos cas y geo.</span>
+
+
+#### **<span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span>**.
+```{r}
+load("C:/Users/felip/OneDrive/proyects/geocoding_mex/geocodemx_xalapa_ver/geocodemx_xalapa_ver/8.RData/geo_positive_den_xal_2008_2020.RData")
+```
+
+
+#### **<span style="color:#003300;">Paso 2. Subir las funciones </span>**.
+```{r}
+# Step 5.2. cargamos las funciones ####
+source('C:/Users/felip/OneDrive/proyects/hotspots/3.Functions/write_cas_geo.R')
+source('C:/Users/felip/OneDrive/proyects/satscan/3.Functions/cas_geo.R')
+
+```
+
+#### **<span style="color:#003300;">Paso 3. Aplicar las funciones</span>**.
+```{r}
+library(magrittr)
+library(sf)
+write_cas_geo(y = xy %>% 
+                  dplyr::mutate(year = lubridate::year(onset)) %>%
+                  dplyr::filter(year == 2019),
+              locality = c("Xalapa de Enriquez"),
+              cve_ent = "30",
+              dir = "cas&geo_files")
+```
+
 

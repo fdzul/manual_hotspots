@@ -83,3 +83,10 @@ tab:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 algoritmo-para-space-time-análisis-con-satscan
+identificación-de-los-cluster-de-transmisión-en-r
+generar-los-archivos-cas-y-geo.
+la-base-de-datos-geocodificada.
+paso-1.-subir-la-base-de-datos-geocodificada.
+paso-2.-subir-las-funciones-.
+paso-2.-aplicar-las-funciones.
+paso-3.-aplicar-las-funciones.
