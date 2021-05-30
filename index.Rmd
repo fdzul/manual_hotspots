@@ -121,4 +121,4 @@ El libro incluye cinco secciones o apartados, una sección para la introducción
 # **<span style="color:#003300;">Agradecimientos</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;"> Los autores agradecen a la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) y al [Centro de Prevención y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) de la [Secretaría de Salud Federal](https://www.gob.mx/salud) por las facilidades otorgadas para poder desarrollar la presente iniciativa. </span>
+<span style="color:#660033;"> Los autores agradecen a la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) y al [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) de la [Secretaría de Salud Federal](https://www.gob.mx/salud) por las facilidades otorgadas para poder desarrollar la presente iniciativa. </span>
