@@ -32,7 +32,7 @@ knox_res <- denhotspots::knox(x = x_data,
                               crs = "+proj=eqc", 
                               ds = 400, 
                               dt = 20, 
-                              sym = 2000, 
+                              sym = 1000, 
                               sp_link = FALSE,
                               planar_coord = FALSE)
 ```

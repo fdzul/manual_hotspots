@@ -92,3 +92,12 @@ paso-2.-aplicar-las-funciones.
 paso-3.-aplicar-las-funciones.
 definir-los-parametros-del-input-análisis-y-resultado-output.span
 definir-los-parametros-del-input-análisis-y-resultado-output.
+tab:unnamed-chunk-3
+space-time-con-knox-test
+algorítmo-para-realizar-la-prueba-de-knox-test
+algorítmo-para-realizar-la-prueba-de-knox
+identificación-de-cadenas-de-transmisión-en-r
+knox-test
+visualización-de-las-cadenas-de-transmisión
+mapa-estático
+mapa-estático-en-paneles-por-grupos-de-semanas
