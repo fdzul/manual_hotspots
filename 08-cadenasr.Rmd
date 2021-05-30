@@ -67,7 +67,7 @@ denhotspots::space_time_link_map(x = knox_res,
 ```
 
 #### **<span style="color:#003300;">Mapa estático en paneles por grupos de semanas</span>**
-```{r, cache=TRUE, warning=FALSE, message=FALSE}
+```{r, cache=TRUE, warning=FALSE, message=FALSE, out.height= "100%", out.width="100%"}
 denhotspots::space_time_link_map(x = knox_res,
                                  locality = "Xalapa de Enríquez",
                                  cve_edo = "30",
