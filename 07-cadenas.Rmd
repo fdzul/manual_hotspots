@@ -2,3 +2,80 @@
 
 # **<span style="color:#003300;">Cadenas de Transmisión</span>** {#cadenas}
 
+
+## <span style="color:#003300;">**Space-Time con Knox test**</span>
+
+<span style="color:#660033;">Para realizar el knox test y detectar las cadenas de transmisión activas o históricas (space-time analisis prospectivo y space-time análisis retrospectivo, respectivamente), se requiere contar con una base de datos de la localidad de interes con las siguientes variables mínimas que incluyen onset (fecha de inicio de síntomas) y las coordenadas geográficas (latitud y longitud) (Tango,2010).</span>
+
+
+```{r echo=FALSE,dpi=300, fig.align ="center", out.width = "100%",fig.cap = "Ejemplo de una base de datos."}
+load("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/space_time_analysis/knox_test/9.cas&geo_files/country/2020/Altamira282020.RData")
+knitr::kable(head(x_data[, -c(2, 5, 6)]), 
+             caption = "Base de datos para el knox test (space-time analysis).")
+
+```
+
+<span style="color:#660033;">El knox test reta la hipótesis nula (las distancias temporales entre pares de casos son independientes de las distancias espaciales) y cuando el valor de p (calculado con Monte Carlo simulation o Chi-Square Test), es menor que 0.05 la hipótesis nula se rechaza y se acepta la hipótesis alternativa (existe dependencia de las distancias espaciales y temporales entre los pares de casos, parafraseado de manera diferente existen cadenas de transmisión).  Básicamente el knox test compara los pares de casos encontrados en la ventana espacio-temporal definida con los pares de casos que ocurren al azar o distribuidos aleatoriamente en esta misma ventana (pares de casos esperados). </span>
+
+
+<span style="color:#660033;">El clásico resultado de Knox test es una tabla de contingencia de 2 x 2 formada por clasificar los pares de casos relacionado (cercanos) en distancia y tiempo, relacionados solo en distancia y relacionados solo en tiempo.</span>
+
+<span style="color:#660033;">Los casos cercanos en tiempo son definidos como aquellos pares de casos dentro la ventana temporal definida ($S_{3}$).
+Los casos cercanos en espacio son definidos como aquellos pares de casos dentro la ventana espacial definida ($S_{1}$).
+Los casos cercanos en tiempo y espacio son definidos como aquellos pares de casos dentro la ventana temporal y espacial definida ($0_{1}$).</span>
+
+
+
+
+```{r echo=FALSE,dpi=300,warning=FALSE, fig.align ="center", out.width = "100%",fig.cap = "Tabla de contingencia de knox test"}
+x <- data.frame("Close" = c("$0_{1}$", "$0_{3}$", "$S_{3}$"),
+                "Not close" = c("$0_{2}$", "$0_{4}$", "$S_{4}$"),
+                "Total" = c("$S_{1}$", "$S_{2}$", "$N$"))
+row.names(x) <- c("Close in Space", "Not close in Space", "Total")
+library(magrittr)
+kableExtra::kbl(x, align = "c",
+                caption = "Tabla de contingencia 2 x 2 para los pares de casos **observados**") %>%
+    kableExtra::kable_paper("striped", full_width = F) %>%
+    kableExtra::add_header_above(c(" " = 1, "Time" = 3)) %>%
+    kableExtra::pack_rows("",3, 3) %>%
+    kableExtra::footnote(fixed_small_size = T,
+                         footnote_as_chunk = T,
+           number = c("$N$ = $0_{1}$ + $0_{2}$ + $0_{3}$ + $0_{4}$"),
+           alphabet = c("$S_{1}$ = $0_{1}$ + $0_{2}$; $S_{2}$ = $0_{3}$ + $0_{4}$; $S_{3}$ = $0_{1}$ + $0_{3}$; $S_{4}$ = $0_{2}$ + $0_{4}$"))
+
+```
+
+
+
+```{r echo=FALSE,dpi=300,warning=FALSE, fig.align ="center", out.width = "100%",fig.cap = "Tabla de contingencia de knox test"}
+x <- data.frame("Close" = c("$E_{1}$", "$E_{3}$"),
+                "Not close" = c("$E_{2}$", "$E_{4}$"))
+row.names(x) <- c("Close in Space", "Not close in Space")
+library(magrittr)
+library(kableExtra)
+kableExtra::kbl(x, align = "c",
+                caption = "Tabla de contingencia 2 x 2 para los pares de casos **esperados**") %>%
+    kableExtra::kable_paper("striped", full_width = F) %>%
+    kableExtra::add_header_above(c(" " = 1, "Time" = 2)) %>%
+    kableExtra::footnote(
+                         fixed_small_size = T,
+                         footnote_as_chunk = T,
+           alphabet = c("$E_{1}$ = ($S_{1}$ * $S_{3}$)/$N$; $E_{2}$ = ($S_{1}$ * $S_{4}$)/$N$; $E_{3}$ = ($S_{2}$ * $S_{3}$)/$N$; $E_{4}$ = ($S_{2}$ * $S_{4}$)/$N$"))
+
+```
+
+ 
+## **<span style="color:#003300;">Algorítmo para realizar la prueba de knox</span>**
+
+
+<span style="color:#660033;">1. Bajar la base de casos de la plataforma del SINAVE.</span>
+
+<span style="color:#660033;">2. Subir la base en R y extraer la información relevante.</span>
+
+<span style="color:#660033;">3. Geocodificar las direcciones de residencia de los casos. </span>
+
+<span style="color:#660033;">4. Generar los archivos RData con las columnas onset y coordenadas geográficas (latitud y longitud).</span>
+
+<span style="color:#660033;">5. Aplicar a la base de datos el Knox test y definir las ventanas espacio-temporales.</span>
+
+<span style="color:#660033;">6. Visualizar las cadenas de transmisión (space-time link map).</span>
