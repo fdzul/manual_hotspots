@@ -30,7 +30,7 @@ description: "El manual describe la Identificación de los hotspots en R"
 
 
 <span style="color:#660033;">La versión online del manual es mantenida en [fdzul.github.io/manual_hotspots](https://fdzul.github.io/manual_hotspots/) & es actualizada [GitHub Actions](https://github.com/fdzul/manual_hotspots/actions), la cual proporciona información sobre el estatus 'build status' con:
-![](https://github.com/fdzul/manual_hotspots/actions/workflows/blank.yml/badge.svg)
+![](https://github.com/fdzul/manual_hotspots/actions/workflows/blank.yml/badge.svg) ![](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffdzul%2Fmanual_hotspots.svg?type=shield)
 </span>
 
 
