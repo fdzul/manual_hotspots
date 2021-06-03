@@ -1,1 +1,0 @@
-# **<span style="color:#003300;">log-Gaussian Cox Process en R</span>** {#coxr}
