@@ -17,7 +17,7 @@ description: "El manual describe la Identificación de los hotspots en R"
 #  **<span style="color:#003300;">Welcome</span>** {-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;">Este documento es la versión en línea del bookdown</span><span style="color:#003300;"> **Manual para la Identificación de los hotspots del dengue en áreas urbanas de México**</span><span style="color:#660033;">, es un libro diseñado para desarrollar las competencias específicas para la identificación de los hotspots del dengue en áreas urbanas y metropolitanas de México.</span>
+<span style="color:#660033;">Este documento es la versión en línea del bookdown</span><span style="color:#003300;"> **Manual para la Identificación de los hotspots del dengue en áreas urbanas de México en R**</span><span style="color:#660033;">, es un libro diseñado para desarrollar las competencias específicas para la identificación de los hotspots del dengue en áreas urbanas y metropolitanas de México.</span>
 
 <a href=""><img src="images/cover.jpg" width="550" height="550" alt="" align="right" style="margin: 0 1em 0 1em" /></a>
   
@@ -30,7 +30,9 @@ description: "El manual describe la Identificación de los hotspots en R"
 
 
 <span style="color:#660033;">La versión online del manual es mantenida en [fdzul.github.io/manual_hotspots](https://fdzul.github.io/manual_hotspots/) & es actualizada [GitHub Actions](https://github.com/fdzul/manual_hotspots/actions), la cual proporciona información sobre el estatus 'build status' con:
-[![Actions](https://github.com/fdzul/manual_hotspots/workflows/Render-Book-from-master/badge.svg)](https://github.com/fdzul/manual_hotspots/actions)</span>
+![](https://github.com/fdzul/manual_hotspots/actions/workflows/blank.yml/badge.svg)
+</span>
+
 
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
@@ -121,4 +123,8 @@ El libro incluye cinco secciones o apartados, una sección para la introducción
 # **<span style="color:#003300;">Agradecimientos</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
+<span style="color:#660033;"> El presente manual fue producido por personal de vectores y la Subdirección de Salud Publica de la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) en colaboración con la Subdirección del Programa Nacional de Vectores del [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) de la [Secretaría de Salud Federal](https://www.gob.mx/salud)  </span>
+
+
 <span style="color:#660033;"> Los autores agradecen a la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) y al [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) de la [Secretaría de Salud Federal](https://www.gob.mx/salud) por las facilidades otorgadas para poder desarrollar la presente iniciativa. </span>
+
