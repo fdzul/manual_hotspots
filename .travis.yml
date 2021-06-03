@@ -8,5 +8,3 @@ r_packages:
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
-
-CODECOV_TOKEN='45e9fbe4-3aa6-4b5d-a04e-7c2fe450a54b'
