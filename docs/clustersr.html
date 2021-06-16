@@ -33,7 +33,7 @@
 <link rel="prev" href="clusters.html"/>
 <link rel="next" href="cadenas.html"/>
 <script src="libs/header-attrs-2.8.4/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,25 +52,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -156,11 +137,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li><a href="index.html#welcome"><strong><span style="color:#003300;">Welcome</span></strong></a></li>
-<li><a href="prologo.html#prologo"><strong><span style="color:#003300;">Prologo</span></strong></a></li>
-<li><a href="justificación.html#justificación"><strong><span style="color:#003300;">Justificación</span></strong></a></li>
-<li><a href="software-convenciones.html#software-convenciones"><strong><span style="color:#003300;">Software &amp; Convenciones</span></strong></a></li>
-<li><a href="estructura-de-manual.html#estructura-de-manual"><strong><span style="color:#003300;">Estructura de Manual</span></strong></a></li>
-<li><a href="agradecimientos.html#agradecimientos"><strong><span style="color:#003300;">Agradecimientos</span></strong></a></li>
 <li class="part"><span><b>I Sección</b></span></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
 <li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
@@ -235,15 +211,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.1" data-path="cadenasr.html"><a href="cadenasr.html#visualización-de-las-cadenas-de-transmisión"><i class="fa fa-check"></i><b>8.2.1</b> <strong><span style="color:#003300;">Visualización de las cadenas de Transmisión </span></strong></a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>V Sección</b></span></li>
-<li class="chapter" data-level="9" data-path="cox.html"><a href="cox.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">log-Gaussian Cox Process</span></strong></a></li>
-<li class="chapter" data-level="10" data-path="coxr.html"><a href="coxr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">log-Gaussian Cox Process en R</span></strong></a></li>
+<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Spatial LGCP</span></strong></a></li>
+<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Spatial LGCP en R</span></strong></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/fdzul" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Felipe Dzul-Manzanilla</span> </a></li>
 <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Fabián Correa-Morales</span></a></li>
 <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Arturo Báez-Hernández</span></a></li>
+<li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/guadalupe-diaz-del-castillo-flores/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Guadalupe Díaz del Castillo Flores</span></a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Heron Huerta</span> </a></li>
 <img src="https://www.ssaver.gob.mx/wp-content/uploads/2021/04/cropped-logoencabezado6abr2.jpg" alt="SESVER" width="250" height="50">
 <img src="https://raw.githubusercontent.com/mxabierto/assets/master/img/logos/cenaprece.png" alt="SESVER" width="250" height="100">
+<img src="https://www.genolifeadn.com/wp-content/uploads/2020/04/indrelogo.png" alt="SESVER" width="100" height="50">
 
 </ul>
 
@@ -273,27 +251,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span style="color:#660033;">Para generar los archivos cas y geo, primero se carga la base de datos de los casos geocodificados, segundo se cargan dos funciones y por último se aplican las funciones. En esté último paso, se define la localidad, el identificador único del estado y la carpeta donde se van a guardar los archivos cas y geo.</span></p>
 <div id="paso-1.-subir-la-base-de-datos-geocodificada." class="section level3" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> <strong><span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span></strong>.</h3>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="clustersr.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/felip/OneDrive/proyects/geocoding_mex/geocodemx_xalapa_ver/geocodemx_xalapa_ver/8.RData/geo_positive_den_xal_2008_2020.RData&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="clustersr.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/felip/OneDrive/proyects/geocoding_mex/geocodemx_xalapa_ver/geocodemx_xalapa_ver/8.RData/geo_positive_den_xal_2008_2020.RData&quot;</span>)</span></code></pre></div>
 </div>
 <div id="paso-2.-subir-las-funciones-." class="section level3" number="6.2.2">
 <h3><span class="header-section-number">6.2.2</span> <strong><span style="color:#003300;">Paso 2. Subir las funciones </span></strong>.</h3>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="clustersr.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5.2. cargamos las funciones ####</span></span>
-<span id="cb44-2"><a href="clustersr.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&#39;C:/Users/felip/OneDrive/proyects/hotspots/3.Functions/write_cas_geo.R&#39;</span>)</span>
-<span id="cb44-3"><a href="clustersr.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&#39;C:/Users/felip/OneDrive/proyects/satscan/3.Functions/cas_geo.R&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="clustersr.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5.2. cargamos las funciones ####</span></span>
+<span id="cb2-2"><a href="clustersr.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&#39;C:/Users/felip/OneDrive/proyects/hotspots/3.Functions/write_cas_geo.R&#39;</span>)</span>
+<span id="cb2-3"><a href="clustersr.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&#39;C:/Users/felip/OneDrive/proyects/satscan/3.Functions/cas_geo.R&#39;</span>)</span></code></pre></div>
 </div>
 <div id="paso-3.-aplicar-las-funciones." class="section level3" number="6.2.3">
 <h3><span class="header-section-number">6.2.3</span> <strong><span style="color:#003300;">Paso 3. Aplicar las funciones</span></strong>.</h3>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="clustersr.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb45-2"><a href="clustersr.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb45-3"><a href="clustersr.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_cas_geo</span>(<span class="at">y =</span> xy <span class="sc">%&gt;%</span> </span>
-<span id="cb45-4"><a href="clustersr.html#cb45-4" aria-hidden="true" tabindex="-1"></a>                  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">year =</span> lubridate<span class="sc">::</span><span class="fu">year</span>(onset)) <span class="sc">%&gt;%</span></span>
-<span id="cb45-5"><a href="clustersr.html#cb45-5" aria-hidden="true" tabindex="-1"></a>                  dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>),</span>
-<span id="cb45-6"><a href="clustersr.html#cb45-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">locality =</span> <span class="fu">c</span>(<span class="st">&quot;Xalapa de Enriquez&quot;</span>),</span>
-<span id="cb45-7"><a href="clustersr.html#cb45-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">cve_ent =</span> <span class="st">&quot;30&quot;</span>,</span>
-<span id="cb45-8"><a href="clustersr.html#cb45-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">dir =</span> <span class="st">&quot;cas&amp;geo_files&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="clustersr.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb3-2"><a href="clustersr.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div>
+<pre><code>## Linking to GEOS 3.9.0, GDAL 3.2.1, PROJ 7.2.1</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="clustersr.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_cas_geo</span>(<span class="at">y =</span> xy <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="clustersr.html#cb5-2" aria-hidden="true" tabindex="-1"></a>                  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">year =</span> lubridate<span class="sc">::</span><span class="fu">year</span>(onset)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="clustersr.html#cb5-3" aria-hidden="true" tabindex="-1"></a>                  dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>),</span>
+<span id="cb5-4"><a href="clustersr.html#cb5-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">locality =</span> <span class="fu">c</span>(<span class="st">&quot;Xalapa de Enriquez&quot;</span>),</span>
+<span id="cb5-5"><a href="clustersr.html#cb5-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">cve_ent =</span> <span class="st">&quot;30&quot;</span>,</span>
+<span id="cb5-6"><a href="clustersr.html#cb5-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">dir =</span> <span class="st">&quot;cas&amp;geo_files&quot;</span>)</span></code></pre></div>
+<pre><code>## although coordinates are longitude/latitude, st_intersects assumes that they are planar</code></pre>
 <pre><code>## although coordinates are longitude/latitude, st_intersects assumes that they are planar
-## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar</code></pre>
+<pre><code>## rsatscan only does anything useful if you have SaTScan</code></pre>
+<pre><code>## See http://www.satscan.org/ for free access</code></pre>
 </div>
 </div>
 <div id="definir-los-parametros-del-input-análisis-y-resultado-output." class="section level2" number="6.3">
@@ -362,19 +343,19 @@ Es la resolución tempora (días)
 </tbody>
 </table>
 <p><span style="color:#660033;">La resolución temporal y espacial para el space-time análisis de dengue por conveniencia estamos considerando 20 días y 400 metros, respectivamente.</span></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="clustersr.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rsatscan)</span>
-<span id="cb47-2"><a href="clustersr.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Subir el archivo cas y geo generado con la función write_cas_geo</span></span>
-<span id="cb47-3"><a href="clustersr.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&amp;geo_files/Xalapa de Enriquez302019.RData&quot;</span>)</span>
-<span id="cb47-4"><a href="clustersr.html#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-5"><a href="clustersr.html#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Aplicar la función denhotspots::satscanR </span></span>
-<span id="cb47-6"><a href="clustersr.html#cb47-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> denhotspots<span class="sc">::</span><span class="fu">satscanR</span>(<span class="at">cas_file =</span> x_cas,</span>
-<span id="cb47-7"><a href="clustersr.html#cb47-7" aria-hidden="true" tabindex="-1"></a>                           <span class="at">geo_file =</span> x_geo,</span>
-<span id="cb47-8"><a href="clustersr.html#cb47-8" aria-hidden="true" tabindex="-1"></a>                           <span class="at">start_date =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="fu">min</span>(x_cas<span class="sc">$</span>date),</span>
-<span id="cb47-9"><a href="clustersr.html#cb47-9" aria-hidden="true" tabindex="-1"></a>                                                                 <span class="at">pattern =</span> <span class="st">&quot;-&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;/&quot;</span>),</span>
-<span id="cb47-10"><a href="clustersr.html#cb47-10" aria-hidden="true" tabindex="-1"></a>                           <span class="at">end_date =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="fu">max</span>(x_cas<span class="sc">$</span>date),</span>
-<span id="cb47-11"><a href="clustersr.html#cb47-11" aria-hidden="true" tabindex="-1"></a>                                                               <span class="at">pattern =</span> <span class="st">&quot;-&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;/&quot;</span>),</span>
-<span id="cb47-12"><a href="clustersr.html#cb47-12" aria-hidden="true" tabindex="-1"></a>                           <span class="at">spatial_window =</span> <span class="fl">0.4</span>,</span>
-<span id="cb47-13"><a href="clustersr.html#cb47-13" aria-hidden="true" tabindex="-1"></a>                           <span class="at">temporal_window =</span> <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="clustersr.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rsatscan)</span>
+<span id="cb10-2"><a href="clustersr.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Subir el archivo cas y geo generado con la función write_cas_geo</span></span>
+<span id="cb10-3"><a href="clustersr.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&amp;geo_files/Xalapa de Enriquez302019.RData&quot;</span>)</span>
+<span id="cb10-4"><a href="clustersr.html#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="clustersr.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Aplicar la función denhotspots::satscanR </span></span>
+<span id="cb10-6"><a href="clustersr.html#cb10-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> denhotspots<span class="sc">::</span><span class="fu">satscanR</span>(<span class="at">cas_file =</span> x_cas,</span>
+<span id="cb10-7"><a href="clustersr.html#cb10-7" aria-hidden="true" tabindex="-1"></a>                           <span class="at">geo_file =</span> x_geo,</span>
+<span id="cb10-8"><a href="clustersr.html#cb10-8" aria-hidden="true" tabindex="-1"></a>                           <span class="at">start_date =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="fu">min</span>(x_cas<span class="sc">$</span>date),</span>
+<span id="cb10-9"><a href="clustersr.html#cb10-9" aria-hidden="true" tabindex="-1"></a>                                                                 <span class="at">pattern =</span> <span class="st">&quot;-&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;/&quot;</span>),</span>
+<span id="cb10-10"><a href="clustersr.html#cb10-10" aria-hidden="true" tabindex="-1"></a>                           <span class="at">end_date =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="fu">max</span>(x_cas<span class="sc">$</span>date),</span>
+<span id="cb10-11"><a href="clustersr.html#cb10-11" aria-hidden="true" tabindex="-1"></a>                                                               <span class="at">pattern =</span> <span class="st">&quot;-&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;/&quot;</span>),</span>
+<span id="cb10-12"><a href="clustersr.html#cb10-12" aria-hidden="true" tabindex="-1"></a>                           <span class="at">spatial_window =</span> <span class="fl">0.4</span>,</span>
+<span id="cb10-13"><a href="clustersr.html#cb10-13" aria-hidden="true" tabindex="-1"></a>                           <span class="at">temporal_window =</span> <span class="dv">20</span>)</span></code></pre></div>
 <p><span style="color:#660033;">La selección de los cluster de transmisión y los casos con valores de p menores a 0.05, y su respectiva visualización se realiza con la función <strong><em><a href="">denhotspots::staticmap_satscan</a></em></strong>. Esta función tiene la capacidad de visualizar los resultados del space-time analisis con rsatscan o SaTScan. En nuestro análisis con rsatscan definimos los argumentos de acuerdo a la siguiente tabla y visualizamos.</span></p>
 <table>
 <thead>
@@ -446,13 +427,13 @@ Cuando satscan es TRUE, se define el path donde se alojan el archivo gis de SaTS
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="clustersr.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb48-2"><a href="clustersr.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb48-3"><a href="clustersr.html#cb48-3" aria-hidden="true" tabindex="-1"></a>denhotspots<span class="sc">::</span><span class="fu">staticmap_satscan</span>(<span class="at">x =</span> x_data,  <span class="co"># este objeto se subió en el paso paso anterior</span></span>
-<span id="cb48-4"><a href="clustersr.html#cb48-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">locality =</span> <span class="st">&quot;Xalapa de Enriquez&quot;</span>,</span>
-<span id="cb48-5"><a href="clustersr.html#cb48-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">cve_edo =</span> <span class="st">&quot;30&quot;</span>,</span>
-<span id="cb48-6"><a href="clustersr.html#cb48-6" aria-hidden="true" tabindex="-1"></a>                               <span class="at">satscan =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb48-7"><a href="clustersr.html#cb48-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rsatscan =</span> x) <span class="co"># x es el resultado de aplicar satscanR</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="clustersr.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb11-2"><a href="clustersr.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb11-3"><a href="clustersr.html#cb11-3" aria-hidden="true" tabindex="-1"></a>denhotspots<span class="sc">::</span><span class="fu">staticmap_satscan</span>(<span class="at">x =</span> x_data,  <span class="co"># este objeto se subió en el paso paso anterior</span></span>
+<span id="cb11-4"><a href="clustersr.html#cb11-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">locality =</span> <span class="st">&quot;Xalapa de Enriquez&quot;</span>,</span>
+<span id="cb11-5"><a href="clustersr.html#cb11-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">cve_edo =</span> <span class="st">&quot;30&quot;</span>,</span>
+<span id="cb11-6"><a href="clustersr.html#cb11-6" aria-hidden="true" tabindex="-1"></a>                               <span class="at">satscan =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb11-7"><a href="clustersr.html#cb11-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">rsatscan =</span> x) <span class="co"># x es el resultado de aplicar satscanR</span></span></code></pre></div>
 <pre><code>## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
@@ -462,7 +443,7 @@ Cuando satscan es TRUE, se define el path donde se alojan el archivo gis de SaTS
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 ## although coordinates are longitude/latitude, st_intersects assumes that they are planar</code></pre>
-<p><img src="manual_hotspots_files/figure-html/unnamed-chunk-44-1.png" width="2800" /></p>
+<p><img src="manual_hotspots_files/figure-html/unnamed-chunk-7-1.png" width="2800" /></p>
 <p><span style="color:#660033;">El mapa muestra todos los cluster circulares de la transmisión de dengue. En el mapa se representan en azul los clusters no significativos (p &gt; 0.05), en rojo se representan los clusters significativos (p &lt; 0.05) y los puntos de color gris son los casos.</span></p>
 
 </div>
@@ -527,20 +508,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
