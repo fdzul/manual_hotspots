@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Justificación | Manual para la identificación de los hotspots en áreas úrbanas</title>
+  <meta name="description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Justificación | Manual para la identificación de los hotspots en áreas úrbanas" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://fdzul.github.io/manual_hotspots/" />
+  <meta property="og:image" content="https://fdzul.github.io/manual_hotspots/images/cover.jpg" />
+  <meta property="og:description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
+  <meta name="github-repo" content="fdzul/manual_hotspots" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Justificación | Manual para la identificación de los hotspots en áreas úrbanas" />
+  
+  <meta name="twitter:description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
+  <meta name="twitter:image" content="https://fdzul.github.io/manual_hotspots/images/cover.jpg" />
+
+<meta name="author" content="Felipe Antonio Dzul Manzanilla" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="prologo.html"/>
+<link rel="next" href="software-convenciones.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><span style= "color:#660033; font-size:15px; font-weight: bold;">Hotspot del Dengue en R</span></a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#welcome"><strong><span style="color:#003300;">Welcome</span></strong></a></li>
+<li><a href="prologo.html#prologo"><strong><span style="color:#003300;">Prologo</span></strong></a></li>
+<li><a href="justificación.html#justificación"><strong><span style="color:#003300;">Justificación</span></strong></a></li>
+<li><a href="software-convenciones.html#software-convenciones"><strong><span style="color:#003300;">Software &amp; Convenciones</span></strong></a></li>
+<li><a href="estructura-de-manual.html#estructura-de-manual"><strong><span style="color:#003300;">Estructura de Manual</span></strong></a></li>
+<li><a href="agradecimientos.html#agradecimientos"><strong><span style="color:#003300;">Agradecimientos</span></strong></a></li>
+<li class="part"><span><b>I Sección</b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
+<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
+<li class="part"><span><b>II Sección</b></span></li>
+<li class="chapter" data-level="3" data-path="hotspots.html"><a href="hotspots.html"><i class="fa fa-check"></i><b>3</b> <strong><span style="color:#003300;">Hotspots</span></strong></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="hotspots.html"><a href="hotspots.html#análisis-de-la-información-epidemiológica-y-entomológica"><i class="fa fa-check"></i><b>3.1</b> <strong><span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span></strong></a></li>
+<li class="chapter" data-level="3.2" data-path="hotspots.html"><a href="hotspots.html#hotspots-de-transmisión-histórica"><i class="fa fa-check"></i><b>3.2</b> <strong><span style="color:#003300;">Hotspots de transmisión histórica</span></strong></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="hotspots.html"><a href="hotspots.html#algoritmo-para-el-cálculo-de-los-hotspots"><i class="fa fa-check"></i><b>3.2.1</b> <span style="color:#003300;">Algoritmo para el cálculo de los Hotspots</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="hotspots.html"><a href="hotspots.html#referencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><span style="color:#003300;">Referencias</span></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="hotspotsr.html"><a href="hotspotsr.html"><i class="fa fa-check"></i><b>4</b> <strong><span style="color:#003300;">Hotspots en R</span></strong></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-las-bases-de-datos-del-sinave."><i class="fa fa-check"></i><b>4.1</b> <strong><span style="color:#003300;">Bajar las bases de datos del <span>SINAVE</span>.</span></strong></a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="hotspotsr.html"><a href="hotspotsr.html#escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx."><i class="fa fa-check"></i><b>4.1.1</b> <strong><span style="color:#660033;">Escribir en el buscador de preferencia la página del sinave (<span>https://www.sinave.gob.mx/</span>).</span></strong></a></li>
+<li class="chapter" data-level="4.1.2" data-path="hotspotsr.html"><a href="hotspotsr.html#en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector."><i class="fa fa-check"></i><b>4.1.2</b> <strong><span style="color:#660033;">En la página del sinave buscar y darle click al boton Enfermedades Transmitidas por Vector.</span></strong></a></li>
+<li class="chapter" data-level="4.1.3" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-el-nombre-del-usurio-y-contraseña."><i class="fa fa-check"></i><b>4.1.3</b> <strong><span style="color:#660033;">Ingresar el nombre del usurio y contraseña.</span></strong></a></li>
+<li class="chapter" data-level="4.1.4" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-a-la-sección-de-reportes."><i class="fa fa-check"></i><b>4.1.4</b> <span style="color:#660033;">Ingresar a la sección de <strong>Reportes</strong>.</span></a></li>
+<li class="chapter" data-level="4.1.5" data-path="hotspotsr.html"><a href="hotspotsr.html#darle-click-a-descarga-de-datos-vectores"><i class="fa fa-check"></i><b>4.1.5</b> <span style="color:#660033;">Darle click a <strong>Descarga de Datos Vectores</strong></span></a></li>
+<li class="chapter" data-level="4.1.6" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-la-base-de-datos-de-la-última-fecha-de-la-enfermedad-de-interés."><i class="fa fa-check"></i><b>4.1.6</b> <strong><span style="color:#660033;">Bajar la base de datos de la última fecha de la enfermedad de interés.</span></strong></a></li>
+<li class="chapter" data-level="4.1.7" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-base-en-la-carpeta-de-interes."><i class="fa fa-check"></i><b>4.1.7</b> <strong><span style="color:#660033;">Guardar la base en la carpeta de interes.</span></strong></a></li>
+<li class="chapter" data-level="4.1.8" data-path="hotspotsr.html"><a href="hotspotsr.html#extraer-el-txt-del-archivo-con-extensión-rar."><i class="fa fa-check"></i><b>4.1.8</b> <strong><span style="color:#660033;">Extraer el txt del archivo con extensión RAR.</span></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#geocodificación-de-la-base-de-datos-de-dengue."><i class="fa fa-check"></i><b>4.2</b> <strong><span style="color:#003300;">Geocodificación de la base de datos de Dengue.</span></strong></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-de-datos-de-dengue-a"><i class="fa fa-check"></i><b>4.2.1</b> <strong><span style="color:#660033;">Subir la base de datos de Dengue a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /></a></li>
+<li class="chapter" data-level="4.2.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-el-csv-a-y-creamos-el-vector-de-direcciones"><i class="fa fa-check"></i><b>4.2.2</b> <strong><span style="color:#660033;">Subir el csv a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /> <strong><span style="color:#003300;">y creamos el vector de direcciones</span></strong></a></li>
+<li class="chapter" data-level="4.2.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-geocodificación"><i class="fa fa-check"></i><b>4.2.3</b> <strong><span style="color:#660033;">Realizar la geocodificación</span></strong></a></li>
+<li class="chapter" data-level="4.2.4" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-información-en-rdata"><i class="fa fa-check"></i><b>4.2.4</b> <strong><span style="color:#660033;">Guardar la información en RData</span></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-los-shapefile-del-inegi."><i class="fa fa-check"></i><b>4.3</b> <strong><span style="color:#003300;">Bajar los shapefile del <span>INEGI</span>.</span></strong></a></li>
+<li class="chapter" data-level="4.4" data-path="hotspotsr.html"><a href="hotspotsr.html#contar-el-número-de-casos-por-ageb-agregación-espacial."><i class="fa fa-check"></i><b>4.4</b> <strong><span style="color:#003300;">Contar el número de casos por AGEB (agregación espacial).</span></strong></a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-datos-geocodificada."><i class="fa fa-check"></i><b>4.4.1</b> <strong><span style="color:#660033;">subir la base datos geocodificada.</span></strong></a></li>
+<li class="chapter" data-level="4.4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-los-agebs."><i class="fa fa-check"></i><b>4.4.2</b> <strong><span style="color:#660033;">subir los AGEBs.</span></strong></a></li>
+<li class="chapter" data-level="4.4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-agregación-espacial."><i class="fa fa-check"></i><b>4.4.3</b> <strong><span style="color:#660033;"> Realizar la agregación espacial.</span></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="hotspotsr.html"><a href="hotspotsr.html#pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots."><i class="fa fa-check"></i><b>4.5</b> <strong><span style="color:#003300;">Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</span></strong></a></li>
+<li class="chapter" data-level="4.6" data-path="hotspotsr.html"><a href="hotspotsr.html#visualizar-los-hotspots."><i class="fa fa-check"></i><b>4.6</b> <strong><span style="color:#003300;">Visualizar los hotspots.</span></strong></a></li>
+</ul></li>
+<li class="part"><span><b>III Sección</b></span></li>
+<li class="chapter" data-level="5" data-path="clusters.html"><a href="clusters.html"><i class="fa fa-check"></i><b>5</b> <strong><span style="color:#003300;">Clusters de transmisión </span></strong></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="clusters.html"><a href="clusters.html#identificación-de-clusters-de-transmisión"><i class="fa fa-check"></i><b>5.1</b> <span style="color:#003300;"><strong>Identificación de clusters de transmisión</strong></span></a></li>
+<li class="chapter" data-level="5.2" data-path="clusters.html"><a href="clusters.html#algoritmo-para-space-time-análisis-con-satscan"><i class="fa fa-check"></i><b>5.2</b> <span style="color:#003300;">Algoritmo para <strong>Space-Time análisis</strong> con <strong><span>SaTScan</span></strong></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="clustersr.html"><a href="clustersr.html"><i class="fa fa-check"></i><b>6</b> <strong><span style="color:#003300;">Clusters de Transmisión en R</span></strong></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="clustersr.html"><a href="clustersr.html#identificación-de-los-cluster-de-transmisión-en-r"><i class="fa fa-check"></i><b>6.1</b> <strong><span style="color:#003300;">Identificación de los cluster de transmisión en R</span></strong></a></li>
+<li class="chapter" data-level="6.2" data-path="clustersr.html"><a href="clustersr.html#generar-los-archivos-cas-y-geo."><i class="fa fa-check"></i><b>6.2</b> <strong><span style="color:#003300;">Generar los archivos cas y geo</span></strong>.</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="clustersr.html"><a href="clustersr.html#paso-1.-subir-la-base-de-datos-geocodificada."><i class="fa fa-check"></i><b>6.2.1</b> <strong><span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span></strong>.</a></li>
+<li class="chapter" data-level="6.2.2" data-path="clustersr.html"><a href="clustersr.html#paso-2.-subir-las-funciones-."><i class="fa fa-check"></i><b>6.2.2</b> <strong><span style="color:#003300;">Paso 2. Subir las funciones </span></strong>.</a></li>
+<li class="chapter" data-level="6.2.3" data-path="clustersr.html"><a href="clustersr.html#paso-3.-aplicar-las-funciones."><i class="fa fa-check"></i><b>6.2.3</b> <strong><span style="color:#003300;">Paso 3. Aplicar las funciones</span></strong>.</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="clustersr.html"><a href="clustersr.html#definir-los-parametros-del-input-análisis-y-resultado-output."><i class="fa fa-check"></i><b>6.3</b> <strong><span style="color:#003300;">Definir los parametros del input, análisis y resultado (output).</span></strong></a></li>
+</ul></li>
+<li class="part"><span><b>IV Sección</b></span></li>
+<li class="chapter" data-level="7" data-path="cadenas.html"><a href="cadenas.html"><i class="fa fa-check"></i><b>7</b> <strong><span style="color:#003300;">Cadenas de Transmisión</span></strong></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cadenas.html"><a href="cadenas.html#space-time-con-knox-test"><i class="fa fa-check"></i><b>7.1</b> <span style="color:#003300;"><strong>Space-Time con Knox test</strong></span></a></li>
+<li class="chapter" data-level="7.2" data-path="cadenas.html"><a href="cadenas.html#algorítmo-para-realizar-la-prueba-de-knox"><i class="fa fa-check"></i><b>7.2</b> <strong><span style="color:#003300;">Algorítmo para realizar la prueba de knox</span></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cadenasr.html"><a href="cadenasr.html"><i class="fa fa-check"></i><b>8</b> <strong><span style="color:#003300;">Cadenas de Transmisión en R</span></strong></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="cadenasr.html"><a href="cadenasr.html#identificación-de-cadenas-de-transmisión-en-r"><i class="fa fa-check"></i><b>8.1</b> <strong><span style="color:#003300;">Identificación de cadenas de transmisión en R</span></strong></a></li>
+<li class="chapter" data-level="8.2" data-path="cadenasr.html"><a href="cadenasr.html#knox-test"><i class="fa fa-check"></i><b>8.2</b> <strong><span style="color:#003300;">Knox test</span></strong></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="cadenasr.html"><a href="cadenasr.html#visualización-de-las-cadenas-de-transmisión"><i class="fa fa-check"></i><b>8.2.1</b> <strong><span style="color:#003300;">Visualización de las cadenas de Transmisión </span></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Spatial LGCP</span></strong></a></li>
+<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Spatial LGCP en R</span></strong></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/fdzul" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Felipe Dzul-Manzanilla</span> </a></li>
+<li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Fabián Correa-Morales</span></a></li>
+<li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Arturo Báez-Hernández</span></a></li>
+<li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/guadalupe-diaz-del-castillo-flores/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Guadalupe Díaz del Castillo Flores</span></a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Heron Huerta</span> </a></li>
+<img src="https://www.ssaver.gob.mx/wp-content/uploads/2021/04/cropped-logoencabezado6abr2.jpg" alt="SESVER" width="250" height="50">
+<img src="https://raw.githubusercontent.com/mxabierto/assets/master/img/logos/cenaprece.png" alt="SESVER" width="250" height="100">
+<img src="https://www.genolifeadn.com/wp-content/uploads/2020/04/indrelogo.png" alt="SESVER" width="100" height="50">
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><span style="color:#003300;">Manual para la identificación de los hotspots en áreas úrbanas</span></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="justificación" class="section level1 unnumbered">
+<h1><strong><span style="color:#003300;">Justificación</span></strong></h1>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+<p><span style="color:#660033;">El programa de prevención y control del dengue en México se enfrenta a grandes desafíos que incluyen:</span></p>
+<ul>
+<li><p><span style="color:#660033;">Expanción geográfica del dengue.</span></p></li>
+<li><p><span style="color:#660033;">Incremento de la transmisión en zonas endémicas y no endémicas.</span></p></li>
+<li><p><span style="color:#660033;">Presencia de brotes en zonas urbanas que contituyen grandes metropolis (Guadalajara, Monterrey, La comarca Lagunera, etc).</span></p></li>
+<li><p><span style="color:#660033;">Potencial introducción de nuevos agentes causales, como la Fiebre Amarilla y Mayaro.</span></p></li>
+</ul>
+<p><span style="color:#660033;">El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales). Teóricamente, de acuerdo a la Power Law 80:20 conocida como principio o ley de Pareto 80/20, sí el 80% de la transmisión se concentra en el 20% del área urbana, por lo tanto la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad.</span></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prologo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="software-convenciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/fdzul/manual_hotspots/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["manual_hotspots.pdf", "manual_hotspots.epub", "manual_hotspots.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
