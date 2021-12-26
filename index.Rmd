@@ -1,5 +1,5 @@
 --- 
-title: <span style="color:#003300;">Manual para la Identificación de los hotspots del dengue en áreas urbanas de México</span>
+title: <span style="color:#003300;">Manual para el Rociado Residual Intradomiciliario de las plagas úrbanas en México</span>
 author: <span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span>
 date: "2021: Last compiled `r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,30 +7,27 @@ output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
 link-citations: yes
-github-repo: fdzul/manual_hotspots
+github-repo: fdzul/manual_irs_chilpancingo
 cover-image: images/cover.jpg
-url: https://fdzul.github.io/manual_hotspots/
+url: https://fdzul.github.io/manual_irs_chilpancingo/
 favicon: "favicon.ico"
-description: "El manual describe la Identificación de los hotspots en R"
+description: "El manual describe el Rociado Residual Intradomiciliario para el control de plagas úrbanas en México"
 ---
 
-#  **<span style="color:#003300;">Welcome</span>** {-}
+# **<span style="color:#003300;"></span>** {-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
-
-<span style="color:#660033;">Este documento es la versión en línea del bookdown</span><span style="color:#003300;"> **Manual para la Identificación de los hotspots del dengue en áreas urbanas de México en R**</span><span style="color:#660033;">, es un libro diseñado para desarrollar las competencias específicas para la identificación de los hotspots del dengue en áreas urbanas y metropolitanas de México.</span>
-
-<a href=""><img src="images/cover.jpg" width="550" height="550" alt="" align="right" style="margin: 0 1em 0 1em" /></a>
+<span style="color:#660033;">Este documento es la versión en línea del bookdown</span><span style="color:#003300;"> **Manual del rociado intradomiciliario para el control de plagas úrbanas en México**</span><span style="color:#660033;">, es un libro diseñado para desarrollar las competencias específicas para implementar un rociado intradomiciliario con calidad y una impregnación homogénea de la superficie blanco.</span>
+<a href=""><img src="images/cover.jpg" width="150" height="300" alt="" align="right" style="margin: 0 1em 0 1em" /></a>
   
-
-<span style="color:#660033;">La concepción teórica y práctica del libro es inspirado por la urgente necesidad de contribuir en políticas públicas y toma de desiciones del Programa de Prevención y Control de las Arbovirosis en México, específicamente en el diseño, implementación y escalamiento de un modelo estratégico de focalización del dengue en las areas urbanas y metropolitanas de México usando análisis espaciales (hotspots analysis, space-time analysis, geostatistical analysis) de la vigilancia epidemiológica y entomológica generada por el programa.</span>
-
-
-<span style="color:#660033;">La publicación online es inspirada por las iniciativas libres para la publicación de textos como 
-[**bookdown**](https://github.com/rstudio/bookdown) & todas las inciciativas de software libre para el análisis de datos espaciales y no espaciales como [**R**](https://cran.r-project.org/), [**RStudio**](https://www.rstudio.com/) y [**Python**](https://www.python.org/). El libro es de codigo abierto, asegurando que su contenido es completamente reproducible y públicamente disponible para personal de la Secretaría de Salud de México.</span>
+<span style="color:#660033;"></span>
 
 
-<span style="color:#660033;">La versión online del manual es mantenida en [fdzul.github.io/manual_hotspots](https://fdzul.github.io/manual_hotspots/) & es actualizada [GitHub Actions](https://github.com/fdzul/manual_hotspots/actions), la cual proporciona información sobre el estatus 'build status' con:
-![](https://github.com/fdzul/manual_hotspots/actions/workflows/blank.yml/badge.svg) ![](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffdzul%2Fmanual_hotspots.svg?type=shield)
+<span style="color:#660033;">La publicación online es inspirada por las iniciativas libres para la publicación de libros como 
+[**bookdown**](https://github.com/rstudio/bookdown) & todas las inciciativas de software libre para el análisis de datos espaciales y no espaciales como [**R**](https://cran.r-project.org/), [**RStudio**](https://www.rstudio.com/) y [**Python**](https://www.python.org/). El libro es de código abierto, asegurando que su contenido es completamente reproducible y públicamente disponible para personal de las instituciones públicas y privadas de México y el resto del mundo.</span>
+
+
+<span style="color:#660033;">La versión online del manual es mantenida en [fdzul.github.io/manual_irs_chilpancingo](https://fdzul.github.io/manual_irs_chilpancingo/) & es actualizada [GitHub Actions](https://github.com/fdzul/manual_irs_chilpancingo/actions), la cual proporciona información sobre el estatus 'build status' con:
+![](https://github.com/fdzul/manual_irs_chilpancingo/actions/workflows/blank.yml/badge.svg) ![](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffdzul%2Fmanual_hotspots.svg?type=shield)
 </span>
 
 
@@ -47,84 +44,56 @@ description: "El manual describe la Identificación de los hotspots en R"
 
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;">El programa de prevención y control del dengue en México se enfrenta a grandes desafíos que incluyen:</span>
+<span style="color:#660033;">El rociado residual intradomiciliario (RRI) fue desarollado para el control de la malaria y se usó con éxito para la erradicación de la fiebre amarilla en Mexico. La mayoría de los manuales de RRI publicados por la Organización Mundial de la Salud son para el control de los anofelinos, y salvo raras excepciones son para el control de vectores de la leishmaniasis. Recientemente (2019), la Organización Panamericana de la Salud publicó el manual para el control de ***Aedes*** en áreas urbanas. Sin embargo el rociado residual aplica para más artrópodos con importancia en salud pública como pulgas, chinches, garrapatas, alacranes y arañas.</span>
 
- - <span style="color:#660033;">Expanción geográfica del dengue.</span>
- 
- - <span style="color:#660033;">Incremento de la transmisión en zonas endémicas y no endémicas.</span>
- 
- - <span style="color:#660033;">Presencia de brotes en zonas urbanas que contituyen grandes metropolis (Guadalajara, Monterrey, La comarca Lagunera, etc).</span>
- 
- - <span style="color:#660033;">Potencial introducción de nuevos agentes causales, como la Fiebre Amarilla y Mayaro.</span>
+<span style="color:#660033;">La falta de manuales de rociado residual intradomiciliario para pulgas, chinches, garrapatas, alacranes y arañas constituye un área de oportunidad para generar documentos normativos que permitan integrarse a el portafolio de intervenciones en salud pública enfocado a artrópodos con importancia médica.</span>
 
 
-<span style="color:#660033;">El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales). Teóricamente, de acuerdo a la Power Law 80:20 conocida como principio o ley de Pareto 80/20, sí el 80% de la transmisión se concentra en el 20% del área urbana, por lo tanto la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad.</span>
-
-# **<span style="color:#003300;">Software & Convenciones</span>** {-}
-
-<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
-
-<span style="color:#660033;">Con el advenimiento de la era del internet, la exponencial la capacidad de las computadoras (software and hardware) y la creciente la disponibilidad software libre para el análisis espacial, ha permitido que más investigadores tengan acceso a las herramientas analíticas. En el top ten para el análisis de datos espaciales, se observan a [QGIS](http://www.qgis.org/es/site/ ), **[R](https://cran.r-project.org/)**, [Python](https://www.python.org/), [GeoDa](https://spatial.uchicago.edu/software), [SaTScan](https://www.satscan.org/) y [GRASS](https://grass.osgeo.org/). Actualmente, existe una tendencia a usar R o Python para el análisis espacial. Entre las principales limitantes de ambos lenguajes de programación es que la curva de aprendizaje es lenta y tortuosa. No obstante, lo anterior, cada día más personas están usando ambos lenguajes para el análisis espacial.</span>
-
-<span style="color:#660033;">En el presente manual se usará **[R](https://cran.r-project.org/)** y **[RStudio](https://www.rstudio.com/)** para el cálculo de los hotspots. El manual asume que los usuarios tienen experiencia en el uso de R, RStudio y que cuentan con su clave API del servicio de geocodificacion de google ([Geocoding API de google](https://developers.google.com/maps/documentation/geocoding/overview)). **[R](https://cran.r-project.org/)** es un programa de computadora estadístico que proporciona un ambiente rico y variado para la visualización y análisis de datos (espaciales y no espaciales). **[R](https://cran.r-project.org/)** se baja gratis del website de Comprensive R Archive Network en https://cran.r-project.org/ y es distribuido con una licencia pública general (GBU). Lo ideal es usar la consola de **[R](https://cran.r-project.org/)**, pero es ampliamente recomendado utilizar un ambiente de desarrollo integrado (IDE, integrated development enviroment) para interactuar con **[R](https://cran.r-project.org/)**, como **[RStudio](https://www.rstudio.com/)**. **[RStudio](https://www.rstudio.com/)** se baja gratis en la página de RStudio https://rstudio.com/products/rstudio/.</span>
-
-
-<span style="color:#660033;">Los análisis hotspots con el estadístico espacial local Getis&Ord ($G_{i}^{*}$) tanto para los datos históricos de los casos y del vector (ovitrampas), así como **Space-Time análisis** con **[SaTScan](https://www.satscan.org/)** y **[ClusterSeer](https://www.biomedware.com/software/clusterseer/)** son implementados en **[R](https://cran.r-project.org/)** y se desarrollaron los siguientes paquetes para facilitar su implementación en los servicios de salud de México.</span>
-
-* **[denhotspots](https://github.com/fdzul/denhotspots)**
-* **[deneggs](https://github.com/fdzul/deneggs)**
-* **[rgeomex](https://github.com/fdzul/rgeomex)**
-* **[dendata](https://github.com/fdzul/dendata)**
-
-<span style="color:#660033;">Los paquetes se instalan en la consola de **[R](https://cran.r-project.org/)** o **[RStudio](https://www.rstudio.com/)** en tecleando lo siguiente:</span>
-
-```{r, warning=FALSE, error=FALSE, message=FALSE}
-#devtools::install_github("fdzul/denhotspots")
-#devtools::install_github("fdzul/deneggs")
-#devtools::install_github("fdzul/rgeomex")
-#devtools::install_github("fdzul/dendata")
-```
-ó
-```{r,warning=FALSE, error=FALSE, message=FALSE}
-#remotes::install_github("fdzul/denhotspots")
-#remotes::install_github("fdzul/deneggs")
-#remotes::install_github("fdzul/rgeomex")
-#remotes::install_github("fdzul/dendata")
-```
-
-<span style="color:#660033;">Por convención en el texto los paquetes se proporcionaran en negrita y azul marino (ejemplo **[denhotspots](https://github.com/fdzul/denhotspots)**). Las funciones puedes referirse individualmente (**[extract_ageb]()**) o a través de su paquete (***[rgeomex::extract_ageb]()***) en cursiva y color azul marino. En el caso de ***[denhotspots::gihi]()***, **[denhotspots]()** es el paquete y ***[gihi]()*** es la función. En los códigos las funciones de los paquetes **[denhotspots](https://github.com/fdzul/denhotspots)**,**[deneggs](https://github.com/fdzul/deneggs)**, **[rgeomex](https://github.com/fdzul/rgeomex)** y **[dendata](https://github.com/fdzul/dendata)** usaran este metodo de applicar la función atravez de ***:*** debido a que evita conflictos con otros paquetes que tienen funciones con el mismo nombre pero que realizan diferente función.</span>
-
-<span style="color:#660033;">Como el documento incluye texto y código, el código estara cirscunscrito en un recuadro con fondo <span style="color:#567482">gris</span> como  acontinuación se presenta. El símbolo **#** indica un comentario del código, no tiene efecto en R y como resultado no se correrá la pieza del código.</span>
-
-```{r,warning=FALSE, error=FALSE, message=FALSE}
-#devtools::install_github("fdzul/denhotspots")
-```
-
-<span style="color:#660033;">En el código (recuadro gris) a las funciones se les asignará un color **<span style="color:#06287e">azul</span>**, a los paquetes un color **<span style="color:#567482">gris</span>**, a los **argumentos** de la funciones se les asignará un color **<span style="color:#7d9029">verde</span>** y a los **valores** de los argumentos se les asignará un color **<span style="color:#06287e">azul</span>**.</span>
-
-```{r, warning=FALSE, error=FALSE, message=FALSE}
-library(sf)
-library(magrittr)
-gua <- rgeomex::extract_ageb(locality = c("Zapopan", "Tonalá",
-                                          "Tlaquepaque", "Guadalajara"),
-                             cve_geo = "14")
-```
-
-```{r, warning=FALSE, error=FALSE, message=FALSE}
-plot(sf::st_geometry(gua$locality))
-```
 
 # **<span style="color:#003300;">Estructura de Manual</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;"> El manual incluye tres análisis espaciales, un análisis para datos espaciales de área (areal analysis) con el estadístico espacial local $G{_i}^{*}$, tres análisis para datos espaciales de patron de puntos espaciales (point pattern), dos son conocidos como space-time analysis y son realizados con los estadísticos satscan statistics & knox test y el tercer análisis utiliza un modelo log-Gaussian Cox process.
-El libro incluye cinco secciones o apartados, una sección para la introducción y el objetivo del libro, y un apartado para cada análisis, que incluye un capítulo donde se describe el algoritmo y un capítulo donde se implementa en el lenguaje de programación de [**R**](https://cran.r-project.org/).</span>
+<span style="color:#660033;"> </span>
 
 # **<span style="color:#003300;">Agradecimientos</span>**{-}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-<span style="color:#660033;"> El presente manual fue producido por personal de vectores y la Subdirección de Salud Publica de la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) en colaboración con la Subdirección del Programa Nacional de Vectores del [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) y el Laboratorio de Entomología del [Instituto de Diagnóstico y Referencia Epidemiológicos](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-indre) de la [Secretaría de Salud Federal](https://www.gob.mx/salud). </span>
+<span style="color:#660033;"> El presente manual fue producido por personal de vectores y la Subdirección de Salud Publica de la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/) en colaboración con la Subdirección del Programa Nacional de Vectores del [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece), el Laboratorio de Entomología del [Instituto de Diagnóstico y Referencia Epidemiológicos](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-indre) de la [Secretaría de Salud Federal](https://www.gob.mx/salud) y la [Dirección de Salud del Municipio de Chilpancingo]().</span>
 
 
 <span style="color:#660033;"> Los autores agradecen a la [Secretaría de Salud del Estado de Veracruz](https://www.ssaver.gob.mx/), al [Centro de Nacional de Programas Preventivos y Control de Enfermedades](https://www.gob.mx/salud/cenaprece) y el [Instituto de Diagnóstico y Referencia Epidemiológicos](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-indre) de la [Secretaría de Salud Federal](https://www.gob.mx/salud) por las facilidades otorgadas para poder desarrollar la presente iniciativa. </span>
+
+
+### Autores y coautores {.unnumbered} 
+
+Editor: Felipe Antonio Dzul Manzanilla
+
+Autores & Coautores: Felipe Antonio Dzul Manzanilla, Fabián Corre-Morales, Evaristo Morales-Ríos, Heron Huerta & Cipriano Gutiérrez-Castro. 
+
+### Financiamiento {.unnumbered} 
+
+El Municipio de Chilpancingo contribuyó parcialmente el financiamiento de la elaboración y edición del presente manual.
+
+
+
+# **<span style="color:#003300;">Terminos de uso & Contributiones</span>**{-}
+ 
+
+### Licencia {.unnumbered} 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>..
+
+
+Los programas académicos, cursos y adiestramientos de las instituciones públicas o privadas son bienvenidos a usar este libro, solo notifiquenos por correo para tener conocimiento. email **felipe.dzul.m@gmail.com**.  
+
+### Como citar el trabajo {.unnumbered}
+
+
+### Contribuciones {.unnumbered}  
+
+Cualquier contribución es bienvenida, por favor de contactarnos vía Github o email.
+
+
+Nota. el manual de rociado residual intradomiciliario  fue liberado con un código de conducta [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+
 

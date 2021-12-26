@@ -67,3 +67,10 @@ fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
+r-markdown
+including-plots
+rri_anofelinos
+anofelinos
+rri_aedes
+rri_lutzomyias
+rri_triatomas

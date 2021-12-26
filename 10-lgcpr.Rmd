@@ -1,4 +1,0 @@
-# **<span style="color:#003300;">Spatial LGCP en R</span>** {#lgcpr}
-
-
-
