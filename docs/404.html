@@ -4,22 +4,22 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Software &amp; Convenciones | Manual para la identificación de los hotspots en áreas úrbanas</title>
+  <title>Page not found | Manual para la identificación de los hotspots en áreas úrbanas</title>
   <meta name="description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Software &amp; Convenciones | Manual para la identificación de los hotspots en áreas úrbanas" />
+  <meta property="og:title" content="Page not found | Manual para la identificación de los hotspots en áreas úrbanas" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://fdzul.github.io/manual_hotspots/" />
-  <meta property="og:image" content="https://fdzul.github.io/manual_hotspots//images/cover.jpg" />
+  <meta property="og:image" content="https://fdzul.github.io/manual_hotspots/images/cover.jpg" />
   <meta property="og:description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
   <meta name="github-repo" content="fdzul/manual_hotspots" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Software &amp; Convenciones | Manual para la identificación de los hotspots en áreas úrbanas" />
+  <meta name="twitter:title" content="Page not found | Manual para la identificación de los hotspots en áreas úrbanas" />
   
   <meta name="twitter:description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
-  <meta name="twitter:image" content="https://fdzul.github.io/manual_hotspots//images/cover.jpg" />
+  <meta name="twitter:image" content="https://fdzul.github.io/manual_hotspots/images/cover.jpg" />
 
 <meta name="author" content="Felipe Antonio Dzul Manzanilla" />
 
@@ -30,10 +30,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="justificación.html"/>
-<link rel="next" href="estructura-de-manual.html"/>
+
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -245,51 +245,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="software-convenciones" class="section level1 unnumbered">
-<h1><strong><span style="color:#003300;">Software &amp; Convenciones</span></strong></h1>
-<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
-<p><span style="color:#660033;">Con el advenimiento de la era del internet, la exponencial la capacidad de las computadoras (software and hardware) y la creciente la disponibilidad software libre para el análisis espacial, ha permitido que más investigadores tengan acceso a las herramientas analíticas. En el top ten para el análisis de datos espaciales, se observan a <a href="http://www.qgis.org/es/site/">QGIS</a>, <strong><a href="https://cran.r-project.org/">R</a></strong>, <a href="https://www.python.org/">Python</a>, <a href="https://spatial.uchicago.edu/software">GeoDa</a>, <a href="https://www.satscan.org/">SaTScan</a> y <a href="https://grass.osgeo.org/">GRASS</a>. Actualmente, existe una tendencia a usar R o Python para el análisis espacial. Entre las principales limitantes de ambos lenguajes de programación es que la curva de aprendizaje es lenta y tortuosa. No obstante, lo anterior, cada día más personas están usando ambos lenguajes para el análisis espacial.</span></p>
-<p><span style="color:#660033;">En el presente manual se usará <strong><a href="https://cran.r-project.org/">R</a></strong> y <strong><a href="https://www.rstudio.com/">RStudio</a></strong> para el cálculo de los hotspots. El manual asume que los usuarios tienen experiencia en el uso de R, RStudio y que cuentan con su clave API del servicio de geocodificacion de google (<a href="https://developers.google.com/maps/documentation/geocoding/overview">Geocoding API de google</a>). <strong><a href="https://cran.r-project.org/">R</a></strong> es un programa de computadora estadístico que proporciona un ambiente rico y variado para la visualización y análisis de datos (espaciales y no espaciales). <strong><a href="https://cran.r-project.org/">R</a></strong> se baja gratis del website de Comprensive R Archive Network en <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> y es distribuido con una licencia pública general (GBU). Lo ideal es usar la consola de <strong><a href="https://cran.r-project.org/">R</a></strong>, pero es ampliamente recomendado utilizar un ambiente de desarrollo integrado (IDE, integrated development enviroment) para interactuar con <strong><a href="https://cran.r-project.org/">R</a></strong>, como <strong><a href="https://www.rstudio.com/">RStudio</a></strong>. <strong><a href="https://www.rstudio.com/">RStudio</a></strong> se baja gratis en la página de RStudio <a href="https://rstudio.com/products/rstudio/" class="uri">https://rstudio.com/products/rstudio/</a>.</span></p>
-<p><span style="color:#660033;">Los análisis hotspots con el estadístico espacial local Getis&amp;Ord (<span class="math inline">\(G_{i}^{*}\)</span>) tanto para los datos históricos de los casos y del vector (ovitrampas), así como <strong>Space-Time análisis</strong> con <strong><a href="https://www.satscan.org/">SaTScan</a></strong> y <strong><a href="https://www.biomedware.com/software/clusterseer/">ClusterSeer</a></strong> son implementados en <strong><a href="https://cran.r-project.org/">R</a></strong> y se desarrollaron los siguientes paquetes para facilitar su implementación en los servicios de salud de México.</span></p>
-<ul>
-<li><strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong></li>
-<li><strong><a href="https://github.com/fdzul/deneggs">deneggs</a></strong></li>
-<li><strong><a href="https://github.com/fdzul/rgeomex">rgeomex</a></strong></li>
-<li><strong><a href="https://github.com/fdzul/dendata">dendata</a></strong></li>
-</ul>
-<p><span style="color:#660033;">Los paquetes se instalan en la consola de <strong><a href="https://cran.r-project.org/">R</a></strong> o <strong><a href="https://www.rstudio.com/">RStudio</a></strong> en tecleando lo siguiente:</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="software-convenciones.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/denhotspots&quot;)</span></span>
-<span id="cb1-2"><a href="software-convenciones.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/deneggs&quot;)</span></span>
-<span id="cb1-3"><a href="software-convenciones.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/rgeomex&quot;)</span></span>
-<span id="cb1-4"><a href="software-convenciones.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/dendata&quot;)</span></span></code></pre></div>
-<p>ó</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="software-convenciones.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/denhotspots&quot;)</span></span>
-<span id="cb2-2"><a href="software-convenciones.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/deneggs&quot;)</span></span>
-<span id="cb2-3"><a href="software-convenciones.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/rgeomex&quot;)</span></span>
-<span id="cb2-4"><a href="software-convenciones.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#remotes::install_github(&quot;fdzul/dendata&quot;)</span></span></code></pre></div>
-<p><span style="color:#660033;">Por convención en el texto los paquetes se proporcionaran en negrita y azul marino (ejemplo <strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong>). Las funciones puedes referirse individualmente (<strong><a href="">extract_ageb</a></strong>) o a través de su paquete (<strong><em><a href="">rgeomex::extract_ageb</a></em></strong>) en cursiva y color azul marino. En el caso de <strong><em><a href="">denhotspots::gihi</a></em></strong>, <strong><a href="">denhotspots</a></strong> es el paquete y <strong><em><a href="">gihi</a></em></strong> es la función. En los códigos las funciones de los paquetes <strong><a href="https://github.com/fdzul/denhotspots">denhotspots</a></strong>,<strong><a href="https://github.com/fdzul/deneggs">deneggs</a></strong>, <strong><a href="https://github.com/fdzul/rgeomex">rgeomex</a></strong> y <strong><a href="https://github.com/fdzul/dendata">dendata</a></strong> usaran este metodo de applicar la función atravez de <strong><em>:</em></strong> debido a que evita conflictos con otros paquetes que tienen funciones con el mismo nombre pero que realizan diferente función.</span></p>
-<p><span style="color:#660033;">Como el documento incluye texto y código, el código estara cirscunscrito en un recuadro con fondo <span style="color:#567482">gris</span> como acontinuación se presenta. El símbolo <strong>#</strong> indica un comentario del código, no tiene efecto en R y como resultado no se correrá la pieza del código.</span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="software-convenciones.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github(&quot;fdzul/denhotspots&quot;)</span></span></code></pre></div>
-<p><span style="color:#660033;">En el código (recuadro gris) a las funciones se les asignará un color <strong><span style="color:#06287e">azul</span></strong>, a los paquetes un color <strong><span style="color:#567482">gris</span></strong>, a los <strong>argumentos</strong> de la funciones se les asignará un color <strong><span style="color:#7d9029">verde</span></strong> y a los <strong>valores</strong> de los argumentos se les asignará un color <strong><span style="color:#06287e">azul</span></strong>.</span></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="software-convenciones.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb4-2"><a href="software-convenciones.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb4-3"><a href="software-convenciones.html#cb4-3" aria-hidden="true" tabindex="-1"></a>gua <span class="ot">&lt;-</span> rgeomex<span class="sc">::</span><span class="fu">extract_ageb</span>(<span class="at">locality =</span> <span class="fu">c</span>(<span class="st">&quot;Zapopan&quot;</span>, <span class="st">&quot;Tonalá&quot;</span>,</span>
-<span id="cb4-4"><a href="software-convenciones.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">&quot;Tlaquepaque&quot;</span>, <span class="st">&quot;Guadalajara&quot;</span>),</span>
-<span id="cb4-5"><a href="software-convenciones.html#cb4-5" aria-hidden="true" tabindex="-1"></a>                             <span class="at">cve_geo =</span> <span class="st">&quot;14&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="software-convenciones.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sf<span class="sc">::</span><span class="fu">st_geometry</span>(gua<span class="sc">$</span>locality))</span></code></pre></div>
-<p><img src="manual_hotspots_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="justificación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="estructura-de-manual.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -317,7 +288,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fdzul/manual_hotspots/edit/master/index.Rmd",
+"link": "https://github.com/fdzul/manual_hotspots/edit/master/%s",
 "text": "Edit"
 },
 "history": {
@@ -329,6 +300,10 @@ gitbook.start({
 "text": null
 },
 "download": ["manual_hotspots.pdf", "manual_hotspots.epub", "manual_hotspots.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }
