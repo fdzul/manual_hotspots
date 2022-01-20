@@ -60,3 +60,7 @@ lgcp
 lgcpr
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
+tab:unnamed-chunk-1
+tab:unnamed-chunk-2
+fig:unnamed-chunk-3
+fig:unnamed-chunk-4
