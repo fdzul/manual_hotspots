@@ -58,3 +58,5 @@ mapa-estático
 mapa-estático-en-paneles-por-grupos-de-semanas
 lgcp
 lgcpr
+fig:unnamed-chunk-1
+fig:unnamed-chunk-2
