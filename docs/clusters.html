@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 5 Clusters de transmisión  | Manual para la identificación de los hotspots en áreas úrbanas</title>
   <meta name="description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 5 Clusters de transmisión  | Manual para la identificación de los hotspots en áreas úrbanas" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://fdzul.github.io/manual_hotspots/" />
   <meta property="og:image" content="https://fdzul.github.io/manual_hotspots/images/cover.jpg" />
   <meta property="og:description" content="El manual describe la identificación de los hotspots en áreas endemicas de dengue en México" />
   <meta name="github-repo" content="fdzul/manual_hotspots" />
@@ -32,7 +31,6 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="prev" href="hotspotsr.html"/>
 <link rel="next" href="clustersr.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,12 +48,13 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 
@@ -76,89 +75,99 @@
 <li><a href="./"><span style= "color:#660033; font-size:15px; font-weight: bold;">Hotspot del Dengue en R</span></a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#welcome"><strong><span style="color:#003300;">Welcome</span></strong></a></li>
-<li class="part"><span><b>I Sección</b></span></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong></a></li>
-<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong></a></li>
-<li class="part"><span><b>II Sección</b></span></li>
-<li class="chapter" data-level="3" data-path="hotspots.html"><a href="hotspots.html"><i class="fa fa-check"></i><b>3</b> <strong><span style="color:#003300;">Hotspots</span></strong></a>
+<li><a href="index.html#welcome"><strong><span style="color:#003300;">Welcome</span></strong><span></span></a></li>
+<li class="part"><span><b>I Sección<span></span></b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> <strong><span style="color:#003300;">Introducción </span></strong><span></span></a></li>
+<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> <strong><span style="color:#003300;"> Objetivo </span></strong><span></span></a></li>
+<li class="part"><span><b>II Sección<span></span></b></span></li>
+<li class="chapter" data-level="3" data-path="hotspots.html"><a href="hotspots.html"><i class="fa fa-check"></i><b>3</b> <strong><span style="color:#003300;">Hotspots</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="hotspots.html"><a href="hotspots.html#análisis-de-la-información-epidemiológica-y-entomológica"><i class="fa fa-check"></i><b>3.1</b> <strong><span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span></strong></a></li>
-<li class="chapter" data-level="3.2" data-path="hotspots.html"><a href="hotspots.html#hotspots-de-transmisión-histórica"><i class="fa fa-check"></i><b>3.2</b> <strong><span style="color:#003300;">Hotspots de transmisión histórica</span></strong></a>
+<li class="chapter" data-level="3.1" data-path="hotspots.html"><a href="hotspots.html#análisis-de-la-información-epidemiológica-y-entomológica"><i class="fa fa-check"></i><b>3.1</b> <strong><span style="color:#003300;">Análisis de la Información epidemiológica y entomológica</span></strong><span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="hotspots.html"><a href="hotspots.html#hotspots-de-transmisión-histórica"><i class="fa fa-check"></i><b>3.2</b> <strong><span style="color:#003300;">Hotspots de transmisión histórica</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="hotspots.html"><a href="hotspots.html#algoritmo-para-el-cálculo-de-los-hotspots"><i class="fa fa-check"></i><b>3.2.1</b> <span style="color:#003300;">Algoritmo para el cálculo de los Hotspots</span></a></li>
-<li class="chapter" data-level="3.2.2" data-path="hotspots.html"><a href="hotspots.html#referencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><span style="color:#003300;">Referencias</span></strong></a></li>
+<li class="chapter" data-level="3.2.1" data-path="hotspots.html"><a href="hotspots.html#algoritmo-para-el-cálculo-de-los-hotspots"><i class="fa fa-check"></i><b>3.2.1</b> <span style="color:#003300;">Algoritmo para el cálculo de los Hotspots</span><span></span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="hotspots.html"><a href="hotspots.html#referencias"><i class="fa fa-check"></i><b>3.2.2</b> <strong><span style="color:#003300;">Referencias</span></strong><span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="hotspotsr.html"><a href="hotspotsr.html"><i class="fa fa-check"></i><b>4</b> <strong><span style="color:#003300;">Hotspots en R</span></strong></a>
+<li class="chapter" data-level="4" data-path="hotspotsr.html"><a href="hotspotsr.html"><i class="fa fa-check"></i><b>4</b> <strong><span style="color:#003300;">Hotspots en R</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-las-bases-de-datos-del-sinave."><i class="fa fa-check"></i><b>4.1</b> <strong><span style="color:#003300;">Bajar las bases de datos del <span>SINAVE</span>.</span></strong></a>
+<li class="chapter" data-level="4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-las-bases-de-datos-del-sinave."><i class="fa fa-check"></i><b>4.1</b> <strong><span style="color:#003300;">Bajar las bases de datos del <span>SINAVE</span>.</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="hotspotsr.html"><a href="hotspotsr.html#escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx."><i class="fa fa-check"></i><b>4.1.1</b> <strong><span style="color:#660033;">Escribir en el buscador de preferencia la página del sinave (<span>https://www.sinave.gob.mx/</span>).</span></strong></a></li>
-<li class="chapter" data-level="4.1.2" data-path="hotspotsr.html"><a href="hotspotsr.html#en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector."><i class="fa fa-check"></i><b>4.1.2</b> <strong><span style="color:#660033;">En la página del sinave buscar y darle click al boton Enfermedades Transmitidas por Vector.</span></strong></a></li>
-<li class="chapter" data-level="4.1.3" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-el-nombre-del-usurio-y-contraseña."><i class="fa fa-check"></i><b>4.1.3</b> <strong><span style="color:#660033;">Ingresar el nombre del usurio y contraseña.</span></strong></a></li>
-<li class="chapter" data-level="4.1.4" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-a-la-sección-de-reportes."><i class="fa fa-check"></i><b>4.1.4</b> <span style="color:#660033;">Ingresar a la sección de <strong>Reportes</strong>.</span></a></li>
-<li class="chapter" data-level="4.1.5" data-path="hotspotsr.html"><a href="hotspotsr.html#darle-click-a-descarga-de-datos-vectores"><i class="fa fa-check"></i><b>4.1.5</b> <span style="color:#660033;">Darle click a <strong>Descarga de Datos Vectores</strong></span></a></li>
-<li class="chapter" data-level="4.1.6" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-la-base-de-datos-de-la-última-fecha-de-la-enfermedad-de-interés."><i class="fa fa-check"></i><b>4.1.6</b> <strong><span style="color:#660033;">Bajar la base de datos de la última fecha de la enfermedad de interés.</span></strong></a></li>
-<li class="chapter" data-level="4.1.7" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-base-en-la-carpeta-de-interes."><i class="fa fa-check"></i><b>4.1.7</b> <strong><span style="color:#660033;">Guardar la base en la carpeta de interes.</span></strong></a></li>
-<li class="chapter" data-level="4.1.8" data-path="hotspotsr.html"><a href="hotspotsr.html#extraer-el-txt-del-archivo-con-extensión-rar."><i class="fa fa-check"></i><b>4.1.8</b> <strong><span style="color:#660033;">Extraer el txt del archivo con extensión RAR.</span></strong></a></li>
+<li class="chapter" data-level="4.1.1" data-path="hotspotsr.html"><a href="hotspotsr.html#escribir-en-el-buscador-de-preferencia-la-página-del-sinave-httpswww.sinave.gob.mx."><i class="fa fa-check"></i><b>4.1.1</b> <strong><span style="color:#660033;">Escribir en el buscador de preferencia la página del sinave (<span>https://www.sinave.gob.mx/</span>).</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.1.2" data-path="hotspotsr.html"><a href="hotspotsr.html#en-la-página-del-sinave-buscar-y-darle-click-al-boton-enfermedades-transmitidas-por-vector."><i class="fa fa-check"></i><b>4.1.2</b> <strong><span style="color:#660033;">En la página del sinave buscar y darle click al boton Enfermedades Transmitidas por Vector.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.1.3" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-el-nombre-del-usurio-y-contraseña."><i class="fa fa-check"></i><b>4.1.3</b> <strong><span style="color:#660033;">Ingresar el nombre del usurio y contraseña.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.1.4" data-path="hotspotsr.html"><a href="hotspotsr.html#ingresar-a-la-sección-de-reportes."><i class="fa fa-check"></i><b>4.1.4</b> <span style="color:#660033;">Ingresar a la sección de <strong>Reportes</strong>.</span><span></span></a></li>
+<li class="chapter" data-level="4.1.5" data-path="hotspotsr.html"><a href="hotspotsr.html#darle-click-a-descarga-de-datos-vectores"><i class="fa fa-check"></i><b>4.1.5</b> <span style="color:#660033;">Darle click a <strong>Descarga de Datos Vectores</strong></span><span></span></a></li>
+<li class="chapter" data-level="4.1.6" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-la-base-de-datos-de-la-última-fecha-de-la-enfermedad-de-interés."><i class="fa fa-check"></i><b>4.1.6</b> <strong><span style="color:#660033;">Bajar la base de datos de la última fecha de la enfermedad de interés.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.1.7" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-base-en-la-carpeta-de-interes."><i class="fa fa-check"></i><b>4.1.7</b> <strong><span style="color:#660033;">Guardar la base en la carpeta de interes.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.1.8" data-path="hotspotsr.html"><a href="hotspotsr.html#extraer-el-txt-del-archivo-con-extensión-rar."><i class="fa fa-check"></i><b>4.1.8</b> <strong><span style="color:#660033;">Extraer el txt del archivo con extensión RAR.</span></strong><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#geocodificación-de-la-base-de-datos-de-dengue."><i class="fa fa-check"></i><b>4.2</b> <strong><span style="color:#003300;">Geocodificación de la base de datos de Dengue.</span></strong></a>
+<li class="chapter" data-level="4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#geocodificación-de-la-base-de-datos-de-dengue."><i class="fa fa-check"></i><b>4.2</b> <strong><span style="color:#003300;">Geocodificación de la base de datos de Dengue.</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-de-datos-de-dengue-a"><i class="fa fa-check"></i><b>4.2.1</b> <strong><span style="color:#660033;">Subir la base de datos de Dengue a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /></a></li>
-<li class="chapter" data-level="4.2.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-el-csv-a-y-creamos-el-vector-de-direcciones"><i class="fa fa-check"></i><b>4.2.2</b> <strong><span style="color:#660033;">Subir el csv a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /> <strong><span style="color:#003300;">y creamos el vector de direcciones</span></strong></a></li>
-<li class="chapter" data-level="4.2.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-geocodificación"><i class="fa fa-check"></i><b>4.2.3</b> <strong><span style="color:#660033;">Realizar la geocodificación</span></strong></a></li>
-<li class="chapter" data-level="4.2.4" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-información-en-rdata"><i class="fa fa-check"></i><b>4.2.4</b> <strong><span style="color:#660033;">Guardar la información en RData</span></strong></a></li>
+<li class="chapter" data-level="4.2.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-de-datos-de-dengue-a"><i class="fa fa-check"></i><b>4.2.1</b> <strong><span style="color:#660033;">Subir la base de datos de Dengue a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /><span></span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-el-csv-a-y-creamos-el-vector-de-direcciones"><i class="fa fa-check"></i><b>4.2.2</b> <strong><span style="color:#660033;">Subir el csv a</span></strong> <img src="https://d33wubrfki0l68.cloudfront.net/62bcc8535a06077094ca3c29c383e37ad7334311/a263f/assets/img/logo.svg" style="width:10.0%" /> <strong><span style="color:#003300;">y creamos el vector de direcciones</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.2.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-geocodificación"><i class="fa fa-check"></i><b>4.2.3</b> <strong><span style="color:#660033;">Realizar la geocodificación</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.2.4" data-path="hotspotsr.html"><a href="hotspotsr.html#guardar-la-información-en-rdata"><i class="fa fa-check"></i><b>4.2.4</b> <strong><span style="color:#660033;">Guardar la información en RData</span></strong><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-los-shapefile-del-inegi."><i class="fa fa-check"></i><b>4.3</b> <strong><span style="color:#003300;">Bajar los shapefile del <span>INEGI</span>.</span></strong></a></li>
-<li class="chapter" data-level="4.4" data-path="hotspotsr.html"><a href="hotspotsr.html#contar-el-número-de-casos-por-ageb-agregación-espacial."><i class="fa fa-check"></i><b>4.4</b> <strong><span style="color:#003300;">Contar el número de casos por AGEB (agregación espacial).</span></strong></a>
+<li class="chapter" data-level="4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#bajar-los-shapefile-del-inegi."><i class="fa fa-check"></i><b>4.3</b> <strong><span style="color:#003300;">Bajar los shapefile del <span>INEGI</span>.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="hotspotsr.html"><a href="hotspotsr.html#contar-el-número-de-casos-por-ageb-agregación-espacial."><i class="fa fa-check"></i><b>4.4</b> <strong><span style="color:#003300;">Contar el número de casos por AGEB (agregación espacial).</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-datos-geocodificada."><i class="fa fa-check"></i><b>4.4.1</b> <strong><span style="color:#660033;">subir la base datos geocodificada.</span></strong></a></li>
-<li class="chapter" data-level="4.4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-los-agebs."><i class="fa fa-check"></i><b>4.4.2</b> <strong><span style="color:#660033;">subir los AGEBs.</span></strong></a></li>
-<li class="chapter" data-level="4.4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-agregación-espacial."><i class="fa fa-check"></i><b>4.4.3</b> <strong><span style="color:#660033;"> Realizar la agregación espacial.</span></strong></a></li>
+<li class="chapter" data-level="4.4.1" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-la-base-datos-geocodificada."><i class="fa fa-check"></i><b>4.4.1</b> <strong><span style="color:#660033;">subir la base datos geocodificada.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.4.2" data-path="hotspotsr.html"><a href="hotspotsr.html#subir-los-agebs."><i class="fa fa-check"></i><b>4.4.2</b> <strong><span style="color:#660033;">subir los AGEBs.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.4.3" data-path="hotspotsr.html"><a href="hotspotsr.html#realizar-la-agregación-espacial."><i class="fa fa-check"></i><b>4.4.3</b> <strong><span style="color:#660033;"> Realizar la agregación espacial.</span></strong><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="hotspotsr.html"><a href="hotspotsr.html#pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots."><i class="fa fa-check"></i><b>4.5</b> <strong><span style="color:#003300;">Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</span></strong></a></li>
-<li class="chapter" data-level="4.6" data-path="hotspotsr.html"><a href="hotspotsr.html#visualizar-los-hotspots."><i class="fa fa-check"></i><b>4.6</b> <strong><span style="color:#003300;">Visualizar los hotspots.</span></strong></a></li>
+<li class="chapter" data-level="4.5" data-path="hotspotsr.html"><a href="hotspotsr.html#pasos-6-10.-cálcular-el-z-score-de-los-casos-a-calcular-los-hotspots."><i class="fa fa-check"></i><b>4.5</b> <strong><span style="color:#003300;">Pasos 6-10. Cálcular el Z-score de los casos a Calcular los hotspots.</span></strong><span></span></a></li>
+<li class="chapter" data-level="4.6" data-path="hotspotsr.html"><a href="hotspotsr.html#visualizar-los-hotspots."><i class="fa fa-check"></i><b>4.6</b> <strong><span style="color:#003300;">Visualizar los hotspots.</span></strong><span></span></a></li>
 </ul></li>
-<li class="part"><span><b>III Sección</b></span></li>
-<li class="chapter" data-level="5" data-path="clusters.html"><a href="clusters.html"><i class="fa fa-check"></i><b>5</b> <strong><span style="color:#003300;">Clusters de transmisión </span></strong></a>
+<li class="part"><span><b>III Sección<span></span></b></span></li>
+<li class="chapter" data-level="5" data-path="clusters.html"><a href="clusters.html"><i class="fa fa-check"></i><b>5</b> <strong><span style="color:#003300;">Clusters de transmisión </span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="clusters.html"><a href="clusters.html#identificación-de-clusters-de-transmisión"><i class="fa fa-check"></i><b>5.1</b> <span style="color:#003300;"><strong>Identificación de clusters de transmisión</strong></span></a></li>
-<li class="chapter" data-level="5.2" data-path="clusters.html"><a href="clusters.html#algoritmo-para-space-time-análisis-con-satscan"><i class="fa fa-check"></i><b>5.2</b> <span style="color:#003300;">Algoritmo para <strong>Space-Time análisis</strong> con <strong><span>SaTScan</span></strong></span></a></li>
+<li class="chapter" data-level="5.1" data-path="clusters.html"><a href="clusters.html#identificación-de-clusters-de-transmisión"><i class="fa fa-check"></i><b>5.1</b> <span style="color:#003300;"><strong>Identificación de clusters de transmisión</strong></span><span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="clusters.html"><a href="clusters.html#algoritmo-para-space-time-análisis-con-satscan"><i class="fa fa-check"></i><b>5.2</b> <span style="color:#003300;">Algoritmo para <strong>Space-Time análisis</strong> con <strong><span>SaTScan</span></strong></span><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="clustersr.html"><a href="clustersr.html"><i class="fa fa-check"></i><b>6</b> <strong><span style="color:#003300;">Clusters de Transmisión en R</span></strong></a>
+<li class="chapter" data-level="6" data-path="clustersr.html"><a href="clustersr.html"><i class="fa fa-check"></i><b>6</b> <strong><span style="color:#003300;">Clusters de Transmisión en R</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="clustersr.html"><a href="clustersr.html#identificación-de-los-cluster-de-transmisión-en-r"><i class="fa fa-check"></i><b>6.1</b> <strong><span style="color:#003300;">Identificación de los cluster de transmisión en R</span></strong></a></li>
-<li class="chapter" data-level="6.2" data-path="clustersr.html"><a href="clustersr.html#generar-los-archivos-cas-y-geo."><i class="fa fa-check"></i><b>6.2</b> <strong><span style="color:#003300;">Generar los archivos cas y geo</span></strong>.</a>
+<li class="chapter" data-level="6.1" data-path="clustersr.html"><a href="clustersr.html#identificación-de-los-cluster-de-transmisión-en-r"><i class="fa fa-check"></i><b>6.1</b> <strong><span style="color:#003300;">Identificación de los cluster de transmisión en R</span></strong><span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="clustersr.html"><a href="clustersr.html#generar-los-archivos-cas-y-geo."><i class="fa fa-check"></i><b>6.2</b> <strong><span style="color:#003300;">Generar los archivos cas y geo</span></strong>.<span></span></a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="clustersr.html"><a href="clustersr.html#paso-1.-subir-la-base-de-datos-geocodificada."><i class="fa fa-check"></i><b>6.2.1</b> <strong><span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span></strong>.</a></li>
-<li class="chapter" data-level="6.2.2" data-path="clustersr.html"><a href="clustersr.html#paso-2.-subir-las-funciones-."><i class="fa fa-check"></i><b>6.2.2</b> <strong><span style="color:#003300;">Paso 2. Subir las funciones </span></strong>.</a></li>
-<li class="chapter" data-level="6.2.3" data-path="clustersr.html"><a href="clustersr.html#paso-3.-aplicar-las-funciones."><i class="fa fa-check"></i><b>6.2.3</b> <strong><span style="color:#003300;">Paso 3. Aplicar las funciones</span></strong>.</a></li>
+<li class="chapter" data-level="6.2.1" data-path="clustersr.html"><a href="clustersr.html#paso-1.-subir-la-base-de-datos-geocodificada."><i class="fa fa-check"></i><b>6.2.1</b> <strong><span style="color:#003300;">Paso 1. Subir la base de datos geocodificada</span></strong>.<span></span></a></li>
+<li class="chapter" data-level="6.2.2" data-path="clustersr.html"><a href="clustersr.html#paso-2.-subir-las-funciones-."><i class="fa fa-check"></i><b>6.2.2</b> <strong><span style="color:#003300;">Paso 2. Subir las funciones </span></strong>.<span></span></a></li>
+<li class="chapter" data-level="6.2.3" data-path="clustersr.html"><a href="clustersr.html#paso-3.-aplicar-las-funciones."><i class="fa fa-check"></i><b>6.2.3</b> <strong><span style="color:#003300;">Paso 3. Aplicar las funciones</span></strong>.<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="clustersr.html"><a href="clustersr.html#definir-los-parametros-del-input-análisis-y-resultado-output."><i class="fa fa-check"></i><b>6.3</b> <strong><span style="color:#003300;">Definir los parametros del input, análisis y resultado (output).</span></strong></a></li>
+<li class="chapter" data-level="6.3" data-path="clustersr.html"><a href="clustersr.html#definir-los-parametros-del-input-análisis-y-resultado-output."><i class="fa fa-check"></i><b>6.3</b> <strong><span style="color:#003300;">Definir los parametros del input, análisis y resultado (output).</span></strong><span></span></a></li>
 </ul></li>
-<li class="part"><span><b>IV Sección</b></span></li>
-<li class="chapter" data-level="7" data-path="cadenas.html"><a href="cadenas.html"><i class="fa fa-check"></i><b>7</b> <strong><span style="color:#003300;">Cadenas de Transmisión</span></strong></a>
+<li class="part"><span><b>IV Sección<span></span></b></span></li>
+<li class="chapter" data-level="7" data-path="cadenas.html"><a href="cadenas.html"><i class="fa fa-check"></i><b>7</b> <strong><span style="color:#003300;">Cadenas de Transmisión</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="cadenas.html"><a href="cadenas.html#space-time-con-knox-test"><i class="fa fa-check"></i><b>7.1</b> <span style="color:#003300;"><strong>Space-Time con Knox test</strong></span></a></li>
-<li class="chapter" data-level="7.2" data-path="cadenas.html"><a href="cadenas.html#algorítmo-para-realizar-la-prueba-de-knox"><i class="fa fa-check"></i><b>7.2</b> <strong><span style="color:#003300;">Algorítmo para realizar la prueba de knox</span></strong></a></li>
+<li class="chapter" data-level="7.1" data-path="cadenas.html"><a href="cadenas.html#space-time-con-knox-test"><i class="fa fa-check"></i><b>7.1</b> <span style="color:#003300;"><strong>Space-Time con Knox test</strong></span><span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="cadenas.html"><a href="cadenas.html#algorítmo-para-realizar-la-prueba-de-knox"><i class="fa fa-check"></i><b>7.2</b> <strong><span style="color:#003300;">Algorítmo para realizar la prueba de knox</span></strong><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="cadenasr.html"><a href="cadenasr.html"><i class="fa fa-check"></i><b>8</b> <strong><span style="color:#003300;">Cadenas de Transmisión en R</span></strong></a>
+<li class="chapter" data-level="8" data-path="cadenasr.html"><a href="cadenasr.html"><i class="fa fa-check"></i><b>8</b> <strong><span style="color:#003300;">Cadenas de Transmisión en R</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="cadenasr.html"><a href="cadenasr.html#identificación-de-cadenas-de-transmisión-en-r"><i class="fa fa-check"></i><b>8.1</b> <strong><span style="color:#003300;">Identificación de cadenas de transmisión en R</span></strong></a></li>
-<li class="chapter" data-level="8.2" data-path="cadenasr.html"><a href="cadenasr.html#knox-test"><i class="fa fa-check"></i><b>8.2</b> <strong><span style="color:#003300;">Knox test</span></strong></a>
+<li class="chapter" data-level="8.1" data-path="cadenasr.html"><a href="cadenasr.html#identificación-de-cadenas-de-transmisión-en-r"><i class="fa fa-check"></i><b>8.1</b> <strong><span style="color:#003300;">Identificación de cadenas de transmisión en R</span></strong><span></span></a></li>
+<li class="chapter" data-level="8.2" data-path="cadenasr.html"><a href="cadenasr.html#knox-test"><i class="fa fa-check"></i><b>8.2</b> <strong><span style="color:#003300;">Knox test</span></strong><span></span></a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="cadenasr.html"><a href="cadenasr.html#visualización-de-las-cadenas-de-transmisión"><i class="fa fa-check"></i><b>8.2.1</b> <strong><span style="color:#003300;">Visualización de las cadenas de Transmisión </span></strong></a></li>
+<li class="chapter" data-level="8.2.1" data-path="cadenasr.html"><a href="cadenasr.html#visualización-de-las-cadenas-de-transmisión"><i class="fa fa-check"></i><b>8.2.1</b> <strong><span style="color:#003300;">Visualización de las cadenas de Transmisión </span></strong><span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Spatial LGCP</span></strong></a></li>
-<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Spatial LGCP en R</span></strong></a></li>
+<li class="part"><span><b>V Sección<span></span></b></span></li>
+<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Log Gaussian Cox Process Espacial</span></strong><span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="lgcp.html"><a href="lgcp.html#lgcp-espacial"><i class="fa fa-check"></i><b>9.1</b> <span style="color:#003300;"><strong>LGCP espacial</strong></span><span></span></a></li>
+<li class="chapter" data-level="9.2" data-path="lgcp.html"><a href="lgcp.html#algorítmo-para-realizar-el-lgcp-espacial"><i class="fa fa-check"></i><b>9.2</b> <strong><span style="color:#003300;">Algorítmo para realizar el LGCP espacial </span></strong><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Log Gaussian Cox Process Espacial en R</span></strong><span></span></a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="lgcpr.html"><a href="lgcpr.html#lgcp-espacial-en-r"><i class="fa fa-check"></i><b>10.1</b> <strong><span style="color:#003300;">LGCP Espacial en R</span></strong><span></span></a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/fdzul" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Felipe Dzul-Manzanilla</span> </a></li>
 <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Fabián Correa-Morales</span></a></li>
 <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Arturo Báez-Hernández</span></a></li>
 <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/guadalupe-diaz-del-castillo-flores/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Guadalupe Díaz del Castillo Flores</span></a></li>
 <li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Heron Huerta</span> </a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Luis Hernández-Herrera</span> </a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Evaristo Morales-Ríos</span> </a></li>
 <img src="https://www.ssaver.gob.mx/wp-content/uploads/2021/04/cropped-logoencabezado6abr2.jpg" alt="SESVER" width="250" height="50">
 <img src="https://raw.githubusercontent.com/mxabierto/assets/master/img/logos/cenaprece.png" alt="SESVER" width="250" height="100">
 <img src="https://www.genolifeadn.com/wp-content/uploads/2020/04/indrelogo.png" alt="SESVER" width="100" height="50">
@@ -180,10 +189,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="clusters" class="section level1" number="5">
-<h1><span class="header-section-number">Capítulo 5</span> <strong><span style="color:#003300;">Clusters de transmisión </span></strong></h1>
-<div id="identificación-de-clusters-de-transmisión" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> <span style="color:#003300;"><strong>Identificación de clusters de transmisión</strong></span></h2>
+<div id="clusters" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> <strong><span style="color:#003300;">Clusters de transmisión </span></strong><a href="clusters.html#clusters" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="identificación-de-clusters-de-transmisión" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> <span style="color:#003300;"><strong>Identificación de clusters de transmisión</strong></span><a href="clusters.html#identificación-de-clusters-de-transmisión" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span style="color:#660033;">La identificación de clusters de transmisión de los virus del dengue se realiza con el estadístico satscan, este análisis es conocido en ingles como space-time analysis y por lo general es realizado en el software <strong><a href="https://www.satscan.org/">SaTScan</a></strong>. Actualmente existe un paquete en <strong><a href="">R</a></strong> llamado rsatscan que corre el software <strong><a href="https://www.satscan.org/">SaTScan</a></strong> a través de <strong><a href="">R</a></strong>. El requisito es tener instalado software <strong><a href="https://www.satscan.org/">SaTScan</a></strong> en el equipo de computo. La identificación de las cadenas de transmisión del dengue con las bases de datos del <strong><a href="">SINAVE</a></strong> es realizado en <strong><a href="">R</a></strong> a traves del análisis space-time con la función <strong><a href="">satscanr</a></strong> del paquete <strong><a href="">denhotspots</a></strong></span></p>
 <p><span style="color:#660033;">Los primeros cuatro pasos son similares al análisis de los hotspots de transmisión histórica, descrito en el apartado previo. La diferencia rádica en que solo es de ínteres el shapefile de las localidades con la finalidad de extraer los casos de la localidad de interes. Como paso cinco se generan dos archivos para el análisis espacio-temporal de los casos: 1) un archivo que contiene tres columnas llamado cas y 2) un archivo con tres columnas llamado geo, ambos nombrados por convención y con la finalidad nemotécnica. El archivo cas hace referencia al archivo que tiene los casos y el archivo geo hace referencia al archivo con la información geográfica. El archivo cas tiene las variables id (identificador del caso), cases (casos por inicio de síntomas), onset (fecha de inicio de síntomas). El archivo geo tiene las variables id(cases), longitud (long) y latitud (lat).</span></p>
 <table>
@@ -295,15 +304,15 @@ En los parámetros del <strong>análisis</strong> se define el tipo de análisis
 </ol>
 <p><span style="color:#660033;">Todos los archivos tienen extensión dBase, excepto el primero que esta compuesto por varias extensiones (.prj, .shp, .shx). adicionalmente pare la información geográfica también existe la extension kml.</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<div id="htmlwidget-f2cd77ec42b811c9fce9" style="width:100%;height:600px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f2cd77ec42b811c9fce9">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  \n  # flow chart for cas y geo file\n  cas [label = \"cas file\"]\n  geo [label = \"geo file\"]\n  \n  # SaTScan deginition\n  \n  SaTScan [label = \"SaTScan\",  style = filled, color = orange]\n  input [label = \"Input\"]\n  analysis [label = \"Analysis\"]\n  output [label = \"Output\"]\n  \n  # Input\n  time_precision [label = \"Time Precision\"]\n  start_date [label = \"Start Date\"]\n  end_date [label = \"End Date\"]\n  coord [label = \"Coordinates\"]\n  lon_lat [label = \"Long/Lat\"]\n  \n  # Analysis\n  type_ana [label = \"Type of Analysis\"]\n  time_ana_retro [label = \"Retrospective Analysis\"]\n  space_time [label = \"Space-Time\"]\n  \n  prob_model [label = \"Probability Model\"]\n  space_time_per [label = \"Space-Time Permutation\"]\n  \n  \n  scan [label = \"Scan Areas with\"]\n  high_rates [label = \"High Rates\"]\n  \n  time_aggr [label = \"Time Aggregation\"]\n  day [label = \"Day\"]\n  \n  # Advanced Analysis Features/Temporal Windows/Maximun Temporal Cluster Size/20 Days\n  adv_ana [label = \"Advanced Analysis Features\"]\n  temp_window [label = \"Temporal Windows\"]\n  max_temp_size [label = \"Maximun Temporal Cluster Size\"]\n  min_temp_size [label = \"Minimun Temporal Cluster Size\"]\n  \n  day20 [label = \"20 Days\"]\n  day1 [label = \"1 Days\"]\n  \n  adv_ana -> temp_window\n  temp_window -> {max_temp_size, min_temp_size}\n  max_temp_size -> day20\n  min_temp_size -> day1\n  \n  #\n  spatial_window [label = \"Spatial Windows\"]\n  adv_ana -> spatial_window\n  max_spatial_size [label = \"0.40 km\"]\n  spatial_window -> max_spatial_size\n  \n  # Output\n  dir [label = \"Directory File\"]\n  geo_output [label = \"Geographical Output\"]\n  col_output [label = \"Column Output Format\"]\n  \n  # dBase\n  clus_inf [label = \"Cluster Information\"]\n  strat_clus [label = \"Stratified Cluster Information\"]\n  loc_inf [label = \"Location Information\"]\n  stat [label = \"Test Statistics\"]\n  \n  \n    \n  # edge definitions with the node IDs\n  edge [color = black]\n  \n  SaTScan -> {input, analysis, output}\n  input -> {time_precision, cas, geo, start_date, end_date, coord}\n  analysis -> {type_ana, prob_model, scan, time_aggr, adv_ana}\n  output -> {dir, geo_output, col_output}\n  col_output -> {clus_inf, strat_clus, loc_inf, stat}\n  type_ana -> time_ana_retro -> space_time\n  prob_model -> space_time_per \n  scan -> high_rates\n  time_aggr -> day\n  time_precision -> day\n  coord -> lon_lat\n  \n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f641761fc69cb5ff7b85" style="width:100%;height:600px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f641761fc69cb5ff7b85">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  \n  # flow chart for cas y geo file\n  cas [label = \"cas file\"]\n  geo [label = \"geo file\"]\n  \n  # SaTScan deginition\n  \n  SaTScan [label = \"SaTScan\",  style = filled, color = orange]\n  input [label = \"Input\"]\n  analysis [label = \"Analysis\"]\n  output [label = \"Output\"]\n  \n  # Input\n  time_precision [label = \"Time Precision\"]\n  start_date [label = \"Start Date\"]\n  end_date [label = \"End Date\"]\n  coord [label = \"Coordinates\"]\n  lon_lat [label = \"Long/Lat\"]\n  \n  # Analysis\n  type_ana [label = \"Type of Analysis\"]\n  time_ana_retro [label = \"Retrospective Analysis\"]\n  space_time [label = \"Space-Time\"]\n  \n  prob_model [label = \"Probability Model\"]\n  space_time_per [label = \"Space-Time Permutation\"]\n  \n  \n  scan [label = \"Scan Areas with\"]\n  high_rates [label = \"High Rates\"]\n  \n  time_aggr [label = \"Time Aggregation\"]\n  day [label = \"Day\"]\n  \n  # Advanced Analysis Features/Temporal Windows/Maximun Temporal Cluster Size/20 Days\n  adv_ana [label = \"Advanced Analysis Features\"]\n  temp_window [label = \"Temporal Windows\"]\n  max_temp_size [label = \"Maximun Temporal Cluster Size\"]\n  min_temp_size [label = \"Minimun Temporal Cluster Size\"]\n  \n  day20 [label = \"20 Days\"]\n  day1 [label = \"1 Days\"]\n  \n  adv_ana -> temp_window\n  temp_window -> {max_temp_size, min_temp_size}\n  max_temp_size -> day20\n  min_temp_size -> day1\n  \n  #\n  spatial_window [label = \"Spatial Windows\"]\n  adv_ana -> spatial_window\n  max_spatial_size [label = \"0.40 km\"]\n  spatial_window -> max_spatial_size\n  \n  # Output\n  dir [label = \"Directory File\"]\n  geo_output [label = \"Geographical Output\"]\n  col_output [label = \"Column Output Format\"]\n  \n  # dBase\n  clus_inf [label = \"Cluster Information\"]\n  strat_clus [label = \"Stratified Cluster Information\"]\n  loc_inf [label = \"Location Information\"]\n  stat [label = \"Test Statistics\"]\n  \n  \n    \n  # edge definitions with the node IDs\n  edge [color = black]\n  \n  SaTScan -> {input, analysis, output}\n  input -> {time_precision, cas, geo, start_date, end_date, coord}\n  analysis -> {type_ana, prob_model, scan, time_aggr, adv_ana}\n  output -> {dir, geo_output, col_output}\n  col_output -> {clus_inf, strat_clus, loc_inf, stat}\n  type_ana -> time_ana_retro -> space_time\n  prob_model -> space_time_per \n  scan -> high_rates\n  time_aggr -> day\n  time_precision -> day\n  coord -> lon_lat\n  \n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 5.1: Algoritmo para el análisis space-time con SaTScan.
 </p>
 </div>
 </div>
-<div id="algoritmo-para-space-time-análisis-con-satscan" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> <span style="color:#003300;">Algoritmo para <strong>Space-Time análisis</strong> con <strong><a href="https://www.satscan.org/">SaTScan</a></strong></span></h2>
+<div id="algoritmo-para-space-time-análisis-con-satscan" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> <span style="color:#003300;">Algoritmo para <strong>Space-Time análisis</strong> con <strong><a href="https://www.satscan.org/">SaTScan</a></strong></span><a href="clusters.html#algoritmo-para-space-time-análisis-con-satscan" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p><span style="color:#660033;">Bajar las bases de <strong><a href="https://www.sinave.gob.mx/">SINAVE</a></strong>.</span></p></li>
 <li><p><span style="color:#660033;">Geocodificar las bases.</span></p></li>
@@ -315,8 +324,8 @@ Figure 5.1: Algoritmo para el análisis space-time con SaTScan.
 <li><p><span style="color:#660033;">Visualizar los cluster de transmisión.</span></p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<div id="htmlwidget-6bafc6ecf7d8fb9fb546" style="width:100%;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6bafc6ecf7d8fb9fb546">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  # flowchart for hotspots\n  sinave [label = \"SINAVE\"]\n  denv [label = \"Bases de DENV\"]\n  geocode [label = \"Geocodificación\"]\n  \n  # flow chart for inegi\n  inegi [label = \"INEGI\"]\n  loc [label = \"Localidades Shapefile\"]\n  loc_esp [label = \"Localidad de Ínteres\"]\n  \n  # flow chart for cas y geo file\n  case_by_loc [label = \"Casos de la Localidad de Ínteres\"]\n  cas [label = \"cas file\"]\n  geo [label = \"geo file\"]\n  \n  # SaTScan definition\n  \n  input [label = \"Input\"]\n  analysis [label = \"Analysis\"]\n  output [label = \"Output\"]\n  \n  # edge definitions with the node IDs\n  edge [color = black]\n  sinave -> denv -> geocode\n  inegi -> loc -> loc_esp\n  loc_esp -> case_by_loc\n  geocode -> case_by_loc -> {cas, geo} -> input -> analysis\n  analysis -> output -> p_values -> cluster\n  p_values [label = \"p < 0.05\"]\n  cluster [label = \"Cluster de Transmisión\", style = filled, color = orange]\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1e26a53a55b643fab22a" style="width:100%;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1e26a53a55b643fab22a">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  # flowchart for hotspots\n  sinave [label = \"SINAVE\"]\n  denv [label = \"Bases de DENV\"]\n  geocode [label = \"Geocodificación\"]\n  \n  # flow chart for inegi\n  inegi [label = \"INEGI\"]\n  loc [label = \"Localidades Shapefile\"]\n  loc_esp [label = \"Localidad de Ínteres\"]\n  \n  # flow chart for cas y geo file\n  case_by_loc [label = \"Casos de la Localidad de Ínteres\"]\n  cas [label = \"cas file\"]\n  geo [label = \"geo file\"]\n  \n  # SaTScan definition\n  \n  input [label = \"Input\"]\n  analysis [label = \"Analysis\"]\n  output [label = \"Output\"]\n  \n  # edge definitions with the node IDs\n  edge [color = black]\n  sinave -> denv -> geocode\n  inegi -> loc -> loc_esp\n  loc_esp -> case_by_loc\n  geocode -> case_by_loc -> {cas, geo} -> input -> analysis\n  analysis -> output -> p_values -> cluster\n  p_values [label = \"p < 0.05\"]\n  cluster [label = \"Cluster de Transmisión\", style = filled, color = orange]\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 5.2: Algoritmo para el análisis space-time con SaTScan y R.
 </p>
