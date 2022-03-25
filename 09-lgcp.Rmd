@@ -9,5 +9,15 @@
 ## **<span style="color:#003300;">Algorítmo para realizar el LGCP espacial </span>**
 
 
+<span style="color:#660033;">1. Bajar la base de casos de la plataforma del SINAVE.</span>
 
+<span style="color:#660033;">2. Subir la base en R y extraer la información relevante.</span>
+
+<span style="color:#660033;">3. Geocodificar las direcciones de residencia de los casos. </span>
+
+<span style="color:#660033;">4. Generar los archivos RData con las columnas onset y coordenadas geográficas (latitud y longitud).</span>
+
+<span style="color:#660033;">5. Aplicar a la base de datos el Knox test y definir las ventanas espacio-temporales.</span>
+
+<span style="color:#660033;">6. Visualizar las cadenas de transmisión (space-time link map).</span>
 
