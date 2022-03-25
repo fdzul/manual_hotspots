@@ -1,1 +1,9 @@
-# **<span style="color:#003300;">Spatial LGCP</span>** {#lgcp}
+# (PART) Sección {-}
+
+# **<span style="color:#003300;">Log Gaussian Cox Process Espacial</span>** {#lgcp}
+
+
+
+## <span style="color:#003300;">**LGCP espacial**</span>
+
+## **<span style="color:#003300;">Algorítmo para realizar el LGCP espacial </span>**
