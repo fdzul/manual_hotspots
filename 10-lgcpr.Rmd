@@ -1,6 +1,6 @@
-# **<span style="color:#003300;">Spatial LGCP en R</span>** {#lgcpr}
+# **<span style="color:#003300;">Log Gaussian Cox Process Espacial en R</span>** {#lgcpr}
 
-## Log Gaussian Cox Process
+## **<span style="color:#003300;">LGCP Espacial en R</span>**
 
 <span style="color:#660033;">En análisis espacial con lgcp se implementa con el paquete **[denhotspots::spatial_lgcp]()**, la función realiza tres variantes de lgcp. El primero llamado "lattice" por convención y de acuerdo a
 Illian et al 2012 y siguiendo el procedimiento descrito por Moraga (2020), el segundo nombrado "inlabru" realizado con el paquete [inlabru](https://sites.google.com/inlabru.org/inlabru) (Bachl et al 2018) y el tercero titulado "simpson" (Simpson et al 2016) siguiendo el procedimiento implementado por Gómez-Rubio (2018).</span>

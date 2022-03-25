@@ -69,3 +69,4 @@ mapa-interactivo
 lgcp-espacial
 algorítmo-para-realizar-el-lgcp-espacial
 log-gaussian-cox-process
+lgcp-espacial-en-r
