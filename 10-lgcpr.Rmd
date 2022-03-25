@@ -1,4 +1,76 @@
 # **<span style="color:#003300;">Spatial LGCP en R</span>** {#lgcpr}
 
+## Log Gaussian Cox Process
 
+<span style="color:#660033;">En análisis espacial con lgcp se implementa con el paquete **[denhotspots::spatial_lgcp]()**, la función realiza tres variantes de lgcp. El primero llamado "lattice" por convención y de acuerdo a
+Illian et al 2012 y siguiendo el procedimiento descrito por Moraga (2020), el segundo nombrado "inlabru" realizado con el paquete [inlabru](https://sites.google.com/inlabru.org/inlabru) (Bachl et al 2018) y el tercero titulado "simpson" (Simpson et al 2016) siguiendo el procedimiento implementado por Gómez-Rubio (2018).</span>
+
+<span style="color:#660033;">La función tiene trece argumentos:**<span style="color:#7d9029">dataset</span>**,
+**<span style="color:#7d9029">locality</span>**,
+**<span style="color:#7d9029">cve_edo</span>**,
+**<span style="color:#7d9029">longitude</span>**,
+**<span style="color:#7d9029">latitude</span>**,
+**<span style="color:#7d9029">k</span>**,
+**<span style="color:#7d9029">plot</span>**,
+**<span style="color:#7d9029">resolution</span>**,
+**<span style="color:#7d9029">aproximation</span>**,
+**<span style="color:#7d9029">integration</span>**,
+**<span style="color:#7d9029">approach</span>**,
+**<span style="color:#7d9029">cell_size</span>** & 
+**<span style="color:#7d9029">name</span>**.</span>
+
+```{r, echo=FALSE}
+data.frame(Argumento = c("datasets", "locality", "cve_edo", "longitude", "latitude",
+                         "k", "plot", "resolution",
+                         "aproximation", "integration", "approach", "cell_size", "name"),
+                Definición = c("Es la base de dengue geocodificada (x_data).",
+                               "Es la localidad Objetivo.",
+                               "Es la clave del Estado.",
+                               "Es el nombre de la columna de la longitud de la base de datos.",
+                               "Es el nombre de la columna de la latitud de la base de datos.",
+                               "Es un parametro que define la triangulación en el área interna y el área externa en el argumento max.edge en la función **[INLA::inla.mesh.2d]()**.",
+                               "Es una valor logico para indicar si se gráfica el mesh",
+                               "Es un valor númerico para definir la resolución del raster de la localidad",
+                               "Es el método aproximación de para el cálculo de la distribución posterior de los marginales y los hiperparametros. Las opciones son adaptative, gaussian, simplified.laplace & laplace",
+                               "Es la estrategia de integración. Las opciones son auto, grid, eb & ccd",
+                               "Es el algoritmo para lgcp espacial. Las opciones son lattice, inlabru & simpson",
+                               "Es un valor númerico para dividir la localidad en x puntos (area/n)",
+                               "Es el nombre de la paleta de colores")) |>
+kableExtra::kable()
+
+```
+
+```{r, warning=FALSE, message=FALSE}
+# 1. Subir el archivo cas y geo generado con la función write_cas_geo
+load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+
+# 2. aplicar la prueba de la funcion spatial lgcp 
+library(magrittr)
+library(ggplot2)
+lattice <- denhotspots::spatial_lgcp(dataset = x_data,
+                                     locality = "Xalapa de Enríquez",
+                                     cve_edo = "30",
+                                     longitude = "x",
+                                     latitude = "y",
+                                     k = 20,
+                                     plot = TRUE,
+                                     aproximation = "gaussian",
+                                     integration = "eb",
+                                     resolution = 0.005,
+                                     approach = "lattice",
+                                     cell_size = 3000,
+                                     name = "YlGnBu")
+```
+
+<span style="color:#660033;">La función **[denhotspots::spatial_lgcp]()** regresa una lista de objetos que incluyen los datos originales (data), la predicción de la intensidad, la localidad y el mapa de intensidad de casos.</span>
+
+```{r}
+names(lattice)
+```
+
+<span style="color:#660033;">Para acceder al mapa de intensidad de casos se corre el siguiente código</span>
+
+```{r}
+lattice$map
+```
 

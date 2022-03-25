@@ -68,3 +68,4 @@ tab:unnamed-chunk-3
 mapa-interactivo
 lgcp-espacial
 algorítmo-para-realizar-el-lgcp-espacial
+log-gaussian-cox-process
