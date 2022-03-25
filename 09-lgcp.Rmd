@@ -17,7 +17,7 @@
 
 <span style="color:#660033;">4. Generar los archivos RData con las columnas onset y coordenadas geográficas (latitud y longitud).</span>
 
-<span style="color:#660033;">5. Aplicar a la base de datos la función  **[denhotspots::spatial_lgcp]()** .</span>
+<span style="color:#660033;">5. Aplicar a la base de datos la función  **[denhotspots::spatial_lgcp]()**.</span>
 
 <span style="color:#660033;">6. Visualizar la intensidad.</span>
 
