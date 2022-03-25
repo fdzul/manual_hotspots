@@ -66,6 +66,23 @@ denhotspots::space_time_link_map(x = knox_res,
                                  facetmap = FALSE))
 ```
 
+#### **<span style="color:#003300;">Mapa interactivo</span>**
+
+```{r, cache=TRUE, fig.show='hide', warning=FALSE, message=FALSE}
+denhotspots::space_time_link_map(x = knox_res,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 maptype = "staticmap",
+                                 facetmap = FALSE)
+```
+
+```{r, echo = FALSE,fig.cap = "Mapa interactivo de las cadenas de transmisión de dengue en la ciudad de Xalapa"}
+htmltools::tags$iframe(src = "space_time_link_map_interactive.html",
+                       width = "100%", 
+                       height = "700vh")
+```
+
+
 #### **<span style="color:#003300;">Mapa estático en paneles por grupos de semanas</span>**
 ```{r, warning=FALSE, message=FALSE, out.height= "100%", out.width="100%"}
 denhotspots::space_time_link_map(x = knox_res,
