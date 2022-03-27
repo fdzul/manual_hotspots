@@ -1,7 +1,7 @@
 --- 
 title: <span style="color:#003300;">Manual para la identificación de los hotspots en áreas úrbanas</span>
 author: <span style="color:#003300;">Felipe Antonio Dzul Manzanilla</span>
-date: "2021: Last compiled `r Sys.Date()`: version `r tmwr_version()`"
+date: "2021: Last compiled `r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
