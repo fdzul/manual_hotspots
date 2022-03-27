@@ -217,14 +217,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.1" data-path="cadenasr.html"><a href="cadenasr.html#visualización-de-las-cadenas-de-transmisión"><i class="fa fa-check"></i><b>8.2.1</b> <strong><span style="color:#003300;">Visualización de las cadenas de Transmisión </span></strong><span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Spatial LGCP</span></strong><span></span></a></li>
-<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Spatial LGCP en R</span></strong><span></span></a></li>
+<li class="part"><span><b>V Sección<span></span></b></span></li>
+<li class="chapter" data-level="9" data-path="lgcp.html"><a href="lgcp.html"><i class="fa fa-check"></i><b>9</b> <strong><span style="color:#003300;">Log Gaussian Cox Process Espacial</span></strong><span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="lgcp.html"><a href="lgcp.html#lgcp-espacial"><i class="fa fa-check"></i><b>9.1</b> <span style="color:#003300;"><strong>LGCP espacial</strong></span><span></span></a></li>
+<li class="chapter" data-level="9.2" data-path="lgcp.html"><a href="lgcp.html#algorítmo-para-realizar-el-lgcp-espacial"><i class="fa fa-check"></i><b>9.2</b> <strong><span style="color:#003300;">Algorítmo para realizar el LGCP espacial </span></strong><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lgcpr.html"><a href="lgcpr.html"><i class="fa fa-check"></i><b>10</b> <strong><span style="color:#003300;">Log Gaussian Cox Process Espacial en R</span></strong><span></span></a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="lgcpr.html"><a href="lgcpr.html#lgcp-espacial-en-r"><i class="fa fa-check"></i><b>10.1</b> <strong><span style="color:#003300;">LGCP Espacial en R</span></strong><span></span></a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/fdzul" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Felipe Dzul-Manzanilla</span> </a></li>
 <li><a href="https://www.researchgate.net/profile/Fabian-Correa-Morales" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Fabián Correa-Morales</span></a></li>
 <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/arturo-baez-hernandez/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Arturo Báez-Hernández</span></a></li>
 <li><a href="https://www.ssaver.gob.mx/directorio-sesver/dsaludpublica/guadalupe-diaz-del-castillo-flores/" target="blank"><span style= "color:#660033; font-size:15px; font-weight: bold;">Guadalupe Díaz del Castillo Flores</span></a></li>
 <li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Heron Huerta</span> </a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Luis Hernández-Herrera</span> </a></li>
+<li><a href="" target="blank"> <span style= "color:#660033; font-size:15px; font-weight: bold;">Evaristo Morales-Ríos</span> </a></li>
 <img src="https://www.ssaver.gob.mx/wp-content/uploads/2021/04/cropped-logoencabezado6abr2.jpg" alt="SESVER" width="250" height="50">
 <img src="https://raw.githubusercontent.com/mxabierto/assets/master/img/logos/cenaprece.png" alt="SESVER" width="250" height="100">
 <img src="https://www.genolifeadn.com/wp-content/uploads/2020/04/indrelogo.png" alt="SESVER" width="100" height="50">
@@ -321,7 +331,7 @@ Es un valor lógico para indicar la clase del objeto el space-time link. Si es T
 planar_coord
 </td>
 <td style="text-align:left;">
-Es valor lógico para indicar si la base es projetada en un sistema planar (TRUE) o no (FALSE)
+Es valor lógico para indicar si la base es projectada en un sistema planar (TRUE) o no (FALSE)
 </td>
 </tr>
 </tbody>
@@ -428,6 +438,9 @@ Es un valor lógico para indicar si el mapa estático se presente en facetas (TR
 </div>
 </div>
 </div>
+
+
+
             </section>
 
           </div>

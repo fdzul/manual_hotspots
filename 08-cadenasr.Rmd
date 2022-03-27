@@ -16,7 +16,7 @@
 d <- data.frame(Argumento = c("x", "crs", "dt", "ds", "sym", "sp_link", "planar_coord"),
                 Definición = c("Es la base de datos con las coordenadas y fecha de inicio de síntomas",
                                "Es el sistema de referencia de coordenadas", "Es la ventana temporal", "Es la ventana espacial",
-                               "Es el numero de simulaciones de Monte Carlo", "Es un valor lógico para indicar la clase del objeto el space-time link. Si es TRUE, la clase es sp, de los contrario es sf", "Es valor lógico para indicar si la base es projetada en un sistema planar (TRUE) o no (FALSE)"))
+                               "Es el numero de simulaciones de Monte Carlo", "Es un valor lógico para indicar la clase del objeto el space-time link. Si es TRUE, la clase es sp, de los contrario es sf", "Es valor lógico para indicar si la base es projectada en un sistema planar (TRUE) o no (FALSE)"))
 kableExtra::kable(d)
 
 ```
@@ -72,7 +72,7 @@ denhotspots::space_time_link_map(x = knox_res,
 denhotspots::space_time_link_map(x = knox_res,
                                  locality = "Xalapa de Enríquez",
                                  cve_edo = "30",
-                                 maptype = "staticmap",
+                                 maptype = "interactive_map",
                                  facetmap = FALSE)
 ```
 
