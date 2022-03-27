@@ -21,8 +21,7 @@ description: "El manual describe la identificación de los hotspots en áreas en
 
 <a href=""><img src="images/cover.jpg" width="550" height="550" alt="" align="right" style="margin: 0 1em 0 1em" /></a>
   
-<span style="color:#660033;">El documento no tiene la intensión de ser una referencia teórica sobre los diferentes analisis espaciales que aborda, por el contrario es un manual intenta enseñar a realizar los análisis espaciales en R & RStudio.</span>
-
+<span style="color:#660033;">El documento no tiene la intensión de ser una referencia teórica sobre los diferentes analisis espaciales que se abordan, por el contrario el manual intenta enseñar a realizar los análisis espaciales en R & RStudio.</span>
 
 
 <span style="color:#660033;">La concepción teórica y práctica del libro es inspirado por la urgente necesidad de contribuir en políticas públicas y toma de desiciones del Programa de Prevención y Control de las Arbovirosis en México, específicamente en el diseño, implementación y escalamiento de un modelo estratégico de focalización del dengue en las areas urbanas y metropolitanas de México usando análisis espaciales (hotspots analysis, space-time analysis, geostatistical analysis) de la vigilancia epidemiológica y entomológica generada por el programa.</span>
