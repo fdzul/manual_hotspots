@@ -24,7 +24,7 @@ source('C:/Users/felip/OneDrive/proyects/satscan/3.Functions/cas_geo.R')
 ```
 
 ### **<span style="color:#003300;">Paso 3. Aplicar las funciones</span>**.
-```{r}
+```{r, warning=FALSE, message=FALSE}
 library(magrittr)
 library(sf)
 write_cas_geo(y = xy %>% 
@@ -56,7 +56,7 @@ kableExtra::kable(d)
 
 <span style="color:#660033;">La resolución temporal y espacial para el space-time análisis de dengue por conveniencia estamos considerando 20 días y 400 metros, respectivamente.</span>
 
-```{r, warning=FALSE, }
+```{r, warning=FALSE, message=FALSE}
 library(rsatscan)
 # 1. Subir el archivo cas y geo generado con la función write_cas_geo
 load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
@@ -77,7 +77,7 @@ x <- denhotspots::satscanR(cas_file = x_cas,
 
 <span style="color:#660033;">La selección de los cluster de transmisión y los casos con valores de p menores a 0.05, y su respectiva visualización se realiza  con la función ***[denhotspots::staticmap_satscan]()***. Esta función tiene la capacidad de visualizar los resultados del space-time analisis con rsatscan o SaTScan. En nuestro análisis con rsatscan definimos los argumentos de acuerdo a la siguiente tabla y visualizamos.</span>
 
-```{r, echo=FALSE, warning=FALSE, error=FALSE}
+```{r, echo=FALSE, message=FALSE,warning=FALSE, error=FALSE}
 library(magrittr)
 d <- data.frame(Argumento = c("x", "rsatscan","satscan",
                               "locality", "cve_edo",
