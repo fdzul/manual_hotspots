@@ -44,12 +44,15 @@ write_cas_geo(y = xy %>%
 library(magrittr)
 d <- data.frame(Argumento = c("cas_file", "geo_file",
                               "start_date", "end_date",
-                              "spatial_window", "spatial_window"),
+                              "spatial_window", "spatial_window",
+                              "ssbatchfilename", "path_satscan"),
                 Definición = c("Es el archivo cas", "Es el archivo geo",
                                "Es la fecha inicio del primer caso",
                                "Es la fecha de inicio del último caso",
                                "Es la resolución espacial (km)",
-                               "Es la resolución tempora (días)"))
+                               "Es la resolución temporal (días)",
+                               "Es el nombre del ejecutable del SatScan",
+                               "Es la ruta donde esta alojado el ejecutable del SatScan"))
 kableExtra::kable(d)
 
 ```
