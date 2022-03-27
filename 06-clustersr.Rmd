@@ -56,7 +56,7 @@ kableExtra::kable(d)
 
 <span style="color:#660033;">La resolución temporal y espacial para el space-time análisis de dengue por conveniencia estamos considerando 20 días y 400 metros, respectivamente.</span>
 
-```{r, cache=TRUE}
+```{r, warning=FALSE, }
 library(rsatscan)
 # 1. Subir el archivo cas y geo generado con la función write_cas_geo
 load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
@@ -69,7 +69,9 @@ x <- denhotspots::satscanR(cas_file = x_cas,
                            end_date = stringr::str_replace_all(max(x_cas$date),
                                                                pattern = "-", replacement = "/"),
                            spatial_window = 0.4,
-                           temporal_window = 20)
+                           temporal_window = 20,
+                           ssbatchfilename = "SaTScanBatch64",
+                           path_satscan = "C:/Program Files/SaTScan")
 ```
 
 
